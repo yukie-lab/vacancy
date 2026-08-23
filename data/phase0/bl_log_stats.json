@@ -1,0 +1,34 @@
+{
+ "generated": "2026-08-23",
+ "n_hip_targets_fetched": 1172,
+ "n_files_total": 20185,
+ "status": {
+  "has_files": 1172,
+  "has_mjd": 1172,
+  "has_freq": 1172,
+  "has_radec": 1172
+ },
+ "targets_by_nominal_band": {
+  "GBT L(名目)": 739,
+  "GBT S(名目)": 911,
+  "Parkes その他サブバンド": 9,
+  "Parkes 10-cm(名目)": 14,
+  "GBT X": 56,
+  "GBT C": 45,
+  "GBT その他サブバンド": 57
+ },
+ "files_by_telescope": {
+  "GBT": 12852,
+  "Parkes": 2600
+ },
+ "files_by_year": {
+  "2016": 6306,
+  "2017": 4486,
+  "2018": 893,
+  "2019": 2859,
+  "2020": 56,
+  "2021": 744,
+  "2022": 108
+ },
+ "n_failed": 0
+}
