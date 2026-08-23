@@ -1,0 +1,21 @@
+{
+ "N=2000,M=1000": {
+  "seconds": 10.82,
+  "per_star_band_ms": 1.3529
+ },
+ "N=20000,M=1000": {
+  "seconds": 305.74,
+  "per_star_band_ms": 3.8218
+ },
+ "N=331312,M=20": {
+  "seconds": 14.27,
+  "per_star_band_ms": 0.0108
+ },
+ "N=331312,M=100": {
+  "seconds": 75.61,
+  "per_star_band_ms": 0.0571
+ },
+ "extrapolated_N=331312,M=1000": {
+  "seconds": 756.1
+ }
+}

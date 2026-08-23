@@ -1,0 +1,48 @@
+{
+ "n_gcns": 331312,
+ "has_wise_name": 298012,
+ "has_W3_mag": 250376,
+ "has_W4_mag": 250451,
+ "has_W3_err": 209535,
+ "has_W4_err": 66904,
+ "W3_snr_ge_3.5": 187338,
+ "W4_snr_ge_3.5": 40632,
+ "W3_and_W4_snr_ge_3.5": 40527,
+ "has_BP_RP": 324310,
+ "wdprob_gt_0.5": 21848,
+ "hephaistos_ms_selection": {
+  "n_ms_ruwe_lt_1.4": 231520,
+  "n_giant_cut": 1682,
+  "n_wd_aen_cut": 39102,
+  "n_ms_with_W3W4_snr3.5": 29248
+ },
+ "ws20_dr2_to_edr3": {
+  "n_ws20_distinct_le120pc": 1782,
+  "matched_1arcsec_and_dG_lt_0.5": 1545,
+  "matched_1arcsec": 1549,
+  "rate": 0.867003367003367,
+  "sep_median_arcsec": 0.0
+ },
+ "embark_join": {
+  "n_embark_stars": 37498,
+  "in_gcns": 14799,
+  "rate": 0.3946610485892581,
+  "embark_schema": "embark-atlas-v1",
+  "embark_layers_keys": [
+   "flyby_single_t0",
+   "flyby_single_any_tdep",
+   "rendezvous_single_t0",
+   "rendezvous_single_any_tdep",
+   "rendezvous_multi_t0",
+   "rendezvous_multi_any_tdep",
+   "intake_dr4_t0",
+   "intake_dr4_any_tdep",
+   "sigma_pos_undecidable_t0",
+   "sigma_pos_undecidable_any_tdep"
+  ]
+ },
+ "bl_hip_in_gcns": {
+  "n_hip_matched_dr3": 5963,
+  "in_gcns_100pc": 2520
+ }
+}

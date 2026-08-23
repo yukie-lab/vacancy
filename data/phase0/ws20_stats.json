@@ -1,0 +1,42 @@
+{
+ "n_rows": 356616,
+ "n_distinct_dr2": 288315,
+ "n_rows_price_target": 1775,
+ "n_distinct_price_targets": 1231,
+ "n_distinct_targets_field": 1319,
+ "inst_counts": {
+  "GBT L-band": 210146,
+  "GBT S-band": 89654,
+  "Parkes 10-cm": 56816
+ },
+ "null_rates": {
+  "min-detec-EIRP": 0.0,
+  "rest": 0.0,
+  "Plx": 0.0,
+  "FWHM": 0.0,
+  "Offset-arcmin": 0.0,
+  "TelResGaus": 0.0,
+  "Gmag": 0.0,
+  "pmRA": 0.0,
+  "BP-RP": 0.06788534446014761
+ },
+ "rest_le_100pc_rows": 2363,
+ "rest_le_100pc_distinct": 1671,
+ "rest_le_50pc_distinct": 1513,
+ "eirp_quantiles_W": {
+  "0.01": 53829376030593.47,
+  "0.1": 1061787041744040.0,
+  "0.5": 9021845400492476.0,
+  "0.9": 4.7038597790766296e+16,
+  "0.99": 1.6709581679460467e+17
+ },
+ "eirp_le_1e13_distinct": 1626,
+ "eirp_le_1e17_distinct": 278577,
+ "eirp_recalc_check": {
+  "n": 356616,
+  "median_ratio": 1.0,
+  "p05": 0.9999999999999972,
+  "p95": 1.0000000000000027,
+  "resp_median_abs_diff": 4.440892098500626e-16
+ }
+}
