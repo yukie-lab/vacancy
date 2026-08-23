@@ -3,3 +3,4 @@ __pycache__/
 *.pyc
 .DS_Store
 data/phase0/*.npz
+data/phase1/ledger_v0.json

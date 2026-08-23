@@ -1,0 +1,70 @@
+{
+ "generated": "2026-08-23",
+ "eps_formula_version": "eps-v0.2 (2026-08-23, 憲法 v0.3 / 裁定 #1・#2: f_ill を星単位潜在変数として周辺化、γ=0.01 情報列)",
+ "population": {
+  "gcns": 331312,
+  "missing_table": 1259,
+  "total": 332571
+ },
+ "radio": {
+  "n_rows_ws20_le120pc_used": 2259,
+  "n_rows_unmatched_dropped": 231,
+  "n_rows_matched_missing_table": 67,
+  "stars_with_obs": 1587,
+  "status_by_band": {
+   "R1": {
+    "observed_insensitive": 33,
+    "ok": 1554,
+    "undecidable_not_in_field": 330984
+   },
+   "R2": {
+    "ok": 1587,
+    "undecidable_not_in_field": 330984
+   },
+   "R3": {
+    "observed_insensitive": 1428,
+    "ok": 159,
+    "undecidable_not_in_field": 330984
+   }
+  },
+  "eirp_edr3_over_ws20_median": 1.0006506928883523,
+  "rows_with_bl_dates": 1934
+ },
+ "mir": {
+  "status": {
+   "observed_insensitive": 1,
+   "ok": 192363,
+   "undecidable_candidate": 3615,
+   "undecidable_model_out": 54498,
+   "undecidable_no_phot": 82094
+  },
+  "locus_bins": {
+   "G-W3": 51,
+   "G-W4": 36
+  },
+  "eps_gt0_by_gamma": {
+   "0.1": 191237,
+   "0.5": 192354,
+   "0.9": 192363,
+   "0.01": 131890
+  },
+  "eps_median_ok_by_gamma": {
+   "0.1": 1.0,
+   "0.5": 1.0,
+   "0.9": 1.0,
+   "0.01": 0.7
+  },
+  "info_column_note": "gamma=0.01 は帯定義外の情報列(裁定 #2 修正 4)。空き度の主張には用いない"
+ },
+ "undecidable_rate": {
+  "R1": 0.9952280866341323,
+  "R2": 0.9952280866341323,
+  "R3": 0.9952280866341323,
+  "W1": 0.4215851652729793
+ },
+ "inputs_sha256": {
+  "gcns_core.npz": "ba8eefd3efa4e1ac9604e456065807838198434571632eb557c4329db82d6a1d",
+  "ws20_rows.npz": "7806ee2534d552a656f3b84de5d9473fd3fe59d5a2d70991c8948dd3dbdd91ee",
+  "EEM_dwarf_colors_Teff.txt": "1de2edeec17bb3346e0e4e70b999de5ee29947df38474e64cddb7cfacc164b7f"
+ }
+}
