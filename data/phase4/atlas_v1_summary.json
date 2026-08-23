@@ -1,0 +1,95 @@
+{
+ "generated": "2026-08-23T21:58:26",
+ "constitution": "CLAUDE.md v0.3 / 裁定 #1–#4 / 事前登録 (b) 10.5281/zenodo.22067884",
+ "population": {
+  "total": 332571,
+  "gcns": 331312,
+  "missing": 1259
+ },
+ "join_embark": {
+  "embark_stars": 37498,
+  "embark_in_gcns": 14799,
+  "gcns_joined": 14799,
+  "gcns_join_rate": 0.04449876868398026,
+  "embark_outside_population": 22699,
+  "note": "EMBARK 37,498 星のうち GCNS(≤100 pc)内在 14,799 を再確認(Phase 0.5 と一致)"
+ },
+ "reachability_any_counts": {
+  "flyby_single_t0": 14799,
+  "flyby_single_any_tdep": 14799,
+  "rendezvous_single_any_tdep": 2339,
+  "rendezvous_multi_any_tdep": 2339,
+  "intake_dr4_any_tdep": 2935,
+  "sigma_pos_undecidable_t0": 3978
+ },
+ "settlement": {
+  "S1_narrow_FGK_MS": 43119,
+  "S2_all_MS": 283526,
+  "S3_all": 332571,
+  "spt_letters": {
+   "A": 1127,
+   "B": 56,
+   "F": 11508,
+   "G": 12555,
+   "K": 35719,
+   "M": 222559
+  },
+  "nea_hosts_lt120pc": 1207,
+  "nea_hosts_with_dr3_id": 1184,
+  "nea_hosts_joined_gcns": 1037,
+  "nea_planets_joined": 1545,
+  "hwc": {
+   "by_name": 44,
+   "by_position": 1,
+   "unmatched": 25,
+   "total_habitable_rows": 70
+  },
+  "hwc_hosts_joined": 35
+ },
+ "undecidable": {
+  "vacancy_radio_not_in_field": 330984,
+  "vacancy_radio_rate": 0.9952280866341323,
+  "vacancy_W1": "拡張区画(情報レイヤ、claim=false、裁定 #4)— v1 では空き度を主張しない",
+  "reachability_not_in_embark": 317772,
+  "reachability_rate": 0.9555012313160197,
+  "reachability_sigma_pos_undecidable_any_cell": 3978,
+  "settlement_no_color": 8261,
+  "settlement_note": "missing 表 1,259 星は測光なし → 定住資源性 判定不能(S3 のみ該当可)"
+ },
+ "conditions": {
+  "vacancy": "空き度上界は T 帯(T-R1: EIRP≥1e13 W / T-R2: ≥1e17 W / T-R3: 地球級レーダー型間欠)の設備に関して、サーベイ集合 S = {WS20 (GBT L, GBT S, Parkes 10-cm)} のもとでの条件付き量。π の関数(代表 π=1e-2 を表示)。測量であって証明ではない",
+  "reachability": "EMBARK v1(会合 flyby / 同行 rendezvous、帯 T1–T4、稼働寿命 L、t_dep 任意、クリーングラフ安定到達)。カタログ 37,498 星の内部に限る",
+  "forbidden": "三軸の積・加重和・単一スコア化は行わない。交差は計数表示のみ"
+ },
+ "cross_examples": {
+  "flyby_single_any_tdep": {
+   "reachable_any_cell": 14799,
+   "reachable_and_R1_bound": 815,
+   "reachable_and_R1_undecidable": 13984,
+   "reachable_and_R3_bound": 108
+  },
+  "rendezvous_single_any_tdep": {
+   "reachable_any_cell": 2339,
+   "reachable_and_R1_bound": 311,
+   "reachable_and_R1_undecidable": 2028,
+   "reachable_and_R3_bound": 38
+  },
+  "rendezvous_multi_any_tdep": {
+   "reachable_any_cell": 2339,
+   "reachable_and_R1_bound": 311,
+   "reachable_and_R1_undecidable": 2028,
+   "reachable_and_R3_bound": 38
+  },
+  "R1_bound_and_not_in_embark": 739,
+  "R1_bound_and_in_embark_but_unreachable_all_cells": 0
+ },
+ "provenance": {
+  "lambda_ledger_sha256": "aba4cedefbf49efcdbbaf575d56c6b5016dc4bc30588202041816964c190896e",
+  "embark_atlas_sha256": "e2aff3397bd233eaaa0e131b8f31d335a9c370d72c9cdbd4da8e63a37fc88b82",
+  "gcns_core_sha256": "ba8eefd3efa4e1ac9604e456065807838198434571632eb557c4329db82d6a1d",
+  "nea_csv_sha256": "6606326fe1d0c0e5881b247a573986f8ad57ca1015d8e727039b47c6483e9b8c",
+  "hwc_csv_sha256": "cc8a68b0181e87ab00ddae9d7cedb6ead10a43cbaa43fb5fdb349af8aaf20e3a",
+  "mamajek_sha256": "1de2edeec17bb3346e0e4e70b999de5ee29947df38474e64cddb7cfacc164b7f"
+ },
+ "cross_tables_R1_flyby_nonempty_cells": 23
+}
