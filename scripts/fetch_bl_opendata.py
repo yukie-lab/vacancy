@@ -2,7 +2,7 @@
 """Phase 0.1(a): Breakthrough Listen 公開アーカイブ(seti.berkeley.edu/opendata)の
 観測ファイルメタデータを HIP 目標ごとに取得し、data/raw/bl_opendata/<target>.json に保存する。
 取得欄: target, telescope, center_freq(MHz), mjd, utc, ra, decl, file_type, quality, url, size, md5sum。
-並列 4、失敗は 3 回まで再試行し、失敗リストを data/raw/bl_opendata/_failed.txt に残す。
+並列 8(Phase 0 当初 4、裁定 #1 執行時に増速)、失敗は 3 回まで再試行し、失敗リストを data/raw/bl_opendata/_failed.txt に残す。
 """
 import json, os, re, sys, time, urllib.request, urllib.parse, concurrent.futures as cf
 
@@ -33,7 +33,7 @@ if __name__ == "__main__":
     print("selected", len(sel), "of", len(targets), flush=True)
     failed = []
     t0 = time.time()
-    with cf.ThreadPoolExecutor(max_workers=4) as ex:
+    with cf.ThreadPoolExecutor(max_workers=8) as ex:
         for i, (t, st) in enumerate(ex.map(fetch, sel)):
             if st.startswith("fail") or st.startswith("error"):
                 failed.append(t + "\t" + st)
