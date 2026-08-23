@@ -203,6 +203,10 @@
   "value": 0.4266,
   "source": "lambda_ledger.json"
  },
+ "lam_min_R1_exact": {
+  "value": 0.426595745,
+  "source": "lambda_ledger.json(不等号で引用する際は厳密値を切り下げて使う — E-7)"
+ },
  "lam_med_R1": {
   "value": 0.8,
   "source": "lambda_ledger.json"
@@ -219,6 +223,10 @@
   "value": 0.4266,
   "source": "lambda_ledger.json"
  },
+ "lam_min_R2_exact": {
+  "value": 0.426595745,
+  "source": "lambda_ledger.json(不等号で引用する際は厳密値を切り下げて使う — E-7)"
+ },
  "lam_med_R2": {
   "value": 0.8,
   "source": "lambda_ledger.json"
@@ -234,6 +242,10 @@
  "lam_min_R3": {
   "value": 0.9985,
   "source": "lambda_ledger.json"
+ },
+ "lam_min_R3_exact": {
+  "value": 0.998457557,
+  "source": "lambda_ledger.json(不等号で引用する際は厳密値を切り下げて使う — E-7)"
  },
  "lam_med_R3": {
   "value": 0.9996,

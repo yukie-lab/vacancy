@@ -70,28 +70,28 @@
    "bytes": 8303
   },
   "error-ledger-public-r1.md": {
-   "sha256": "e99f4eda6ea1cc57e11f260db328ef876b99c4d392dca971a79c2784cafc33f1",
-   "bytes": 1830
+   "sha256": "f773de6535b889555d7394a9c721c52734dfeec18837f14a5c9f459364df6514",
+   "bytes": 2352
   },
   "paper/vacancy_ja.md": {
-   "sha256": "97787b1db42f366b841ed33efee04726b842860c4138608f680995692621efec",
-   "bytes": 31656
+   "sha256": "a4d8e36fc7b97bf5d0ba41b1f19021bd1679faec29a7956100e05bba84fd5cb6",
+   "bytes": 31697
   },
   "paper/vacancy_en.md": {
-   "sha256": "d4df5eba0c86d7e0636604d58737ab40ddd20e80dc5d62a7e8009132d9f8a498",
-   "bytes": 33312
+   "sha256": "9672f32932df9f39a44261bf5f77cb49e780bdd6f017fe6768fbefc1befcab2d",
+   "bytes": 33360
   },
   "paper/numbers.json": {
-   "sha256": "910343363fed93874be231e18655abac45a11db44d0b93d6a31fa303a52ff019",
-   "bytes": 10670
+   "sha256": "6ab96c0c43531fd9a9f7b93217610d0f83790575c1178909b2a71743030890e0",
+   "bytes": 11141
   },
   "code/scripts/bl_log_stats.py": {
    "sha256": "c148df5274266a803fd38dbbb2130a501cb7dc35a2cd67aaf992197134c59ca6",
    "bytes": 5171
   },
   "code/scripts/build_paper_numbers.py": {
-   "sha256": "f39d2fd6a526789af0709c9f6fbd056f4b8f60d53f535723649c5f4b1ed6dd7d",
-   "bytes": 9573
+   "sha256": "4249f1b8d844b16ca8a1685d1c770c37526f31b685b33e4d373caa4cbaf25a8b",
+   "bytes": 9713
   },
   "code/scripts/export_g2.py": {
    "sha256": "7e4ccf54980921c049dabad4636ab297877e3fe1ab53900c97802bb9f330efbb",
@@ -114,8 +114,8 @@
    "bytes": 3946
   },
   "code/scripts/gate_check_paper.py": {
-   "sha256": "0618709fb88bea2e38ae434746360b3aab16df6e10b324a079e415362f5a8d97",
-   "bytes": 3400
+   "sha256": "f2839fb941c0a0d629edb3ddda24b25cbf05973cfb58db79e4891d8109ec812f",
+   "bytes": 3412
   },
   "code/scripts/xmatch_hip_dr3.py": {
    "sha256": "e43bda156f2a316b6a70f0ca4449fd2dc8c8b6fafb61cc48a2d80d8d126b2ed8",
@@ -154,8 +154,8 @@
    "bytes": 7679
   },
   "paper/vacancy_en_mnras.md": {
-   "sha256": "f7b3506eed2d93cdbc0b7e09b2b79fbe94611d508f041c00d65c101f5114e4ba",
-   "bytes": 33361
+   "sha256": "0569aa342356c60bda07f66b15b3596c34444c82917d194ddc0713a03fbf66e5",
+   "bytes": 33409
   },
   "code/scripts/build_mnras_version.py": {
    "sha256": "9d5358a08e75e130861c0c0c81a1255e8d452e42e5dfd259b7b9f2a59b299a68",

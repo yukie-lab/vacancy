@@ -36,7 +36,7 @@ put("g2_radio_maxdlog", 4.9e-10, "裁定ログ(参謀報告)"); put("g2_mir_maxd
 L = J("data/phase2/lambda_ledger.json")["stars"]
 for b in ("R1", "R2", "R3"):
     st = np.array(L[f"status_{b}"]); lam = np.array(L[f"lambda_{b}"])[st == "ok"]; post = np.array(L[f"post_{b}_pi0.01"])[st == "ok"]
-    put(f"lam_min_{b}", round(float(lam.min()), 4), "lambda_ledger.json"); put(f"lam_med_{b}", round(float(np.median(lam)), 4), "lambda_ledger.json"); put(f"lam_max_{b}", round(float(lam.max()), 4), "lambda_ledger.json")
+    put(f"lam_min_{b}", round(float(lam.min()), 4), "lambda_ledger.json"); put(f"lam_min_{b}_exact", float(lam.min()), "lambda_ledger.json(不等号で引用する際は厳密値を切り下げて使う — E-7)"); put(f"lam_med_{b}", round(float(np.median(lam)), 4), "lambda_ledger.json"); put(f"lam_max_{b}", round(float(lam.max()), 4), "lambda_ledger.json")
     put(f"post_med_pi0.01_{b}", round(float(np.median(post)), 4), "lambda_ledger.json")
 put("lam_min_R1_combo", "GBT L + GBT S + GBT S + Parkes 10-cm(S 帯 2 ポインティング、1 星)", "radio_obs_v0.json(裁定 #6 指摘 2 で検証)")
 stW = np.array(L["status_W1"]); lw = np.array(L["lambda_W1_g0.1"]); okW = stW == "ok"
