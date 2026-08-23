@@ -84,7 +84,38 @@
     "pass": true
    }
   ],
-  "all_pass": false
+  "all_pass": false,
+  "rejudgement_ruling3": {
+   "ruling": "裁定 #3(逸脱, 2026-08-23): ≤100/≤200 pc の基準を公刊の明示誤差区間の内側に改訂。≤50 pc は完全一致要件不変。再計数手続き不変",
+   "rows": [
+    {
+     "shell_pc": 50,
+     "inv_N_pct": 0.06609,
+     "rule": "N == 1513",
+     "pass": true
+    },
+    {
+     "shell_pc": 100,
+     "inv_N_pct": 0.05984,
+     "interval_pct": [
+      0.058,
+      0.062
+     ],
+     "pass": true
+    },
+    {
+     "shell_pc": 200,
+     "inv_N_pct": 0.03882,
+     "interval_pct": [
+      0.031,
+      0.043
+     ],
+     "pass": true
+    }
+   ],
+   "all_pass_new": true,
+   "old_rule_record": "旧基準(±1%)では ≤100 pc 不合格(−1.89%)。記録は上書きせず残置"
+  }
  },
  "c_bayes_marginalization": {
   "note": "別量: 1/N(頻度論・不検出試行の計数)と、星単位の事後 P(占有|D,T,π) の殻平均。一致を強要しない(第7条 G3(i))。ok 以外(感度外)の星は除外して平均",
