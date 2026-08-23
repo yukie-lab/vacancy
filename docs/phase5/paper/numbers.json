@@ -1,0 +1,583 @@
+{
+ "ws20_rows": {
+  "value": 356616,
+  "source": "data/phase0/ws20_stats.json"
+ },
+ "ws20_stars": {
+  "value": 288315,
+  "source": "ws20_stats.json"
+ },
+ "ws20_le50": {
+  "value": 1513,
+  "source": "ws20_stats.json"
+ },
+ "ws20_le100": {
+  "value": 1671,
+  "source": "ws20_stats.json"
+ },
+ "ws20_eirp_recalc_median_ratio": {
+  "value": 1.0,
+  "source": "ws20_stats.json"
+ },
+ "gcns_n": {
+  "value": 331312,
+  "source": "gcns_stats.json"
+ },
+ "gcns_w3_det": {
+  "value": 209535,
+  "source": "gcns_stats.json"
+ },
+ "gcns_w3w4_snr35": {
+  "value": 40527,
+  "source": "gcns_stats.json"
+ },
+ "ws20_dr2_edr3_match_le100": {
+  "value": 1545,
+  "source": "gcns_stats.json"
+ },
+ "embark_in_gcns": {
+  "value": 14799,
+  "source": "gcns_stats.json"
+ },
+ "embark_n": {
+  "value": 37498,
+  "source": "gcns_stats.json"
+ },
+ "bl_targets_all": {
+  "value": 12087,
+  "source": "bl_log_stats.json"
+ },
+ "bl_hip": {
+  "value": 6219,
+  "source": "bl_log_stats.json"
+ },
+ "bl_hip_dr3": {
+  "value": 5963,
+  "source": "bl_log_stats.json"
+ },
+ "bl_hip_gcns": {
+  "value": 2520,
+  "source": "bl_log_stats.json"
+ },
+ "bl_files": {
+  "value": 95529,
+  "source": "bl_log_stats.json"
+ },
+ "budget_seconds_N331312_M100": {
+  "value": 75.61,
+  "source": "budget_results.json"
+ },
+ "pop_total": {
+  "value": 332571,
+  "source": "ledger_v0_summary.json"
+ },
+ "pop_missing": {
+  "value": 1259,
+  "source": "ledger_v0_summary.json"
+ },
+ "radio_rows_used": {
+  "value": 2259,
+  "source": "ledger_v0_summary.json"
+ },
+ "radio_stars_obs": {
+  "value": 1587,
+  "source": "ledger_v0_summary.json"
+ },
+ "ok_R1": {
+  "value": 1554,
+  "source": "ledger_v0_summary.json"
+ },
+ "insens_R1": {
+  "value": 33,
+  "source": "ledger_v0_summary.json"
+ },
+ "ok_R2": {
+  "value": 1587,
+  "source": "ledger_v0_summary.json"
+ },
+ "insens_R2": {
+  "value": 0,
+  "source": "ledger_v0_summary.json"
+ },
+ "ok_R3": {
+  "value": 159,
+  "source": "ledger_v0_summary.json"
+ },
+ "insens_R3": {
+  "value": 1428,
+  "source": "ledger_v0_summary.json"
+ },
+ "undec_radio": {
+  "value": 330984,
+  "source": "ledger_v0_summary.json"
+ },
+ "undec_radio_rate_pct": {
+  "value": 99.52,
+  "source": "ledger_v0_summary.json"
+ },
+ "w1_ok": {
+  "value": 192363,
+  "source": "ledger_v0_summary.json"
+ },
+ "w1_candidate": {
+  "value": 3615,
+  "source": "ledger_v0_summary.json"
+ },
+ "w1_model_out": {
+  "value": 54498,
+  "source": "ledger_v0_summary.json"
+ },
+ "w1_no_phot": {
+  "value": 82094,
+  "source": "ledger_v0_summary.json"
+ },
+ "undec_w1_rate_pct": {
+  "value": 42.16,
+  "source": "ledger_v0_summary.json"
+ },
+ "rows_with_bl_dates": {
+  "value": 1934,
+  "source": "ledger_v0_summary.json"
+ },
+ "bl_unpublished_gcns": {
+  "value": 1530,
+  "source": "docs/phase1/00-status.md(bl_hip_to_dr3_hgca.json × radio_obs_v0.json)"
+ },
+ "g1_checks": {
+  "value": 6777,
+  "source": "g1_report.json"
+ },
+ "g1_violations": {
+  "value": 0,
+  "source": "g1_report.json"
+ },
+ "mc_N": {
+  "value": 1000,
+  "source": "g1_report.json"
+ },
+ "mc_seed": {
+  "value": 20260823,
+  "source": "g1_report.json"
+ },
+ "mc_width_med_R1_dex": {
+  "value": 0.094,
+  "source": "g1_report.json"
+ },
+ "lowconf_R1": {
+  "value": 0,
+  "source": "g1_report.json"
+ },
+ "lowconf_R2": {
+  "value": 0,
+  "source": "g1_report.json"
+ },
+ "lowconf_R3": {
+  "value": 0,
+  "source": "g1_report.json"
+ },
+ "lowconf_W1_g0.1": {
+  "value": 25822,
+  "source": "g1_report.json"
+ },
+ "lowconf_W1_g0.5": {
+  "value": 8785,
+  "source": "g1_report.json"
+ },
+ "lowconf_W1_g0.9": {
+  "value": 5620,
+  "source": "g1_report.json"
+ },
+ "internal_two_path_R1": {
+  "value": 3.1742442219151457e-07,
+  "source": "g1_report.json"
+ },
+ "g2_radio_maxdlog": {
+  "value": 4.9e-10,
+  "source": "裁定ログ(参謀報告)"
+ },
+ "g2_mir_maxdlog": {
+  "value": 5.2e-07,
+  "source": "裁定ログ(参謀報告)"
+ },
+ "lam_min_R1": {
+  "value": 0.4266,
+  "source": "lambda_ledger.json"
+ },
+ "lam_med_R1": {
+  "value": 0.8,
+  "source": "lambda_ledger.json"
+ },
+ "lam_max_R1": {
+  "value": 0.8596,
+  "source": "lambda_ledger.json"
+ },
+ "post_med_pi0.01_R1": {
+  "value": 0.008,
+  "source": "lambda_ledger.json"
+ },
+ "lam_min_R2": {
+  "value": 0.4266,
+  "source": "lambda_ledger.json"
+ },
+ "lam_med_R2": {
+  "value": 0.8,
+  "source": "lambda_ledger.json"
+ },
+ "lam_max_R2": {
+  "value": 0.8596,
+  "source": "lambda_ledger.json"
+ },
+ "post_med_pi0.01_R2": {
+  "value": 0.008,
+  "source": "lambda_ledger.json"
+ },
+ "lam_min_R3": {
+  "value": 0.9985,
+  "source": "lambda_ledger.json"
+ },
+ "lam_med_R3": {
+  "value": 0.9996,
+  "source": "lambda_ledger.json"
+ },
+ "lam_max_R3": {
+  "value": 0.9998,
+  "source": "lambda_ledger.json"
+ },
+ "post_med_pi0.01_R3": {
+  "value": 0.01,
+  "source": "lambda_ledger.json"
+ },
+ "lam_min_R1_combo": {
+  "value": "GBT L + GBT S + GBT S + Parkes 10-cm(S 帯 2 ポインティング、1 星)",
+  "source": "radio_obs_v0.json(裁定 #6 指摘 2 で検証)"
+ },
+ "w1_lam_lt1": {
+  "value": 191237,
+  "source": "lambda_ledger.json"
+ },
+ "w1_lam_eq1": {
+  "value": 1126,
+  "source": "lambda_ledger.json"
+ },
+ "lowconf_w1_clip_fraction_pct": {
+  "value": 97,
+  "source": "docs/phase2/00-status.md(25,113/25,822)"
+ },
+ "g3ia_GBT L-band": {
+  "value": {
+   "N": 882,
+   "pub": 0.45,
+   "ours": 0.6782,
+   "ratio": 1.507,
+   "fN": 3.97
+  },
+  "source": "g3_report.json"
+ },
+ "g3ia_GBT S-band": {
+  "value": {
+   "N": 1005,
+   "pub": 0.37,
+   "ours": 0.5953,
+   "ratio": 1.609,
+   "fN": 3.72
+  },
+  "source": "g3_report.json"
+ },
+ "g3ia_Parkes 10-cm": {
+  "value": {
+   "N": 189,
+   "pub": 2.0,
+   "ours": 3.1451,
+   "ratio": 1.573,
+   "fN": 3.78
+  },
+  "source": "g3_report.json"
+ },
+ "g3ib_50": {
+  "value": {
+   "N": 1513,
+   "inv": 0.06609,
+   "pub": 0.066,
+   "rel": 0.14,
+   "emax": 8236432924800.88
+  },
+  "source": "g3_report.json"
+ },
+ "g3ib_100": {
+  "value": {
+   "N": 1671,
+   "inv": 0.05984,
+   "pub": 0.061,
+   "rel": -1.89,
+   "emax": 64874403391004.0
+  },
+  "source": "g3_report.json"
+ },
+ "g3ib_200": {
+  "value": {
+   "N": 2576,
+   "inv": 0.03882,
+   "pub": 0.039,
+   "rel": -0.46,
+   "emax": 249474527418150.0
+  },
+  "source": "g3_report.json"
+ },
+ "g3ic_50": {
+  "value": {
+   "joined": 1436,
+   "ok": 1436,
+   "meanlam": 0.767,
+   "post1e-3": 0.0007673396232590528,
+   "post1e-2": 0.007688788653203342
+  },
+  "source": "g3_report.json"
+ },
+ "g3ic_100": {
+  "value": {
+   "joined": 1534,
+   "ok": 1509,
+   "meanlam": 0.769,
+   "post1e-3": 0.0007692627481776011,
+   "post1e-2": 0.007707925628230616
+  },
+  "source": "g3_report.json"
+ },
+ "g3ic_200": {
+  "value": {
+   "joined": 1545,
+   "ok": 1512,
+   "meanlam": 0.769,
+   "post1e-3": 0.0007692776296296298,
+   "post1e-2": 0.007708074035052909
+  },
+  "source": "g3_report.json"
+ },
+ "g3ii_0.1": {
+  "value": {
+   "N_sample": 187274,
+   "N_compat": 3871,
+   "cand": 3304,
+   "undet": 566,
+   "f": 0.02067024787210184,
+   "pub": 0.0066,
+   "ratio": 3.13
+  },
+  "source": "g3_report.json"
+ },
+ "g3ii_0.5": {
+  "value": {
+   "N_sample": 187274,
+   "N_compat": 3312,
+   "cand": 3304,
+   "undet": 7,
+   "f": 0.017685316701731152,
+   "pub": 0.00019,
+   "ratio": 93.08
+  },
+  "source": "g3_report.json"
+ },
+ "g3ii_0.9": {
+  "value": {
+   "N_sample": 187274,
+   "N_compat": 3309,
+   "cand": 3304,
+   "undet": 4,
+   "f": 0.017669297393124513,
+   "pub": 1.8e-05,
+   "ratio": 981.63
+  },
+  "source": "g3_report.json"
+ },
+ "g3ii_pub_N": {
+  "value": 265724,
+  "source": "g3_report.json"
+ },
+ "g3ii_gcns_le100": {
+  "value": 300567,
+  "source": "g3_report.json"
+ },
+ "g3ii_ms_all": {
+  "value": 276814,
+  "source": "g3_report.json"
+ },
+ "g3ii_B_0.1": {
+  "value": {
+   "N": 1012,
+   "ratio": 0.82
+  },
+  "source": "g3_report.json"
+ },
+ "g3ii_B_0.5": {
+  "value": {
+   "N": 6,
+   "ratio": 0.17
+  },
+  "source": "g3_report.json"
+ },
+ "g3ii_B_0.9": {
+  "value": {
+   "N": 1,
+   "ratio": 0.3
+  },
+  "source": "g3_report.json"
+ },
+ "g3iii_lam_marg_min": {
+  "value": 0.999085,
+  "source": "g3_report.json"
+ },
+ "g3iii_lam_upper_min": {
+  "value": 0.99479,
+  "source": "g3_report.json"
+ },
+ "g3iii_extreme": {
+  "value": 0.0851,
+  "source": "g3_report.json"
+ },
+ "g3iii_d_all3": {
+  "value": [
+   1.3,
+   4.8
+  ],
+  "source": "g3_report.json"
+ },
+ "embark_join_rate_pct": {
+  "value": 4.45,
+  "source": "atlas_v1_summary.json"
+ },
+ "embark_outside": {
+  "value": 22699,
+  "source": "atlas_v1_summary.json"
+ },
+ "reach_undec": {
+  "value": 317772,
+  "source": "atlas_v1_summary.json"
+ },
+ "reach_undec_rate_pct": {
+  "value": 95.55,
+  "source": "atlas_v1_summary.json"
+ },
+ "settle_undec": {
+  "value": 8261,
+  "source": "atlas_v1_summary.json"
+ },
+ "S1_narrow_FGK_MS": {
+  "value": 43119,
+  "source": "atlas_v1_summary.json"
+ },
+ "S2_all_MS": {
+  "value": 283526,
+  "source": "atlas_v1_summary.json"
+ },
+ "nea_hosts": {
+  "value": 1037,
+  "source": "atlas_v1_summary.json"
+ },
+ "nea_planets": {
+  "value": 1545,
+  "source": "atlas_v1_summary.json"
+ },
+ "hwc_rows_joined": {
+  "value": 45,
+  "source": "atlas_v1_summary.json"
+ },
+ "hwc_rows_total": {
+  "value": 70,
+  "source": "atlas_v1_summary.json"
+ },
+ "hwc_hosts": {
+  "value": 35,
+  "source": "atlas_v1_summary.json"
+ },
+ "cross_flyby_R1": {
+  "value": 815,
+  "source": "atlas_v1_summary.json"
+ },
+ "cross_flyby_R3": {
+  "value": 108,
+  "source": "atlas_v1_summary.json"
+ },
+ "cross_rdv_R1": {
+  "value": 311,
+  "source": "atlas_v1_summary.json"
+ },
+ "cross_rdv_any": {
+  "value": 2339,
+  "source": "atlas_v1_summary.json"
+ },
+ "cross_R1_not_in_embark": {
+  "value": 739,
+  "source": "atlas_v1_summary.json"
+ },
+ "cross_R1_S1": {
+  "value": 633,
+  "source": "docs/phase4/00-status.md"
+ },
+ "cross_R1_S2": {
+  "value": 1406,
+  "source": "docs/phase4/00-status.md"
+ },
+ "cross_R1_nea": {
+  "value": 136,
+  "source": "docs/phase4/00-status.md"
+ },
+ "prereg_a_commit": {
+  "value": "10a01e710854b69344651ed6ba016ab303c9d124",
+  "source": "裁定ログ"
+ },
+ "prereg_b_doi": {
+  "value": "10.5281/zenodo.22067884",
+  "source": "裁定ログ"
+ },
+ "frozen_sha256": {
+  "value": "88eb780959bba5ae841e944cdcf5d7e64242b8ca964a334f18c785aab1ac56fa",
+  "source": "裁定ログ"
+ },
+ "nu_window_GHz": {
+  "value": [
+   1.1,
+   3.45
+  ],
+  "source": "epsilon.py"
+ },
+ "nu_cells": {
+  "value": 9,
+  "source": "epsilon.py"
+ },
+ "f_pipe": {
+  "value": 0.5,
+  "source": "epsilon.py"
+ },
+ "eirp50_gbt": {
+  "value": 2100000000000.0,
+  "source": "epsilon.py"
+ },
+ "eirp50_parkes": {
+  "value": 9100000000000.0,
+  "source": "epsilon.py"
+ },
+ "coverage_L_GHz": {
+  "value": 0.66,
+  "source": "epsilon.py"
+ },
+ "coverage_S_GHz": {
+  "value": 0.94,
+  "source": "epsilon.py"
+ },
+ "coverage_P_GHz": {
+  "value": 0.85,
+  "source": "epsilon.py"
+ },
+ "coverage_union_GHz": {
+  "value": 2.15,
+  "source": "epsilon.py"
+ },
+ "heph_pub_f": {
+  "value": [
+   0.0066,
+   0.00019,
+   1.8e-05
+  ],
+  "source": "Suazo+22 Table 1"
+ }
+}

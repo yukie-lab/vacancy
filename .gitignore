@@ -9,3 +9,10 @@ data/phase2/lambda_ledger.json
 data/phase2/mc_quantiles.npz
 data/phase2/aggregate_run.log
 data/phase4/atlas_v1.json
+data/release/*.json
+data/release/*.npz
+data/release/inputs/
+!data/release/MANIFEST.json
+!data/release/*_summary.json
+!data/release/g1_report.json
+!data/release/g3_report.json
