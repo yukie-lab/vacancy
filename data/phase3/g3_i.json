@@ -1,0 +1,167 @@
+{
+ "item": "G3(i)",
+ "frozen_doi": "10.5281/zenodo.22067884",
+ "a_price_report": {
+  "formula": "f = [1 − 0.05^(1/N)] / P, P = f_pipe = 0.5(二項厳密 95% 上限)",
+  "rows": [
+   {
+    "band": "GBT L-band",
+    "N": 882,
+    "published_pct": 0.45,
+    "ours_binomial95_pct": 0.6782,
+    "ratio_ours_over_pub": 1.507,
+    "ref_4_over_N_pct": 0.4535,
+    "ref_poisson95_pct": 0.6793,
+    "implied_fN_from_pub": 3.97
+   },
+   {
+    "band": "GBT S-band",
+    "N": 1005,
+    "published_pct": 0.37,
+    "ours_binomial95_pct": 0.5953,
+    "ratio_ours_over_pub": 1.609,
+    "ref_4_over_N_pct": 0.398,
+    "ref_poisson95_pct": 0.5962,
+    "implied_fN_from_pub": 3.72
+   },
+   {
+    "band": "Parkes 10-cm",
+    "N": 189,
+    "published_pct": 2.0,
+    "ours_binomial95_pct": 3.1451,
+    "ratio_ours_over_pub": 1.573,
+    "ref_4_over_N_pct": 2.1164,
+    "ref_poisson95_pct": 3.1701,
+    "implied_fN_from_pub": 3.78
+   }
+  ],
+  "verdict": "報告義務(合否判定なし)",
+  "footnote": "原典 Price+20 §5.3 の算式は本文に明記されていない(P = 0.5、各星を試行、95% 信頼のみ)。公刊三値から逆算した f·N = 3.97 / 3.74 / 3.78 はばらつき、単一の標準式(4/N、ポアソン 2.996/(0.5N)、二項厳密)では三値を同時に再現できない(参謀照合済み、裁定 #2)。"
+ },
+ "b_ws20_hardgate": {
+  "distance_basis": "WS20 rest(DR2, Bailer-Jones+18)のみ。EDR3/GCNS 不使用",
+  "rows": [
+   {
+    "shell_pc": 50,
+    "N_rest_only": 1513,
+    "N_with_eirp_cut": 1513,
+    "eirp_cut_changes_count": false,
+    "max_eirp_min_in_shell_W": 8236432924800.88,
+    "quoted_eirp_W": 10000000000000.0,
+    "inv_N_pct": 0.06609,
+    "published_pct": 0.066,
+    "rel_diff_pct": 0.14,
+    "N_implied_by_published": 1515.2,
+    "rule": "exact_N_1513",
+    "pass": true
+   },
+   {
+    "shell_pc": 100,
+    "N_rest_only": 1671,
+    "N_with_eirp_cut": 1671,
+    "eirp_cut_changes_count": false,
+    "max_eirp_min_in_shell_W": 64874403391004.0,
+    "quoted_eirp_W": 65000000000000.0,
+    "inv_N_pct": 0.05984,
+    "published_pct": 0.061,
+    "rel_diff_pct": -1.89,
+    "N_implied_by_published": 1639.3,
+    "rule": "pm1pct",
+    "pass": false
+   },
+   {
+    "shell_pc": 200,
+    "N_rest_only": 2576,
+    "N_with_eirp_cut": 2576,
+    "eirp_cut_changes_count": false,
+    "max_eirp_min_in_shell_W": 249474527418150.0,
+    "quoted_eirp_W": 250000000000000.0,
+    "inv_N_pct": 0.03882,
+    "published_pct": 0.039,
+    "rel_diff_pct": -0.46,
+    "N_implied_by_published": 2564.1,
+    "rule": "pm1pct",
+    "pass": true
+   }
+  ],
+  "all_pass": false
+ },
+ "c_bayes_marginalization": {
+  "note": "別量: 1/N(頻度論・不検出試行の計数)と、星単位の事後 P(占有|D,T,π) の殻平均。一致を強要しない(第7条 G3(i))。ok 以外(感度外)の星は除外して平均",
+  "rows": [
+   {
+    "shell_pc": 50,
+    "band": "R1",
+    "N_shell_ws20": 1513,
+    "N_joined_edr3_ledger": 1436,
+    "N_status_ok": 1436,
+    "mean_lambda_ok": 0.7671690718628134,
+    "mean_posterior_pi0.001": 0.0007673396232590528,
+    "mean_posterior_pi0.01": 0.007688788653203342,
+    "mean_posterior_pi0.1": 0.0784672903718663,
+    "published_1_over_N_pct": 0.066
+   },
+   {
+    "shell_pc": 50,
+    "band": "R2",
+    "N_shell_ws20": 1513,
+    "N_joined_edr3_ledger": 1436,
+    "N_status_ok": 1436,
+    "mean_lambda_ok": 0.7671690718628134,
+    "mean_posterior_pi0.001": 0.0007673396232590528,
+    "mean_posterior_pi0.01": 0.007688788653203342,
+    "mean_posterior_pi0.1": 0.0784672903718663,
+    "published_1_over_N_pct": 0.066
+   },
+   {
+    "shell_pc": 100,
+    "band": "R1",
+    "N_shell_ws20": 1671,
+    "N_joined_edr3_ledger": 1534,
+    "N_status_ok": 1509,
+    "mean_lambda_ok": 0.7690932419383698,
+    "mean_posterior_pi0.001": 0.0007692627481776011,
+    "mean_posterior_pi0.01": 0.007707925628230616,
+    "mean_posterior_pi0.1": 0.07864871182968852,
+    "published_1_over_N_pct": 0.061
+   },
+   {
+    "shell_pc": 100,
+    "band": "R2",
+    "N_shell_ws20": 1671,
+    "N_joined_edr3_ledger": 1534,
+    "N_status_ok": 1534,
+    "mean_lambda_ok": 0.7692155121910039,
+    "mean_posterior_pi0.001": 0.0007693849348109518,
+    "mean_posterior_pi0.01": 0.007709139976531942,
+    "mean_posterior_pi0.1": 0.07866007806453715,
+    "published_1_over_N_pct": 0.061
+   },
+   {
+    "shell_pc": 200,
+    "band": "R1",
+    "N_shell_ws20": 2576,
+    "N_joined_edr3_ledger": 1545,
+    "N_status_ok": 1512,
+    "mean_lambda_ok": 0.7691081278564815,
+    "mean_posterior_pi0.001": 0.0007692776296296298,
+    "mean_posterior_pi0.01": 0.007708074035052909,
+    "mean_posterior_pi0.1": 0.07865015041997354,
+    "published_1_over_N_pct": 0.039
+   },
+   {
+    "shell_pc": 200,
+    "band": "R2",
+    "N_shell_ws20": 2576,
+    "N_joined_edr3_ledger": 1545,
+    "N_status_ok": 1545,
+    "mean_lambda_ok": 0.769375473358576,
+    "mean_posterior_pi0.001": 0.0007695448200647248,
+    "mean_posterior_pi0.01": 0.007710731968932039,
+    "mean_posterior_pi0.1": 0.07867526666860841,
+    "published_1_over_N_pct": 0.039
+   }
+  ]
+ },
+ "script_sha256": "91a51af3af252801f08562d63a77caefc6629bc9138ea2b891955532556c1536"
+}
