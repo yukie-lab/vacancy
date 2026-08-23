@@ -5,3 +5,6 @@ __pycache__/
 data/phase0/*.npz
 data/phase1/ledger_v0.json
 data/phase2/g2_export_v0.json
+data/phase2/lambda_ledger.json
+data/phase2/mc_quantiles.npz
+data/phase2/aggregate_run.log

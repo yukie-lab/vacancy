@@ -1,0 +1,89 @@
+{
+ "generated": "2026-08-23T20:55:21",
+ "frozen_preregistration_doi": "10.5281/zenodo.22067884",
+ "eps_formula_version": "eps-v0.2 (2026-08-23, 憲法 v0.3 / 裁定 #1・#2: f_ill を星単位潜在変数として周辺化、γ=0.01 情報列)",
+ "g2_export_sha256": "56505529498429b313a3a55d2a46e62ba5b5aa7846fbcaf9550f47fd5a6d762a",
+ "pi_grid": {
+  "min": 1e-06,
+  "max": 0.5,
+  "n": 51,
+  "representative": [
+   0.001,
+   0.01,
+   0.1
+  ],
+  "curve": "P(占有|D,T,π) = expit(logit π + ln Λ)"
+ },
+ "internal_two_path_max_abs_dlog10": {
+  "R1": 3.1742442219151457e-07,
+  "R2": 3.1742442219151457e-07,
+  "R3": 2.010027036849528e-10,
+  "W1_g0.1": 2.3372235258278806e-08,
+  "W1_g0.5": 2.3372235258278806e-08,
+  "W1_g0.9": 2.1440228287206153e-08
+ },
+ "g1": {
+  "radio_checks": 6777,
+  "radio_violations": 0,
+  "violations": [],
+  "tolerance": 1e-12,
+  "mir_note": "surv = (1−θ3)(1−θ4) は θ の追加に対し構造的に非増加(単体テスト test_merge_mir / test_gamma_monotone)",
+  "elapsed_s": 0.0
+ },
+ "mc": {
+  "N": 1000,
+  "seed": 20260823,
+  "low_confidence_dex": 0.5,
+  "low_confidence_counts": {
+   "R1": 0,
+   "R2": 0,
+   "R3": 0,
+   "W1_g0.1": 25822,
+   "W1_g0.5": 8785,
+   "W1_g0.9": 5620
+  },
+  "evaluated_counts": {
+   "R1": 1587,
+   "R2": 1587,
+   "R3": 1587,
+   "W1_g0.1": 192363,
+   "W1_g0.5": 192363,
+   "W1_g0.9": 192363
+  },
+  "width_median_dex": {
+   "R1": 0.09367345324700663,
+   "R2": 0.09374004628631183,
+   "R3": 0.0,
+   "W1_g0.1": 0.0,
+   "W1_g0.5": 0.0,
+   "W1_g0.9": 0.0
+  }
+ },
+ "undecidable_rates_recheck": {
+  "radio": 0.9952280866341323,
+  "W1": 0.4215851652729793
+ },
+ "status_counts": {
+  "R1": {
+   "observed_insensitive": 33,
+   "ok": 1554,
+   "undecidable_not_in_field": 330984
+  },
+  "R2": {
+   "ok": 1587,
+   "undecidable_not_in_field": 330984
+  },
+  "R3": {
+   "observed_insensitive": 1428,
+   "ok": 159,
+   "undecidable_not_in_field": 330984
+  },
+  "W1": {
+   "observed_insensitive": 1,
+   "ok": 192363,
+   "undecidable_candidate": 3615,
+   "undecidable_model_out": 54498,
+   "undecidable_no_phot": 82094
+  }
+ }
+}
