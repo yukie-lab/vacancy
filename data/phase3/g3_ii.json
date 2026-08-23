@@ -1,0 +1,119 @@
+{
+ "item": "G3(ii)",
+ "frozen_doi": "10.5281/zenodo.22067884",
+ "published": {
+  "N": 265724,
+  "f": {
+   "0.1": 0.0066,
+   "0.5": 0.00019,
+   "0.9": 1.8e-05
+  },
+  "T_DS_K": 300,
+  "basis": "Gaia DR2 + AllWISE(Suazo+22 Table 1, 100 pc)"
+ },
+ "rows": [
+  {
+   "gamma": 0.1,
+   "N_sample": 187274,
+   "N_compatible": 3871,
+   "N_compatible_candidates": 3304,
+   "N_compatible_undetected_ok": 566,
+   "N_compatible_insensitive": 1,
+   "N_excluded": 183403,
+   "f_ours": 0.02067024787210184,
+   "f_published": 0.0066,
+   "ratio": 3.1318557381972485,
+   "pass": false
+  },
+  {
+   "gamma": 0.5,
+   "N_sample": 187274,
+   "N_compatible": 3312,
+   "N_compatible_candidates": 3304,
+   "N_compatible_undetected_ok": 7,
+   "N_compatible_insensitive": 1,
+   "N_excluded": 183962,
+   "f_ours": 0.017685316701731152,
+   "f_published": 0.00019,
+   "ratio": 93.08061421963764,
+   "pass": false
+  },
+  {
+   "gamma": 0.9,
+   "N_sample": 187274,
+   "N_compatible": 3309,
+   "N_compatible_candidates": 3304,
+   "N_compatible_undetected_ok": 4,
+   "N_compatible_insensitive": 1,
+   "N_excluded": 183965,
+   "f_ours": 0.017669297393124513,
+   "f_published": 1.8e-05,
+   "ratio": 981.6276329513618,
+   "pass": false
+  }
+ ],
+ "all_pass": false,
+ "factors": {
+  "population_basis": {
+   "ours": "GCNS EDR3 ≤100 pc(dist_50)、主系列選択 式8–9 + RUWE<1.4、WISE 測光あり",
+   "published": "Gaia DR2 ≤100 pc、主系列選択 式8–9 + 高 AEN 除外、Gaia–AllWISE best neighbour"
+  },
+  "counts": {
+   "gcns_total": 331312,
+   "gcns_le100pc": 300567,
+   "ms_selected_with_wise_le100": 187274,
+   "ms_selected_all_incl_no_wise": 276814,
+   "published_N": 265724,
+   "status_in_sample": {
+    "observed_insensitive": 1,
+    "ok": 183969,
+    "undecidable_candidate": 3304
+   }
+  },
+  "detection_definition": {
+   "ours": "G−W3 / G−W4 の主系列軌跡からの残差 ≥ k σ_tot(k=3、σ_tot² = σ_phot² + σ_locus²)、上限星は F_DS ≥ 3.5σ かつ色条件。W3 または W4 で検出 → 排除",
+   "published": "G−W1..W4 vs M_G の CMD で DS モデル(T, γ)の占める領域に観測点が入るか(4 図全てで)。非検出は S/N<2 上限で判定。RMSE 適合は Hephaistos II"
+  },
+  "T_DS_cell_used_K": [
+   291.61101330837073,
+   321.40958497160386
+  ],
+  "note_T": "本作は対数格子 20 区間。300 K を含む区間の生存指標を用いる(凍結格子を変えない)",
+  "candidate_definition": "本作の『検出候補』(既超過 ≥3σ)は Hephaistos の『DS 領域内の星』に対応するが、領域定義(kσ 残差 vs CMD 境界)が異なる"
+ },
+ "script_sha256": "bbb2fb24c541865b63d4d39a7cdc39baec49f6edd1844ef44602155ed3d29db8",
+ "diagnostic_not_adopted": {
+  "definition_B": "観測残差が (γ, 300 K) モデル残差と k σ_tot 以内で整合(W3・W4 とも)、上限星は DS 流束 < 3.5σ なら整合。凍結成分(k=3, σ_tot, モデル, 軌跡)のみ使用。採用していない(付議材料)",
+  "rows": [
+   {
+    "gamma": 0.1,
+    "N_sample": 187274,
+    "N_compatible": 1012,
+    "f_ours": 0.0054,
+    "f_published": 0.0066,
+    "ratio": 0.82,
+    "in_0.3_3": true
+   },
+   {
+    "gamma": 0.5,
+    "N_sample": 187274,
+    "N_compatible": 6,
+    "f_ours": 3.2e-05,
+    "f_published": 0.00019,
+    "ratio": 0.17,
+    "in_0.3_3": false
+   },
+   {
+    "gamma": 0.9,
+    "N_sample": 187274,
+    "N_compatible": 1,
+    "f_ours": 5.34e-06,
+    "f_published": 1.8e-05,
+    "ratio": 0.3,
+    "in_0.3_3": false,
+    "note": "0.2966、境界の直下"
+   }
+  ]
+ },
+ "stop_and_refer": "定義 A(検出候補を全 γ で適合扱い)は γ に依存しない候補クラスのため γ=0.5/0.9 で比 93/982。定義 B(モデル整合)でも γ=0.5 で 0.17。数字合わせをせず停止・付議"
+}
