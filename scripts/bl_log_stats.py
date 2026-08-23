@@ -49,7 +49,7 @@ gst = json.load(open(os.path.join(HERE, "..", "data", "phase0", "gcns_stats.json
 res = {"generated": datetime.date.today().isoformat(),
        "denominators": {"N_all_targets": n_all, "N_selected_for_fetch": n_sel, "N_HIP_names": n_hip_names,
                         "N_HIP_to_DR3_HGCA": hipmap["n_matched"], "N_HIP_in_GCNS": gst["bl_hip_in_gcns"]["in_gcns_100pc"],
-                        "N_HIP_fetched": len(hip), "N_all_fetched": len(files) - (1 if os.path.exists(os.path.join(RAW, "_failed.txt")) else 0),
+                        "N_HIP_fetched": len(hip), "N_all_fetched": len(files),
                         "fetch_complete": len(hip) == n_hip_names},
        "n_hip_targets_fetched": len(hip), "n_files_total": n_files, "status": dict(st),
        "targets_by_nominal_band": dict(bands), "files_by_telescope": dict(tel), "files_by_year": dict(sorted(years.items())), "n_failed": len(failed)}

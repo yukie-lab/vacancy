@@ -6,39 +6,39 @@
   "N_HIP_names": 6219,
   "N_HIP_to_DR3_HGCA": 5963,
   "N_HIP_in_GCNS": 2520,
-  "N_HIP_fetched": 1526,
-  "N_all_fetched": 1567,
-  "fetch_complete": false
+  "N_HIP_fetched": 6219,
+  "N_all_fetched": 6309,
+  "fetch_complete": true
  },
- "n_hip_targets_fetched": 1526,
- "n_files_total": 26775,
+ "n_hip_targets_fetched": 6219,
+ "n_files_total": 95529,
  "status": {
-  "has_files": 1526,
-  "has_mjd": 1526,
-  "has_freq": 1526,
-  "has_radec": 1526
+  "has_files": 6219,
+  "has_mjd": 6219,
+  "has_freq": 6219,
+  "has_radec": 6219
  },
  "targets_by_nominal_band": {
-  "GBT L(名目)": 913,
-  "GBT S(名目)": 1206,
-  "Parkes 10-cm(名目)": 18,
-  "Parkes その他サブバンド": 12,
-  "GBT C": 89,
-  "GBT X": 97,
-  "GBT その他サブバンド": 91
+  "GBT L(名目)": 3610,
+  "GBT S(名目)": 4889,
+  "Parkes その他サブバンド": 24,
+  "Parkes 10-cm(名目)": 42,
+  "GBT C": 519,
+  "GBT X": 554,
+  "GBT その他サブバンド": 437
  },
  "files_by_telescope": {
-  "GBT": 17233,
-  "Parkes": 3308
+  "GBT": 71115,
+  "Parkes": 7975
  },
  "files_by_year": {
-  "2016": 8631,
-  "2017": 5263,
-  "2018": 942,
-  "2019": 3750,
-  "2020": 187,
-  "2021": 1496,
-  "2022": 272
+  "2016": 29976,
+  "2017": 23515,
+  "2018": 2812,
+  "2019": 14705,
+  "2020": 2161,
+  "2021": 4080,
+  "2022": 1841
  },
  "n_failed": 0
 }
