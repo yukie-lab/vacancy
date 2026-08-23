@@ -1,0 +1,469 @@
+{
+ "item": "G3(iii)",
+ "frozen_doi": "10.5281/zenodo.22067884",
+ "band": "T-R3",
+ "virtual_row": "太陽系、3 受信帯(GBT L, GBT S, Parkes 10-cm)、軸上、各 1 観測行、EIRP_peak = 1e11 W",
+ "criteria": {
+  "lambda_f_ill_upper_1e-2": ">= 0.99",
+  "lambda_marginalized": ">= 0.999"
+ },
+ "rows": [
+  {
+   "d_pc": 1.3,
+   "eirp_min_W": {
+    "GBT L-band": 1419600000.0000002,
+    "GBT S-band": 1419600000.0000002,
+    "Parkes 10-cm": 6151600000.000002
+   },
+   "theta_sens": {
+    "GBT L-band": 1.0,
+    "GBT S-band": 1.0,
+    "Parkes 10-cm": 1.0
+   },
+   "lambda_marginalized": 0.9990846762656549,
+   "lambda_f_ill_1e-2": 0.994790425531915,
+   "lambda_extreme_fill1_fpipe1": 0.08510638297872353,
+   "posterior_pi0.01_marg": 0.009990938212085286,
+   "pass": true
+  },
+  {
+   "d_pc": 1.8,
+   "eirp_min_W": {
+    "GBT L-band": 2721600000.0000005,
+    "GBT S-band": 2721600000.0000005,
+    "Parkes 10-cm": 11793600000.000002
+   },
+   "theta_sens": {
+    "GBT L-band": 1.0,
+    "GBT S-band": 1.0,
+    "Parkes 10-cm": 1.0
+   },
+   "lambda_marginalized": 0.9990846762656549,
+   "lambda_f_ill_1e-2": 0.994790425531915,
+   "lambda_extreme_fill1_fpipe1": 0.08510638297872353,
+   "posterior_pi0.01_marg": 0.009990938212085286,
+   "pass": true
+  },
+  {
+   "d_pc": 2.0,
+   "eirp_min_W": {
+    "GBT L-band": 3360000000.0,
+    "GBT S-band": 3360000000.0,
+    "Parkes 10-cm": 14560000000.0
+   },
+   "theta_sens": {
+    "GBT L-band": 1.0,
+    "GBT S-band": 1.0,
+    "Parkes 10-cm": 1.0
+   },
+   "lambda_marginalized": 0.9990846762656549,
+   "lambda_f_ill_1e-2": 0.994790425531915,
+   "lambda_extreme_fill1_fpipe1": 0.08510638297872353,
+   "posterior_pi0.01_marg": 0.009990938212085286,
+   "pass": true
+  },
+  {
+   "d_pc": 2.3,
+   "eirp_min_W": {
+    "GBT L-band": 4443600000.0,
+    "GBT S-band": 4443600000.0,
+    "Parkes 10-cm": 19255600000.0
+   },
+   "theta_sens": {
+    "GBT L-band": 1.0,
+    "GBT S-band": 1.0,
+    "Parkes 10-cm": 1.0
+   },
+   "lambda_marginalized": 0.9990846762656549,
+   "lambda_f_ill_1e-2": 0.994790425531915,
+   "lambda_extreme_fill1_fpipe1": 0.08510638297872353,
+   "posterior_pi0.01_marg": 0.009990938212085286,
+   "pass": true
+  },
+  {
+   "d_pc": 2.8,
+   "eirp_min_W": {
+    "GBT L-band": 6585599999.999999,
+    "GBT S-band": 6585599999.999999,
+    "Parkes 10-cm": 28537599999.999996
+   },
+   "theta_sens": {
+    "GBT L-band": 1.0,
+    "GBT S-band": 1.0,
+    "Parkes 10-cm": 1.0
+   },
+   "lambda_marginalized": 0.9990846762656549,
+   "lambda_f_ill_1e-2": 0.994790425531915,
+   "lambda_extreme_fill1_fpipe1": 0.08510638297872353,
+   "posterior_pi0.01_marg": 0.009990938212085286,
+   "pass": true
+  },
+  {
+   "d_pc": 3.3,
+   "eirp_min_W": {
+    "GBT L-band": 9147600000.000002,
+    "GBT S-band": 9147600000.000002,
+    "Parkes 10-cm": 39639600000.00001
+   },
+   "theta_sens": {
+    "GBT L-band": 1.0,
+    "GBT S-band": 1.0,
+    "Parkes 10-cm": 1.0
+   },
+   "lambda_marginalized": 0.9990846762656549,
+   "lambda_f_ill_1e-2": 0.994790425531915,
+   "lambda_extreme_fill1_fpipe1": 0.08510638297872353,
+   "posterior_pi0.01_marg": 0.009990938212085286,
+   "pass": true
+  },
+  {
+   "d_pc": 3.8,
+   "eirp_min_W": {
+    "GBT L-band": 12129600000.0,
+    "GBT S-band": 12129600000.0,
+    "Parkes 10-cm": 52561600000.0
+   },
+   "theta_sens": {
+    "GBT L-band": 1.0,
+    "GBT S-band": 1.0,
+    "Parkes 10-cm": 1.0
+   },
+   "lambda_marginalized": 0.9990846762656549,
+   "lambda_f_ill_1e-2": 0.994790425531915,
+   "lambda_extreme_fill1_fpipe1": 0.08510638297872353,
+   "posterior_pi0.01_marg": 0.009990938212085286,
+   "pass": true
+  },
+  {
+   "d_pc": 4.0,
+   "eirp_min_W": {
+    "GBT L-band": 13440000000.0,
+    "GBT S-band": 13440000000.0,
+    "Parkes 10-cm": 58240000000.0
+   },
+   "theta_sens": {
+    "GBT L-band": 1.0,
+    "GBT S-band": 1.0,
+    "Parkes 10-cm": 1.0
+   },
+   "lambda_marginalized": 0.9990846762656549,
+   "lambda_f_ill_1e-2": 0.994790425531915,
+   "lambda_extreme_fill1_fpipe1": 0.08510638297872353,
+   "posterior_pi0.01_marg": 0.009990938212085286,
+   "pass": true
+  },
+  {
+   "d_pc": 4.3,
+   "eirp_min_W": {
+    "GBT L-band": 15531599999.999998,
+    "GBT S-band": 15531599999.999998,
+    "Parkes 10-cm": 67303599999.99999
+   },
+   "theta_sens": {
+    "GBT L-band": 1.0,
+    "GBT S-band": 1.0,
+    "Parkes 10-cm": 1.0
+   },
+   "lambda_marginalized": 0.9990846762656549,
+   "lambda_f_ill_1e-2": 0.994790425531915,
+   "lambda_extreme_fill1_fpipe1": 0.08510638297872353,
+   "posterior_pi0.01_marg": 0.009990938212085286,
+   "pass": true
+  },
+  {
+   "d_pc": 4.8,
+   "eirp_min_W": {
+    "GBT L-band": 19353600000.0,
+    "GBT S-band": 19353600000.0,
+    "Parkes 10-cm": 83865600000.0
+   },
+   "theta_sens": {
+    "GBT L-band": 1.0,
+    "GBT S-band": 1.0,
+    "Parkes 10-cm": 1.0
+   },
+   "lambda_marginalized": 0.9990846762656549,
+   "lambda_f_ill_1e-2": 0.994790425531915,
+   "lambda_extreme_fill1_fpipe1": 0.08510638297872353,
+   "posterior_pi0.01_marg": 0.009990938212085286,
+   "pass": true
+  },
+  {
+   "d_pc": 5.3,
+   "eirp_min_W": {
+    "GBT L-band": 23595600000.0,
+    "GBT S-band": 23595600000.0,
+    "Parkes 10-cm": 102247600000.0
+   },
+   "theta_sens": {
+    "GBT L-band": 1.0,
+    "GBT S-band": 1.0,
+    "Parkes 10-cm": 0.0
+   },
+   "lambda_marginalized": 0.999402122767301,
+   "lambda_f_ill_1e-2": 0.9965968085106384,
+   "lambda_extreme_fill1_fpipe1": 0.36170212765957466,
+   "posterior_pi0.01_marg": 0.009994080980007806,
+   "pass": true
+  },
+  {
+   "d_pc": 5.8,
+   "eirp_min_W": {
+    "GBT L-band": 28257599999.999996,
+    "GBT S-band": 28257599999.999996,
+    "Parkes 10-cm": 122449599999.99997
+   },
+   "theta_sens": {
+    "GBT L-band": 1.0,
+    "GBT S-band": 1.0,
+    "Parkes 10-cm": 0.0
+   },
+   "lambda_marginalized": 0.999402122767301,
+   "lambda_f_ill_1e-2": 0.9965968085106384,
+   "lambda_extreme_fill1_fpipe1": 0.36170212765957466,
+   "posterior_pi0.01_marg": 0.009994080980007806,
+   "pass": true
+  },
+  {
+   "d_pc": 6.0,
+   "eirp_min_W": {
+    "GBT L-band": 30240000000.0,
+    "GBT S-band": 30240000000.0,
+    "Parkes 10-cm": 131040000000.0
+   },
+   "theta_sens": {
+    "GBT L-band": 1.0,
+    "GBT S-band": 1.0,
+    "Parkes 10-cm": 0.0
+   },
+   "lambda_marginalized": 0.999402122767301,
+   "lambda_f_ill_1e-2": 0.9965968085106384,
+   "lambda_extreme_fill1_fpipe1": 0.36170212765957466,
+   "posterior_pi0.01_marg": 0.009994080980007806,
+   "pass": true
+  },
+  {
+   "d_pc": 6.3,
+   "eirp_min_W": {
+    "GBT L-band": 33339600000.000004,
+    "GBT S-band": 33339600000.000004,
+    "Parkes 10-cm": 144471600000.0
+   },
+   "theta_sens": {
+    "GBT L-band": 1.0,
+    "GBT S-band": 1.0,
+    "Parkes 10-cm": 0.0
+   },
+   "lambda_marginalized": 0.999402122767301,
+   "lambda_f_ill_1e-2": 0.9965968085106384,
+   "lambda_extreme_fill1_fpipe1": 0.36170212765957466,
+   "posterior_pi0.01_marg": 0.009994080980007806,
+   "pass": true
+  },
+  {
+   "d_pc": 6.8,
+   "eirp_min_W": {
+    "GBT L-band": 38841600000.00001,
+    "GBT S-band": 38841600000.00001,
+    "Parkes 10-cm": 168313600000.00003
+   },
+   "theta_sens": {
+    "GBT L-band": 1.0,
+    "GBT S-band": 1.0,
+    "Parkes 10-cm": 0.0
+   },
+   "lambda_marginalized": 0.999402122767301,
+   "lambda_f_ill_1e-2": 0.9965968085106384,
+   "lambda_extreme_fill1_fpipe1": 0.36170212765957466,
+   "posterior_pi0.01_marg": 0.009994080980007806,
+   "pass": true
+  },
+  {
+   "d_pc": 7.3,
+   "eirp_min_W": {
+    "GBT L-band": 44763599999.99999,
+    "GBT S-band": 44763599999.99999,
+    "Parkes 10-cm": 193975599999.99997
+   },
+   "theta_sens": {
+    "GBT L-band": 1.0,
+    "GBT S-band": 1.0,
+    "Parkes 10-cm": 0.0
+   },
+   "lambda_marginalized": 0.999402122767301,
+   "lambda_f_ill_1e-2": 0.9965968085106384,
+   "lambda_extreme_fill1_fpipe1": 0.36170212765957466,
+   "posterior_pi0.01_marg": 0.009994080980007806,
+   "pass": true
+  },
+  {
+   "d_pc": 7.8,
+   "eirp_min_W": {
+    "GBT L-band": 51105600000.0,
+    "GBT S-band": 51105600000.0,
+    "Parkes 10-cm": 221457600000.0
+   },
+   "theta_sens": {
+    "GBT L-band": 1.0,
+    "GBT S-band": 1.0,
+    "Parkes 10-cm": 0.0
+   },
+   "lambda_marginalized": 0.999402122767301,
+   "lambda_f_ill_1e-2": 0.9965968085106384,
+   "lambda_extreme_fill1_fpipe1": 0.36170212765957466,
+   "posterior_pi0.01_marg": 0.009994080980007806,
+   "pass": true
+  },
+  {
+   "d_pc": 8.0,
+   "eirp_min_W": {
+    "GBT L-band": 53760000000.0,
+    "GBT S-band": 53760000000.0,
+    "Parkes 10-cm": 232960000000.0
+   },
+   "theta_sens": {
+    "GBT L-band": 1.0,
+    "GBT S-band": 1.0,
+    "Parkes 10-cm": 0.0
+   },
+   "lambda_marginalized": 0.999402122767301,
+   "lambda_f_ill_1e-2": 0.9965968085106384,
+   "lambda_extreme_fill1_fpipe1": 0.36170212765957466,
+   "posterior_pi0.01_marg": 0.009994080980007806,
+   "pass": true
+  },
+  {
+   "d_pc": 8.3,
+   "eirp_min_W": {
+    "GBT L-band": 57867600000.00001,
+    "GBT S-band": 57867600000.00001,
+    "Parkes 10-cm": 250759600000.00003
+   },
+   "theta_sens": {
+    "GBT L-band": 1.0,
+    "GBT S-band": 1.0,
+    "Parkes 10-cm": 0.0
+   },
+   "lambda_marginalized": 0.999402122767301,
+   "lambda_f_ill_1e-2": 0.9965968085106384,
+   "lambda_extreme_fill1_fpipe1": 0.36170212765957466,
+   "posterior_pi0.01_marg": 0.009994080980007806,
+   "pass": true
+  },
+  {
+   "d_pc": 8.8,
+   "eirp_min_W": {
+    "GBT L-band": 65049600000.000015,
+    "GBT S-band": 65049600000.000015,
+    "Parkes 10-cm": 281881600000.00006
+   },
+   "theta_sens": {
+    "GBT L-band": 1.0,
+    "GBT S-band": 1.0,
+    "Parkes 10-cm": 0.0
+   },
+   "lambda_marginalized": 0.999402122767301,
+   "lambda_f_ill_1e-2": 0.9965968085106384,
+   "lambda_extreme_fill1_fpipe1": 0.36170212765957466,
+   "posterior_pi0.01_marg": 0.009994080980007806,
+   "pass": true
+  },
+  {
+   "d_pc": 9.3,
+   "eirp_min_W": {
+    "GBT L-band": 72651600000.00002,
+    "GBT S-band": 72651600000.00002,
+    "Parkes 10-cm": 314823600000.00006
+   },
+   "theta_sens": {
+    "GBT L-band": 1.0,
+    "GBT S-band": 1.0,
+    "Parkes 10-cm": 0.0
+   },
+   "lambda_marginalized": 0.999402122767301,
+   "lambda_f_ill_1e-2": 0.9965968085106384,
+   "lambda_extreme_fill1_fpipe1": 0.36170212765957466,
+   "posterior_pi0.01_marg": 0.009994080980007806,
+   "pass": true
+  },
+  {
+   "d_pc": 9.8,
+   "eirp_min_W": {
+    "GBT L-band": 80673600000.00002,
+    "GBT S-band": 80673600000.00002,
+    "Parkes 10-cm": 349585600000.00006
+   },
+   "theta_sens": {
+    "GBT L-band": 1.0,
+    "GBT S-band": 1.0,
+    "Parkes 10-cm": 0.0
+   },
+   "lambda_marginalized": 0.999402122767301,
+   "lambda_f_ill_1e-2": 0.9965968085106384,
+   "lambda_extreme_fill1_fpipe1": 0.36170212765957466,
+   "posterior_pi0.01_marg": 0.009994080980007806,
+   "pass": true
+  },
+  {
+   "d_pc": 10.3,
+   "eirp_min_W": {
+    "GBT L-band": 89115600000.00002,
+    "GBT S-band": 89115600000.00002,
+    "Parkes 10-cm": 386167600000.00006
+   },
+   "theta_sens": {
+    "GBT L-band": 1.0,
+    "GBT S-band": 1.0,
+    "Parkes 10-cm": 0.0
+   },
+   "lambda_marginalized": 0.999402122767301,
+   "lambda_f_ill_1e-2": 0.9965968085106384,
+   "lambda_extreme_fill1_fpipe1": 0.36170212765957466,
+   "posterior_pi0.01_marg": 0.009994080980007806,
+   "pass": true
+  },
+  {
+   "d_pc": 10.8,
+   "eirp_min_W": {
+    "GBT L-band": 97977600000.00002,
+    "GBT S-band": 97977600000.00002,
+    "Parkes 10-cm": 424569600000.00006
+   },
+   "theta_sens": {
+    "GBT L-band": 1.0,
+    "GBT S-band": 1.0,
+    "Parkes 10-cm": 0.0
+   },
+   "lambda_marginalized": 0.999402122767301,
+   "lambda_f_ill_1e-2": 0.9965968085106384,
+   "lambda_extreme_fill1_fpipe1": 0.36170212765957466,
+   "posterior_pi0.01_marg": 0.009994080980007806,
+   "pass": true
+  }
+ ],
+ "all_pass": true,
+ "red_flag_check": {
+  "expected_lambda_extreme": 0.08510638297872353,
+  "observed_at_d_with_all_theta_1": [
+   [
+    1.3,
+    0.08510638297872353
+   ],
+   [
+    1.8,
+    0.08510638297872353
+   ],
+   [
+    2.0,
+    0.08510638297872353
+   ]
+  ],
+  "interpretation": "f_ill = f_pipe = 1 の極では Λ ≈ 0.085 < 0.5 → 地球は「検出される」。検出器(ε)が生きていることの動作確認であり合格条件ではない"
+ },
+ "d_range_all_theta_1_pc": [
+  1.3,
+  4.8
+ ],
+ "interpretation_seed": "地球級帯 T-R3 では事後 ≈ 事前 — 本アトラスが空き度を語れる技術帯の下限は地球自身で校正される。",
+ "script_sha256": "3e6436072e854106e4f75416c61838bc7f1279fa8a84ed8d4a5906f6aad1748a"
+}
