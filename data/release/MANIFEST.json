@@ -1,5 +1,5 @@
 {
- "release": "vacancy-data-v1.0-candidate(公開前最終裁定前)",
+ "release": "vacancy-data-v1.0-candidate(裁定 #7 反映、公開前最終裁定前)",
  "generated": "2026-08-23",
  "constitution": "CLAUDE.md v0.3 / 裁定 #1–#6",
  "preregistration_b_doi": "10.5281/zenodo.22067884",
@@ -74,12 +74,12 @@
    "bytes": 1830
   },
   "paper/vacancy_ja.md": {
-   "sha256": "13652130fa946272ba8ebc988965a949ed53084bbe406bcd8dd49ba404ab86db",
-   "bytes": 32227
+   "sha256": "97787b1db42f366b841ed33efee04726b842860c4138608f680995692621efec",
+   "bytes": 31656
   },
   "paper/vacancy_en.md": {
-   "sha256": "7c83eb4f3774078cce8915a0622ade3c357ed6b5a1ed51eb754a804a7e07a62e",
-   "bytes": 34116
+   "sha256": "d4df5eba0c86d7e0636604d58737ab40ddd20e80dc5d62a7e8009132d9f8a498",
+   "bytes": 33312
   },
   "paper/numbers.json": {
    "sha256": "910343363fed93874be231e18655abac45a11db44d0b93d6a31fa303a52ff019",
@@ -152,6 +152,14 @@
   "code/tests/test_epsilon.py": {
    "sha256": "c2ce3fee56ca75a19f364ec614a7adba163441fcaf682ec785e109a0f881dab2",
    "bytes": 7679
+  },
+  "paper/vacancy_en_mnras.md": {
+   "sha256": "f7b3506eed2d93cdbc0b7e09b2b79fbe94611d508f041c00d65c101f5114e4ba",
+   "bytes": 33361
+  },
+  "code/scripts/build_mnras_version.py": {
+   "sha256": "9d5358a08e75e130861c0c0c81a1255e8d452e42e5dfd259b7b9f2a59b299a68",
+   "bytes": 1948
   }
  }
 }

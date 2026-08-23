@@ -1,3 +1,4 @@
+<!-- MNRAS 版: scripts/build_mnras_version.py で md 版から機械生成(裁定 #7)。本文・数値は md 版と同一。 -->
 # A Vacancy Atlas of the Solar Neighbourhood: Star-by-Star, Technology-Band-Conditional Upper Bounds on Occupation from Heterogeneous Non-Detections
 
 **Yukie Maeda** — Independent Researcher, Tokyo — ORCID: 0009-0005-3401-9230
@@ -19,20 +20,20 @@ For each star in the solar neighbourhood we aggregate conditional non-detections
 Searches for extraterrestrial technology over 60 years have accumulated non-detections, but a non-detection is not the proposition "nobody is anywhere"; it is a star-level, conditional fact: "when this survey looked at this star, at this sensitivity, in this band, at this time, there was no trace". Our question is what the **star-by-star, band-conditional upper bound on occupation** looks like once those conditional non-detections are aggregated heterogeneously per star. This quantity differs from population-model limits (the Grimaldi family) and from the coverage fraction of search-parameter volume (the Wright et al. 2018 haystack), and to our knowledge it has not previously been tabulated.
 
 ### 1.2 Motivation
-The motivation is twofold. First, to provide a basic survey for thinking about the expansion of the human habitat as "looking for places that are vacant" rather than as invasion. Second, to contribute a star-level evidence ledger to the puzzle of the rarity of technology in the universe. We elevate the ethical requirement into methodology: every statement is written as a probability statement carrying the conditional clause "with respect to facilities of band T, under survey set S", and no absolute "vacant" is ever asserted (§7).
+The motivation is twofold. First, to provide a basic survey for thinking about the expansion of the human habitat as "looking for places that are vacant" rather than as invasion. Second, to contribute a star-level evidence ledger to the puzzle of the rarity of technology in the universe. We elevate the ethical requirement into methodology: every statement is written as a probability statement carrying the conditional clause "with respect to facilities of band T, under survey set S", and no absolute "vacant" is ever asserted (§7.1).
 
 ### 1.3 Contributions
 (i) A star-by-star, band-resolved ε and Λ ledger for 332,571 stars with provenance. (ii) A merging rule that marginalises shared latent variables within a modality, and a theorem that the naive product tilts toward vacancy (§3.4). (iii) Two-stage pre-registration (factor structure → thresholds and pass criteria) with public deviation records. (iv) The discipline of reading the undecidable accounting as a main result. (v) Cross-tabulation with reachability and settlement resources without composition.
 
 ### 1.4 Outline
-§2 position; §3 method; §4 verification including the deviation section; §5 results; §6 the three-axis atlas; §7 interpretation discipline; §8 limitations and outlook; Appendices A–D.
+§2 position; §3 method; §4 verification including the deviation section; §5 results; §6 the three-axis atlas; §7 discussion (interpretation discipline; limitations and outlook); Appendices A–D.
 
 ## 2. Position
 
 **Relative to the Grimaldi family (probabilistic population models)**: Grimaldi (2017) and related work derive expected detection rates from probabilistic models of transmitter distribution and lifetime. We tabulate the likelihood ratio Λ_i(T) per star i and make no population assumption (π is swept).
 **Relative to the Wright et al. (2018) haystack**: that work discusses the fractional coverage of the search-parameter volume. We project it onto individual stars and count the holes in coverage per star as "undecidable"; the 99.52% undecidable fraction (§5.2) is the star-level version of haystack incompleteness.
 **Relative to Breakthrough Listen and Ĝ/Hephaistos**: Price et al. (2020) and Wlodarczyk-Sroka et al. (2020; hereafter WS20) report new radio observations and population limits; Wright et al. (2014), Griffith et al. (2015), and Suazo et al. (2022, 2024) search for mid-infrared waste heat. We perform no new observation and **aggregate these existing non-detections heterogeneously per star**. The Phase 0 survey established that Ĝ provides no per-star limits for nearby stars (it targets galaxies) and that Hephaistos closes methodologically in the published literature but releases no per-star table[^p0].
-**Diversity of limit formulae**: the percentage limits of Price et al. (2020) §5.3 (formula not stated), the 1/N of WS20, our exact binomial limit, and our star-level Bayesian bound are all **different quantities** (§4.3, §7).
+**Diversity of limit formulae**: the percentage limits of Price et al. (2020) §5.3 (formula not stated), the 1/N of WS20, our exact binomial limit, and our star-level Bayesian bound are all **different quantities** (§4.3, §7.1).
 
 [^p0]: `docs/phase0/01-machine-readability-survey.md`.
 
@@ -164,10 +165,12 @@ S1 narrow (FGK main sequence, Mamajek classes F0–K5): 43,119 stars; S2 all mai
 ### 6.4 HWC cross-reference table (not a composition)
 Sixteen HWC habitable-candidate hosts carry a T-R1 bound (e.g. the host of Proxima Cen b, Λ = 0.819, EMBARK-reachable; the host of Ross 128 b, Λ = 0.860, outside EMBARK). Nineteen hosts, including TRAPPIST-1, LHS 1140, and TOI-700, lie outside every radio field and are vacancy-undecidable. Being a habitable candidate and carrying a vacancy bound are independent imported quantities; the table cross-references and does not compose them.
 
-## 7. Interpretation discipline
+## 7. Discussion
+
+### 7.1 Interpretation discipline
 Every statement in this paper obeys four sentences. (1) **This is a survey, not a proof** — evidence of absence is limited and does not prove the absence of occupation. (2) **A vacancy bound is not a settlement permit** — no inference of absence of occupation, nor of the legitimacy of settlement, may be drawn from this product. (3) **The HWC cross-reference table is not a composition** — no quantity multiplies habitable candidacy by a vacancy bound. (4) **1/N and the star-level posterior are different quantities** — their numerical proximity (§4.3(c)) is coincidental. In addition, omitting the conditional clause (band, survey set, π), presenting a single number or ranking, forming products or weighted sums across the three axes, tilting undecidable stars toward vacancy, and using this product to justify settlement, contact, or transmission are prohibited. The W1 information layer has no established anchor and is not used for vacancy claims.
 
-## 8. Limitations and outlook
+### 7.2 Limitations and outlook
 - **Unpublished observations**: the BL open archive holds unpublished observations (C/X band etc.) of 1,530 GCNS stars; publication of limits could move them from undecidable (d) to decidable. UWL, optical lasers, and transients remain on the extension shelf.
 - **Independence assumptions**: independence of f_pipe across observations is the same premise as Price et al. (2020), but correlation effects may remain outside the sensitivity range U[0.3, 0.8].
 - **Re-anchoring W1**: passive (publication of a per-star Hephaistos table, or an independent anchor at DR4 v1.1).
@@ -194,5 +197,33 @@ Regeneration: `python3 src/vacancy/build_ledger.py` (3 s) → `scripts/export_g2
 ## Acknowledgements
 This work has made use of data from the European Space Agency (ESA) mission Gaia (https://www.cosmos.esa.int/gaia), processed by the Gaia Data Processing and Analysis Consortium (DPAC, https://www.cosmos.esa.int/web/gaia/dpac/consortium). Funding for the DPAC has been provided by national institutions, in particular the institutions participating in the Gaia Multilateral Agreement. This research has made use of the NASA Exoplanet Archive, which is operated by the California Institute of Technology, under contract with the National Aeronautics and Space Administration under the Exoplanet Exploration Program. This research has made use of the VizieR catalogue access tool, CDS, Strasbourg, France (DOI: 10.26093/cds/vizier). The Habitable Worlds Catalog is maintained by the Planetary Habitability Laboratory @ UPR Arecibo. Observation metadata from the Breakthrough Listen open data archive (seti.berkeley.edu/opendata) were used.
 
-## References (under full cross-check by the staff officer — 23-item checklist)
-[1] Price D. C. et al. 2020, AJ 159, 86. [2] Wlodarczyk-Sroka B. S., Garrett M. A., Siemion A. P. V. 2020, MNRAS 498, 5720. [3] Enriquez J. E. et al. 2017, ApJ 849, 104. [4] Isaacson H. et al. 2017, PASP 129, 054501. [5] Lebofsky M. et al. 2019, PASP 131, 124505. [6] Suazo M. et al. 2022, MNRAS 512, 2988. [7] Suazo M. et al. 2024, MNRAS 531, 695. [8] Wright J. T. et al. 2014, ApJ 792, 26; 792, 27. [9] Griffith R. L. et al. 2015, ApJS 217, 25. [10] Wright J. T., Kanodia S., Lubar E. 2018, AJ 156, 260. [11] Grimaldi C. 2017, Sci. Rep. 7, 46273. [12] Gaia Collaboration, Smart R. L. et al. 2021, A&A 649, A6. [13] Gaia Collaboration 2016, A&A 595, A1; 2021, A&A 649, A1; 2023, A&A 674, A1. [14] Brandt T. D. 2021, ApJS 254, 42. [15] Bailer-Jones C. A. L. et al. 2018, AJ 156, 58. [16] Pecaut M. J., Mamajek E. E. 2013, ApJS 208, 9. [17] Wright E. L. et al. 2010, AJ 140, 1868; Cutri R. M. et al. 2014, VizieR II/328; Marocco F. et al. 2021, ApJS 253, 8. [18] Jarrett T. H. et al. 2011, ApJ 735, 112. [19] Sullivan W. T., Brown S., Wetherill C. 1978, Science 199, 377; Saide R. C. et al. 2023, MNRAS 522, 2393. [20] Sheikh S. Z. et al. 2019, ApJ 884, 14. [21] NASA Exoplanet Archive, Planetary Systems Composite Parameters, doi:10.26133/NEA12 (retrieved 2026-08-23). [22] Habitable Worlds Catalog, PHL @ UPR Arecibo (retrieved 2026-08-23). [23] Maeda Y. 2026a, Zenodo, doi:10.5281/zenodo.22067884 (pre-registration (b)); Maeda Y. 2026b, WAKE, Zenodo, doi:10.5281/zenodo.21966305; Maeda Y. 2026c, EMBARK, Zenodo, doi:10.5281/zenodo.22059576.
+## References
+
+- Bailer-Jones C. A. L. et al. 2018, AJ 156, 58.
+- Brandt T. D. 2021, ApJS 254, 42.
+- Cutri R. M. et al. 2014, VizieR II/328.
+- Enriquez J. E. et al. 2017, ApJ 849, 104.
+- Gaia Collaboration 2016, A&A 595, A1; 2021, A&A 649, A1; 2023, A&A 674, A1.
+- Gaia Collaboration, Smart R. L. et al. 2021, A&A 649, A6.
+- Griffith R. L. et al. 2015, ApJS 217, 25.
+- Grimaldi C. 2017, Sci. Rep. 7, 46273.
+- Habitable Worlds Catalog, PHL @ UPR Arecibo (retrieved 2026-08-23).
+- Isaacson H. et al. 2017, PASP 129, 054501.
+- Jarrett T. H. et al. 2011, ApJ 735, 112.
+- Lebofsky M. et al. 2019, PASP 131, 124505.
+- Maeda Y. 2026a, Zenodo, doi:10.5281/zenodo.22067884 (pre-registration (b)).
+- Maeda Y. 2026b, WAKE, Zenodo, doi:10.5281/zenodo.21966305.
+- Maeda Y. 2026c, EMBARK, Zenodo, doi:10.5281/zenodo.22059576.
+- Marocco F. et al. 2021, ApJS 253, 8.
+- NASA Exoplanet Archive, Planetary Systems Composite Parameters, doi:10.26133/NEA12 (retrieved 2026-08-23).
+- Pecaut M. J., Mamajek E. E. 2013, ApJS 208, 9.
+- Price D. C. et al. 2020, AJ 159, 86.
+- Saide R. C. et al. 2023, MNRAS 522, 2393.
+- Sheikh S. Z. et al. 2019, ApJ 884, 14.
+- Suazo M. et al. 2022, MNRAS 512, 2988.
+- Suazo M. et al. 2024, MNRAS 531, 695.
+- Sullivan W. T., Brown S., Wetherill C. 1978, Science 199, 377.
+- Wlodarczyk-Sroka B. S., Garrett M. A., Siemion A. P. V. 2020, MNRAS 498, 5720.
+- Wright E. L. et al. 2010, AJ 140, 1868.
+- Wright J. T. et al. 2014, ApJ 792, 26; 792, 27.
+- Wright J. T., Kanodia S., Lubar E. 2018, AJ 156, 260.
