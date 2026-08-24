@@ -9,4 +9,4 @@ dependencies:
   - numpy=2.5
   - pytest=8
   # 外部取得は urllib + curl のみ(astropy/astroquery 不使用 — Phase 0 実測どおり)
-  # 予約: matplotlib(図版, Phase 5)
+  - matplotlib=3.11        # Phase 5.4 手順 A で解禁(図 1 生成。裁定ログに記録)
