@@ -4,6 +4,7 @@
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{array}
+\usepackage{float}
 \usepackage{xeCJK}
 \setCJKmainfont{Hiragino Mincho ProN}
 \pagestyle{plain}
@@ -160,7 +161,7 @@
 \subsection*{4.5 G3(iii): 太陽系自己検定(合格)}
 \noindent 太陽系を d = 1.3–10.8 pc の 24 点(GBT L + GBT S + Parkes 10-cm、軸上、各 1 観測行、EIRP\_peak = 10\(^{11}\) W)の仮想行として T-R3 に通した。全 d で \(\Lambda\)(周辺化) \(\geq\) 0.999085、\(\Lambda\)(f\_ill 上端 10\(^{-2}\)) \(\geq\) 0.99479、すなわち\textbf{事後 \(\approx\) 事前}であり合格\footnote{\texttt{data/phase3/g3\_report.json}。}。赤信号の動作確認: f\_ill = f\_pipe = 1 の極では \(\Lambda\) = 1 \(-\) 2.15/2.35 = 0.0851 < 0.5(d \(\leq\) 4.8 pc で 3 帯とも感度内)となり地球は「検出される」。\(\varepsilon\)(検出器)は生きており、T-R3 で事後 \(\approx\) 事前になるのは照射因子(間欠・指向)が小さいためである。Parkes 10-cm は d > 5.24 pc で感度外、GBT は 10.9 pc まで(図 1)。\par\smallskip
 
-\begin{figure}[t]\centering
+\begin{figure}[H]\centering
 \includegraphics[width=.9\linewidth]{figs/fig1_g3iii_dlambda.png}
 \par\smallskip{\small 図 1: G3(iii) 太陽系自己検定の d–\(\Lambda\)。周辺化値・f\_ill = 10\(^{-2}\)(上端)・極限(f\_ill = f\_pipe = 1)の 3 曲線と感度境界(Parkes 5.24 pc、GBT 10.9 pc)。数値は g3\_iii.json の凍結値。再現: python3 scripts/build\_paper\_figs.py}
 \end{figure}
@@ -176,9 +177,9 @@
 \subsection*{5.1 台帳の概観}
 \noindent 空き度上界(\(\varepsilon\) 確定)を持つ星は T-R1 \textbf{1,554}、T-R2 \textbf{1,587}、T-R3 \textbf{159}(d \(\leq\) 10.8 pc)\footnote{\texttt{data/phase2/lambda\_ledger.json}(summary.status\_counts、lambda\_*)。}。観測されたが当該帯で感度外(\(\varepsilon\) = 0、\(\Lambda\) = 1 = 情報なし)の星は T-R1 33、T-R3 1,428。T-R1 の \(\Lambda\) は 0.4266(最小: GBT L + GBT S + GBT S + Parkes 10-cm の 4 観測行、S 帯 2 ポインティング、1 星)/ 0.8000(中央値: GBT S のみ)/ 0.8596(最大: GBT L のみ)で、事後 @\(\pi\) = 10\(^{-2}\) の中央値は 0.0080。T-R3 は \(\Lambda\) = 0.9985–0.9998(4 桁丸め; 最小の厳密値 0.998458)、事後 @\(\pi\) = 10\(^{-2}\) で 0.0100。\(\Lambda\) の値は観測行の被覆構造(受信帯の窓内被覆率 \(\times\) f\_pipe)で決まり、距離にはほとんど依らない(感度閾値をまたぐ星が T-R1 で 33 星のみ。図 2)。\par\smallskip
 
-\begin{figure}[t]\centering
+\begin{figure}[H]\centering
 \includegraphics[width=.9\linewidth]{figs/fig2_coverage_lambda.png}
-\par\smallskip{\small 図 2: 宣言窓 [1.10, 3.45] GHz の受信帯被覆(上: 9 共通区間とノッチ)と、台帳に実在する観測行組合せごとの併合 \(\Lambda\)(下: T-R1、棒の色は \(\pi\) = 10\(^{-2}\) の事後彩色)。数値は radio\_obs\_v0.json と lambda\_ledger.json の凍結値。再現: python3 scripts/build\_paper\_figs.py}
+\par\smallskip{\small 図 2: 宣言窓 [1.10, 3.45] GHz の受信帯被覆(上: 9 共通区間とノッチ)と、台帳に実在する観測行組合せのうち出現数上位 6 組合せの併合 \(\Lambda\)(下: T-R1、計 1,515 星。残り 39 星は 3 帯以上等の少数組合せ。棒の色は \(\pi\) = 10\(^{-2}\) の事後彩色)。数値は radio\_obs\_v0.json と lambda\_ledger.json の凍結値。再現: python3 scripts/build\_paper\_figs.py}
 \end{figure}
 
 
@@ -186,7 +187,7 @@
 \subsection*{5.2 判定不能 99.52\%: 主結果として}
 \noindent 母集団 332,571 星のうち、WS20 のいずれのポインティングの視野にも入っていない星は \textbf{330,984(99.52\%)}\footnote{\texttt{data/phase2/lambda\_ledger.json}(summary.status\_counts、lambda\_*)。}。このうち \textbf{1,530 星}は BL 公開アーカイブに観測ファイルがあるが上限が公刊されていない(C/X 帯、または L/S/10-cm で Price+20 非掲載)ため「観測あり・未公刊」として判定不能 (d) に分類した\footnote{\texttt{docs/phase1/00-status.md} \S{}1.3。}。判定不能は空き側にも占有側にも倒さない。この数字は、既存の電波 SETI の不在証拠が太陽近傍 100 pc の星のうち\textbf{どれだけ少ない星にしか及んでいないか}を星単位で示すものであり、Wright+18 のヘイスタック不完備性の星単位版である(図 3)。\par\smallskip
 
-\begin{figure}[t]\centering
+\begin{figure}[H]\centering
 \includegraphics[width=.9\linewidth]{figs/fig3_atlas_overview.png}
 \par\smallskip{\small 図 3: アトラス概観(銀河面への投影、sim\_display\_v1 から機械生成)。判定不能星は灰(1/8 間引き)、T-R1 上界あり星は \(\pi\) = 10\(^{-2}\) の事後による中立連続彩色、EMBARK 到達星は輪郭、太陽は星印。シミュレータと同一の配色規律。再現: python3 scripts/build\_paper\_figs.py}
 \end{figure}
@@ -196,7 +197,7 @@
 \subsection*{5.3 上界曲線}
 \noindent P(占有 | D, T, \(\pi\)) = expit(logit \(\pi\) + ln \(\Lambda\)) は \(\pi\) の単調関数で、\(\Lambda\) \(\in\) [0.43, 0.86] の電波帯では事後 \(\approx\) \(\pi\) \(\times\) \(\Lambda\)(\(\pi\) \(\ll\) 1)となる。図 4(\(\pi\) 掃引)。\par\smallskip
 
-\begin{figure}[t]\centering
+\begin{figure}[H]\centering
 \includegraphics[width=.9\linewidth]{figs/fig4_pi_sweep.png}
 \par\smallskip{\small 図 4: \(\pi\) 掃引の上界曲線 P(占有 | D, T, \(\pi\)) = expit(logit \(\pi\) + ln \(\Lambda\))。曲線は凍結台帳の \(\Lambda\)(T-R1 の最小/中央/最大、T-R3 の最小/中央/最大)。点線は事前 P = \(\pi\)。再現: python3 scripts/build\_paper\_figs.py}
 \end{figure}

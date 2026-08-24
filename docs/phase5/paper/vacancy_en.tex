@@ -4,6 +4,7 @@
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{array}
+\usepackage{float}
 \hyphenpenalty=10000 \exhyphenpenalty=10000 \sloppy
 \pagestyle{plain}
 \title{A Vacancy Atlas of the Solar Neighbourhood: Star-by-Star, Technology-Band-Conditional Upper Bounds on Occupation from Heterogeneous Non-Detections \\[1ex] {\large Preprint, English version; a Japanese version accompanies this record; \url{doi:10.5281/zenodo.XXXXXXX}}}
@@ -159,7 +160,7 @@
 \subsection*{4.5 G3(iii) --- Solar-System self-test (pass)}
 \noindent The Solar System was passed through T-R3 as virtual rows at 24 distances d = 1.3--10.8 pc (GBT L + GBT S + Parkes 10-cm, on axis, one row each, EIRP\_peak = 10\(^{11}\) W). At every d, \(\Lambda\)(marginalised) \(\geq\) 0.999085 and \(\Lambda\)(f\_ill at its upper end 10\(^{-2}\)) \(\geq\) 0.99479 --- \textbf{posterior \(\approx\) prior}, pass\footnote{\texttt{data/phase3/g3\_report.json}.}. Red-flag check: in the extreme f\_ill = f\_pipe = 1, \(\Lambda\) = 1 \(-\) 2.15/2.35 = 0.0851 < 0.5 (for d \(\leq\) 4.8 pc all three bands are sensitive), i.e. Earth "would be detected". The detector \(\varepsilon\) is alive; posterior \(\approx\) prior in T-R3 results from the smallness of the illumination factor (intermittency and beaming). Parkes 10-cm loses sensitivity beyond d = 5.24 pc; GBT keeps it to 10.9 pc (Figure 1).\par\smallskip
 
-\begin{figure}[t]\centering
+\begin{figure}[H]\centering
 \includegraphics[width=.9\linewidth]{figs/fig1_g3iii_dlambda.png}
 \par\smallskip{\small Figure 1: the G3(iii) Solar-System self-test as d--\(\Lambda\). Three curves (marginalised; f\_ill = 10\(^{-2}\), the upper end; the extreme f\_ill = f\_pipe = 1) with the sensitivity boundaries (Parkes 5.24 pc, GBT 10.9 pc). Values are the frozen g3\_iii.json. Reproduce: python3 scripts/build\_paper\_figs.py}
 \end{figure}
@@ -175,9 +176,9 @@
 \subsection*{5.1 Overview of the ledger}
 \noindent Stars carrying a vacancy bound (\(\varepsilon\) determined) number \textbf{1,554} in T-R1, \textbf{1,587} in T-R2, and \textbf{159} in T-R3 (d \(\leq\) 10.8 pc)\footnote{\texttt{data/phase2/lambda\_ledger.json} (summary.status\_counts, lambda\_*).}. Stars observed but insensitive in the band (\(\varepsilon\) = 0, \(\Lambda\) = 1 = no information) number 33 in T-R1 and 1,428 in T-R3. In T-R1, \(\Lambda\) ranges from 0.4266 (minimum: four rows, GBT L + GBT S + GBT S + Parkes 10-cm, i.e. two S-band pointings, one star) through 0.8000 (median: GBT S only) to 0.8596 (maximum: GBT L only), with a median posterior of 0.0080 at \(\pi\) = 10\(^{-2}\). In T-R3, \(\Lambda\) = 0.9985--0.9998 (rounded to four digits; exact minimum 0.998458) and the posterior at \(\pi\) = 10\(^{-2}\) is 0.0100. \(\Lambda\) is set by the coverage structure of the observation rows (in-window coverage of the receiver \(\times\) f\_pipe) and hardly by distance (only 33 stars straddle the sensitivity threshold in T-R1; Figure 2).\par\smallskip
 
-\begin{figure}[t]\centering
+\begin{figure}[H]\centering
 \includegraphics[width=.9\linewidth]{figs/fig2_coverage_lambda.png}
-\par\smallskip{\small Figure 2: receiver coverage of the declared window [1.10, 3.45] GHz (top: the 9 common intervals and notches) and the merged \(\Lambda\) for each observation-row combination present in the ledger (bottom: T-R1; bar colours follow the posterior colour rule at \(\pi\) = 10\(^{-2}\)). Values are the frozen radio\_obs\_v0.json and lambda\_ledger.json. Reproduce: python3 scripts/build\_paper\_figs.py}
+\par\smallskip{\small Figure 2: receiver coverage of the declared window [1.10, 3.45] GHz (top: the 9 common intervals and notches) and the merged \(\Lambda\) for the six most frequent observation-row combinations present in the ledger (bottom: T-R1; 1,515 stars in total, the remaining 39 stars being rarer combinations of three or more rows; bar colours follow the posterior colour rule at \(\pi\) = 10\(^{-2}\)). Values are the frozen radio\_obs\_v0.json and lambda\_ledger.json. Reproduce: python3 scripts/build\_paper\_figs.py}
 \end{figure}
 
 
@@ -185,7 +186,7 @@
 \subsection*{5.2 99.52\% undecidable --- as a main result}
 \noindent Of the 332,571 stars, \textbf{330,984 (99.52\%)} lie outside the field of every WS20 pointing\footnote{\texttt{data/phase2/lambda\_ledger.json} (summary.status\_counts, lambda\_*).}. Among them, \textbf{1,530 stars} have observation files in the BL open archive but no published limit (C/X band, or L/S/10-cm not in Price et al. 2020) and are classified as "observed, unpublished", undecidable (d)\footnote{\texttt{docs/phase1/00-status.md} \S{}1.3.}. Undecidable stars are tilted neither toward vacancy nor toward occupation. This number shows, star by star, \textbf{how few of the stars within 100 pc existing radio SETI non-detections actually reach}; it is the star-level version of the haystack incompleteness of Wright et al. (2018) (Figure 3).\par\smallskip
 
-\begin{figure}[t]\centering
+\begin{figure}[H]\centering
 \includegraphics[width=.9\linewidth]{figs/fig3_atlas_overview.png}
 \par\smallskip{\small Figure 3: atlas overview (projection onto the Galactic plane, machine-generated from sim\_display\_v1). Undecidable stars in grey (thinned 1/8); stars with a T-R1 bound in the value-neutral continuous colour of the posterior at \(\pi\) = 10\(^{-2}\); EMBARK-reachable stars as outlines; the Sun as a star marker. Same colour discipline as the simulator. Reproduce: python3 scripts/build\_paper\_figs.py}
 \end{figure}
@@ -195,7 +196,7 @@
 \subsection*{5.3 Upper-bound curves}
 \noindent P(occupied | D, T, \(\pi\)) = expit(logit \(\pi\) + ln \(\Lambda\)) is monotonic in \(\pi\); for the radio bands with \(\Lambda\) \(\in\) [0.43, 0.86] the posterior is \(\approx\) \(\pi\) \(\times\) \(\Lambda\) for \(\pi\) \(\ll\) 1. Figure 4 (\(\pi\) sweep).\par\smallskip
 
-\begin{figure}[t]\centering
+\begin{figure}[H]\centering
 \includegraphics[width=.9\linewidth]{figs/fig4_pi_sweep.png}
 \par\smallskip{\small Figure 4: upper-bound curves P(occupied | D, T, \(\pi\)) = expit(logit \(\pi\) + ln \(\Lambda\)). Curves use the frozen-ledger \(\Lambda\) (min/median/max of T-R1 and T-R3); the dotted line is the prior P = \(\pi\). Reproduce: python3 scripts/build\_paper\_figs.py}
 \end{figure}

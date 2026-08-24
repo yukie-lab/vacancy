@@ -135,7 +135,7 @@ def convert(md_path, en=False):
         elif ln.startswith("[FIG] "):
             close_items()
             path, cap = ln[6:].split(" | ", 1)
-            body.append(r"\begin{figure}[t]\centering")
+            body.append(r"\begin{figure}[H]\centering")
             body.append(r"\includegraphics[width=.9\linewidth]{" + path + "}")
             body.append(r"\par\smallskip{\small " + inline_full(cap) + r"}")
             body.append(r"\end{figure}")
@@ -191,7 +191,7 @@ def convert(md_path, en=False):
     hyph = "\\hyphenpenalty=10000 \\exhyphenpenalty=10000 \\sloppy\n" if en else ""
     quote_block = "\n".join(r"\begin{center}\textbf{" + tex_inline(q.strip("*"), en) + r"}\end{center}" for q in quotes)
     return ("\\documentclass[11pt]{article}\n\\usepackage[margin=2.7cm]{geometry}\n\\usepackage{amsmath,amssymb}\n"
-            "\\usepackage{graphicx}\n\\usepackage{url}\n\\usepackage{array}\n" + cjk + hyph +
+            "\\usepackage{graphicx}\n\\usepackage{url}\n\\usepackage{array}\n\\usepackage{float}\n" + cjk + hyph +
             "\\pagestyle{plain}\n"
             "\\title{" + title + r" \\[1ex] {\large " + tex_inline(preprint.strip("()()"), en) + "}}\n"
             "\\author{" + tex_inline(author_line.replace("**", ""), en) + r" \\ " + tex_inline(affil_line, en) + r" \\ " + tex_inline(orcid_line, en) + r"\thanks{" + tex_inline(footmeta.split(":", 1)[1].strip() if ":" in footmeta else footmeta, en) + "}}\n"

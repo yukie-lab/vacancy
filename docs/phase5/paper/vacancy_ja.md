@@ -125,7 +125,7 @@ Suazo+22 Table 1(100 pc、N = 265,724、T_DS = 300 K)の「DS 適合(排除で�
 ### 5.1 台帳の概観
 空き度上界(ε 確定)を持つ星は T-R1 **1,554**、T-R2 **1,587**、T-R3 **159**(d ≤ 10.8 pc)[^s1]。観測されたが当該帯で感度外(ε = 0、Λ = 1 = 情報なし)の星は T-R1 33、T-R3 1,428。T-R1 の Λ は 0.4266(最小: GBT L + GBT S + GBT S + Parkes 10-cm の 4 観測行、S 帯 2 ポインティング、1 星)/ 0.8000(中央値: GBT S のみ)/ 0.8596(最大: GBT L のみ)で、事後 @π = 10⁻² の中央値は 0.0080。T-R3 は Λ = 0.9985–0.9998(4 桁丸め; 最小の厳密値 0.998458)、事後 @π = 10⁻² で 0.0100。Λ の値は観測行の被覆構造(受信帯の窓内被覆率 × f_pipe)で決まり、距離にはほとんど依らない(感度閾値をまたぐ星が T-R1 で 33 星のみ。図 2)。
 
-[FIG] figs/fig2_coverage_lambda.png | 図 2: 宣言窓 [1.10, 3.45] GHz の受信帯被覆(上: 9 共通区間とノッチ)と、台帳に実在する観測行組合せごとの併合 Λ(下: T-R1、棒の色は π = 10⁻² の事後彩色)。数値は radio_obs_v0.json と lambda_ledger.json の凍結値。再現: python3 scripts/build_paper_figs.py
+[FIG] figs/fig2_coverage_lambda.png | 図 2: 宣言窓 [1.10, 3.45] GHz の受信帯被覆(上: 9 共通区間とノッチ)と、台帳に実在する観測行組合せのうち出現数上位 6 組合せの併合 Λ(下: T-R1、計 1,515 星。残り 39 星は 3 帯以上等の少数組合せ。棒の色は π = 10⁻² の事後彩色)。数値は radio_obs_v0.json と lambda_ledger.json の凍結値。再現: python3 scripts/build_paper_figs.py
 
 
 [^s1]: `data/phase2/lambda_ledger.json`(summary.status_counts、lambda_*)。

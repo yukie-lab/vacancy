@@ -38,6 +38,16 @@ ax.axhline(0.99, color="0.8", lw=0.7); ax.text(1.35, 0.99, "0.99 criterion", fon
 ax.set_xlabel("distance of the virtual Solar-System row  d [pc]"); ax.set_ylabel("$\\Lambda$ (T-R3)")
 ax.set_ylim(0, 1.05); ax.grid(alpha=0.25); ax.legend(fontsize=8, loc="center right")
 ax.set_title("G3(iii): Solar-System self-test (values from g3_iii.json)", fontsize=10)
+# ズームインセット(裁定 #10-3): 合格 2 曲線と 0.99 基準線を判読可能に
+axi = ax.inset_axes([0.13, 0.20, 0.46, 0.34])
+axi.plot(d, [r["lambda_marginalized"] for r in rows], "-", color="#27496d", lw=1.4)
+axi.plot(d, [r["lambda_f_ill_1e-2"] for r in rows], "--", color="#4a6f97", lw=1.2)
+axi.axhline(0.99, color="0.7", lw=0.8)
+axi.axvline(5.24, color="0.65", lw=0.6, ls="-.")
+axi.set_ylim(0.985, 1.001); axi.set_xlim(min(d), max(d))
+axi.tick_params(labelsize=6); axi.grid(alpha=0.25)
+axi.set_title("zoom: [0.985, 1.001]", fontsize=6.5)
+ax.indicate_inset_zoom(axi, edgecolor="0.6", lw=0.6)
 fig.tight_layout(); save(fig, "fig1_g3iii_dlambda")
 
 # ---------------- 図 2: 受信帯被覆 9 区間と Λ の構成(実在の観測組合せ)
@@ -71,7 +81,7 @@ a2.barh(range(len(vals)), vals, color=[c for c in cols], height=0.6)
 for i, (v, n) in enumerate(zip(vals, ns)):
     a2.text(v + 0.01, i, f"$\\Lambda$ = {v:.4f}  ({n} stars)", va="center", fontsize=8)
 a2.set_yticks(range(len(labels))); a2.set_yticklabels(labels, fontsize=8)
-a2.set_xlim(0, 1.05); a2.set_xlabel("merged $\\Lambda$ (T-R1) for observation-row combinations present in the ledger", fontsize=8)
+a2.set_xlim(0, 1.38); a2.set_xticks([0, 0.2, 0.4, 0.6, 0.8, 1.0]); a2.set_xlabel("merged $\\Lambda$ (T-R1) for observation-row combinations present in the ledger", fontsize=8)
 a2.grid(alpha=0.25, axis="x")
 fig.tight_layout(); save(fig, "fig2_coverage_lambda")
 

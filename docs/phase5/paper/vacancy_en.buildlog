@@ -1,20 +1,20 @@
 note: Running TeX ...
 note: Rerunning TeX because "vacancy_en.aux" changed ...
 note: Running xdvipdfmx ...
-note: Writing `vacancy_en.pdf` (2.9822921752929688 MiB)
+note: Writing `vacancy_en.pdf` (3.0112924575805664 MiB)
 note: Skipped writing 1 intermediate files (use --keep-intermediates to keep them)
-warning: vacancy_en.tex:84: Underfull \hbox (badness 1331) in paragraph at lines 84--84
-warning: vacancy_en.tex:102: Underfull \hbox (badness 2229) in paragraph at lines 101--102
-warning: vacancy_en.tex:267: Underfull \hbox (badness 10000) in paragraph at lines 267--267
-warning: vacancy_en.tex:267: Underfull \hbox (badness 10000) in paragraph at lines 267--267
-warning: vacancy_en.tex:267: Underfull \hbox (badness 10000) in paragraph at lines 267--267
-warning: vacancy_en.tex:267: Underfull \hbox (badness 10000) in paragraph at lines 267--267
-warning: vacancy_en.tex:267: Underfull \hbox (badness 1990) in paragraph at lines 267--267
-warning: vacancy_en.tex:84: Underfull \hbox (badness 1331) in paragraph at lines 84--84
-warning: vacancy_en.tex:102: Underfull \hbox (badness 2229) in paragraph at lines 101--102
-warning: vacancy_en.tex:267: Underfull \hbox (badness 10000) in paragraph at lines 267--267
-warning: vacancy_en.tex:267: Underfull \hbox (badness 10000) in paragraph at lines 267--267
-warning: vacancy_en.tex:267: Underfull \hbox (badness 10000) in paragraph at lines 267--267
-warning: vacancy_en.tex:267: Underfull \hbox (badness 10000) in paragraph at lines 267--267
-warning: vacancy_en.tex:267: Underfull \hbox (badness 1990) in paragraph at lines 267--267
+warning: vacancy_en.tex:85: Underfull \hbox (badness 1331) in paragraph at lines 85--85
+warning: vacancy_en.tex:103: Underfull \hbox (badness 2229) in paragraph at lines 102--103
+warning: vacancy_en.tex:268: Underfull \hbox (badness 10000) in paragraph at lines 268--268
+warning: vacancy_en.tex:268: Underfull \hbox (badness 10000) in paragraph at lines 268--268
+warning: vacancy_en.tex:268: Underfull \hbox (badness 10000) in paragraph at lines 268--268
+warning: vacancy_en.tex:268: Underfull \hbox (badness 10000) in paragraph at lines 268--268
+warning: vacancy_en.tex:268: Underfull \hbox (badness 1990) in paragraph at lines 268--268
+warning: vacancy_en.tex:85: Underfull \hbox (badness 1331) in paragraph at lines 85--85
+warning: vacancy_en.tex:103: Underfull \hbox (badness 2229) in paragraph at lines 102--103
+warning: vacancy_en.tex:268: Underfull \hbox (badness 10000) in paragraph at lines 268--268
+warning: vacancy_en.tex:268: Underfull \hbox (badness 10000) in paragraph at lines 268--268
+warning: vacancy_en.tex:268: Underfull \hbox (badness 10000) in paragraph at lines 268--268
+warning: vacancy_en.tex:268: Underfull \hbox (badness 10000) in paragraph at lines 268--268
+warning: vacancy_en.tex:268: Underfull \hbox (badness 1990) in paragraph at lines 268--268
 warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
