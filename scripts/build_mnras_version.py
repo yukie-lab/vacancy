@@ -6,11 +6,7 @@
 import os, re
 P = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "docs", "phase5", "paper")
 s = open(os.path.join(P, "vacancy_en.md")).read()
-# --- §7 + §8 → Discussion
-s = s.replace("## 7. Interpretation discipline\n", "## 7. Discussion\n\n### 7.1 Interpretation discipline\n")
-s = s.replace("## 8. Limitations and outlook\n", "### 7.2 Limitations and outlook\n")
-s = s.replace("§7 interpretation discipline; §8 limitations and outlook;", "§7 discussion (interpretation discipline; limitations and outlook);")
-s = s.replace("(§7)", "(§7.1)").replace("(§4.3, §7)", "(§4.3, §7.1)")
+# --- §7 統合は裁定 #8 で md 版に反映済み(本スクリプトでは参考文献の author-year 化のみ)
 # --- 参考文献 author-year
 a = s.index("## References")
 refs_block = s[a:]

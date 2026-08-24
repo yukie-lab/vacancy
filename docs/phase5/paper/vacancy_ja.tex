@@ -7,13 +7,17 @@
 \usepackage{xeCJK}
 \setCJKmainfont{Hiragino Mincho ProN}
 \pagestyle{plain}
-\title{太陽近傍の空き度アトラス — 既存不在証拠の異種合算による星単位・技術帯別の占有確率上界台帳 \\[1ex] {\large プレプリント、日本語版。英語版を同一レコードに同梱。\url{doi:10.5281/zenodo.XXXXXXX}}}
-\author{前田幸枝(Yukie Maeda) — Independent Researcher, Tokyo — ORCID: 0009-0005-3401-9230\thanks{AI システムの役割と検証プロトコルの全容は付録 B に開示する。本内部検証は人間による査読の代替ではない。}}
+\title{太陽近傍の空き度アトラス: 既存不在証拠の異種合算による星単位・技術帯別の占有確率上界台帳 \\[1ex] {\large プレプリント、日本語版。英語版を同一レコードに同梱。\url{doi:10.5281/zenodo.XXXXXXX}}}
+\author{前田幸枝(Yukie Maeda) \\ Independent Researcher, Tokyo \\ ORCID: 0009-0005-3401-9230\thanks{AI システムの役割と検証プロトコルの全容は付録 B に開示する。本内部検証は人間による査読の代替ではない。}}
 \date{}
 \begin{document}
 \maketitle
-\begin{center}\textbf{測量であって証明ではない。不在の証拠は限定的であり、占有の不在を証明しない。}\end{center}
-\begin{center}\textbf{空き度は入植許可証ではない。}\end{center}
+
+\section*{要旨}
+
+\noindent 太陽近傍の恒星ごとに、「宣言された技術帯 T の設備があれば既存サーベイ集合 S で検出されていたはず」という条件付き不在証拠を合算し、星単位・技術帯別の占有確率上界 P(占有 | D, T, \(\pi\)) を事前確率 \(\pi\) の関数として台帳化した。我々の知る限り、この量の星単位台帳は存在しない。母集団は 100 pc 以内の 332,571 星(Gaia EDR3 GCNS 基盤)\footnote{出所: \texttt{data/phase1/ledger\_v0\_summary.json}(population)。以下、数値の転記元は脚注または表注に示す。再計算は行っていない。}。主張帯は電波 3 帯(T-R1: EIRP \(\geq\) 10\(^{13}\) W、T-R2: \(\geq\) 10\(^{17}\) W、T-R3: 地球級レーダー型間欠漏洩)、[1.10, 3.45] GHz。検出確率は Wlodarczyk-Sroka+20 の 356,616 観測行から取得し、同一モダリティ内の観測は潜在変数で周辺化して併合した。素朴な尤度積が「空き側」に倒れることを定理として示す。閾値・合格基準は合算前に事前登録した(\url{doi:10.5281/zenodo.22067884})。検証: G1 単調性 6,777 検査・違反 0、G2 独立二経路は 4.9 \(\times\) 10\(^{-10}\) dex で一致、G3 は WS20 の 1/N を \(\leq\)50 pc で N = 1513 の完全一致で再現、Hephaistos I 計数は不合格(廃熱帯を降格)、太陽系自己検定は合格。上界を持つ星は T-R1 1,554・T-R2 1,587・T-R3 159、330,984 星(99.52\%)は判定不能であり主結果として報告する。T-R3 では事後 \(\approx\) 事前(\(\Lambda\) \(\geq\) 0.998)であり、空き度を語れる帯の下限は地球自身で校正される。到達可能性・定住資源性との結合では会合到達かつ T-R1 上界を持つ星は 815。DR4(2026-12-02)合流時には距離更新分のみ再計算する(v1.1)。本台帳の上界は測量値であり占有の不在の証明ではなく、入植その他いかなる行為の正当化にも用いない(\S{}7.1)。\par\smallskip
+
+
 \section*{目次}
 \begin{itemize}\setlength{\itemsep}{0pt}
 \item[] 要旨
@@ -33,15 +37,15 @@
 \item[] \hspace{1.2em}3.7 独立性仮定
 \item[] \hspace{1.2em}3.8 データ来歴
 \item[] 4. Verification
-\item[] \hspace{1.2em}4.1 G1 — 単調性と MC 安定性
-\item[] \hspace{1.2em}4.2 G2 — 独立二経路
-\item[] \hspace{1.2em}4.3 G3(i) — WS20 / Price 系アンカー
-\item[] \hspace{1.2em}4.4 G3(ii) — Hephaistos I 計数再現(不合格)
-\item[] \hspace{1.2em}4.5 G3(iii) — 太陽系自己検定(合格)
-\item[] \hspace{1.2em}4.6 逸脱節(第9条3項)— 制度が機能した二つの実例
+\item[] \hspace{1.2em}4.1 G1: 単調性と MC 安定性
+\item[] \hspace{1.2em}4.2 G2: 独立二経路
+\item[] \hspace{1.2em}4.3 G3(i): WS20 / Price 系アンカー
+\item[] \hspace{1.2em}4.4 G3(ii): Hephaistos I 計数再現(不合格)
+\item[] \hspace{1.2em}4.5 G3(iii): 太陽系自己検定(合格)
+\item[] \hspace{1.2em}4.6 逸脱節(第9条3項): 制度が機能した二つの実例
 \item[] 5. Results
 \item[] \hspace{1.2em}5.1 台帳の概観
-\item[] \hspace{1.2em}5.2 判定不能 99.52\% — 主結果として
+\item[] \hspace{1.2em}5.2 判定不能 99.52\%: 主結果として
 \item[] \hspace{1.2em}5.3 上界曲線
 \item[] \hspace{1.2em}5.4 太陽自己校正
 \item[] \hspace{1.2em}5.5 W1 情報レイヤ(claim=false)
@@ -50,40 +54,36 @@
 \item[] \hspace{1.2em}6.2 交差計数(合成なし)
 \item[] \hspace{1.2em}6.3 定住資源性スライダー
 \item[] \hspace{1.2em}6.4 HWC 照合表(合成ではない)
-\item[] 7. Interpretation discipline
-\item[] 8. Limitations \& future
-\item[] 付録 A — \(\varepsilon\) 因子表・受信帯被覆・共通 \(\nu\) グリッド
-\item[] 付録 B — Method record and AI disclosure
-\item[] 付録 C — 判定不能会計(三軸)
-\item[] 付録 D — Reproducibility and data release
+\item[] 7. Discussion
+\item[] \hspace{1.2em}7.1 解釈の範囲と限界(Interpretation and scope)
+\item[] \hspace{1.2em}7.2 限界と展望(Limitations and outlook)
+\item[] 付録 A: \(\varepsilon\) 因子表・受信帯被覆・共通 \(\nu\) グリッド
+\item[] 付録 B: Method record and AI disclosure
+\item[] 付録 C: 判定不能会計(三軸)
+\item[] 付録 D: Reproducibility and data release
 \item[] 謝辞
-\item[] 参考文献(参謀照合中 — 付録の確認リスト 23 項目)
+\item[] 参考文献
 \end{itemize}
-\section*{要旨}
-
-\noindent 太陽近傍の恒星ごとに、「宣言された技術帯 T の設備があれば既存サーベイ集合 S で検出されていたはず」という条件付き不在証拠を合算し、星単位・技術帯別の占有確率上界 P(占有 | D, T, \(\pi\)) を事前確率 \(\pi\) の関数として台帳化した。我々の知る限り、この量の星単位台帳は存在しない。母集団は 100 pc 以内の 332,571 星(Gaia EDR3 GCNS 基盤)\footnote{出所: \texttt{data/phase1/ledger\_v0\_summary.json}(population)。以下、数値の転記元は脚注または表注に示す。再計算は行っていない。}。主張帯は電波 3 帯(T-R1: EIRP \(\geq\) 10\(^{13}\) W、T-R2: \(\geq\) 10\(^{17}\) W、T-R3: 地球級レーダー型間欠漏洩)、[1.10, 3.45] GHz。検出確率は Wlodarczyk-Sroka+20 の 356,616 観測行から輸入し、同一モダリティ内の観測は潜在変数で周辺化して併合した — 素朴な尤度積が「空き側」に倒れることを定理として示す。閾値・合格基準は合算前に事前登録した(\url{doi:10.5281/zenodo.22067884})。検証: G1 単調性 6,777 検査・違反 0、G2 独立二経路は 4.9 \(\times\) 10\(^{-10}\) dex で一致、G3 は WS20 の 1/N を \(\leq\)50 pc で N = 1513 の完全一致で再現、Hephaistos I 計数は不合格(廃熱帯を降格)、太陽系自己検定は合格。上界を持つ星は T-R1 1,554・T-R2 1,587・T-R3 159、330,984 星(99.52\%)は判定不能であり主結果として報告する。T-R3 では事後 \(\approx\) 事前(\(\Lambda\) \(\geq\) 0.998)— 空き度を語れる帯の下限は地球自身で校正される。到達可能性・定住資源性との結合では会合到達かつ T-R1 上界を持つ星は 815。DR4(2026-12-02)合流時には距離更新分のみ再計算する(v1.1)。\par\smallskip
-
-
 \section*{1. Introduction}
 
 \subsection*{1.1 中核の問い}
 \noindent 地球外技術の探索(SETI)は 60 年にわたり不検出を積み上げてきたが、その不検出は「宇宙のどこにも誰もいない」という命題ではなく、「このサーベイが、この感度で、この帯域を、この時刻に見たとき、この星に痕跡はなかった」という星単位・条件付きの事実の集まりである。本稿の問いは、それらの条件付き不在証拠を恒星ごとに異種合算したとき、\textbf{星単位・技術帯別の占有確率上界}がどのように並ぶか、である。この量は、母集団モデルに基づく上限(Grimaldi 系)やサーベイ空間体積の被覆率(Wright+18 のヘイスタック)とは異なり、我々の知る限りこれまで台帳化されていない。\par\smallskip
 
 \subsection*{1.2 動機}
-\noindent 本研究の動機は二つである。第一に、人類の生息域拡張を「侵略」ではなく「空いているところを探す」という形で考えるための基礎測量を与えること。第二に、宇宙における技術の稀少性という謎に、星単位の証拠台帳という形で寄与すること。本稿ではこの倫理的要請を方法論に昇格させた — すべての言明を「T 帯の設備に関して、サーベイ集合 S のもとで」という条件節を伴う確率文として書き、絶対的な「空いている」を主張しない(\S{}7)。\par\smallskip
+\noindent 本研究の動機は二つである。第一に、人類の生息域拡張を「侵略」ではなく「空いているところを探す」という形で考えるための基礎測量を与えること。第二に、宇宙における技術の稀少性という謎に、星単位の証拠台帳という形で寄与すること。本稿ではこの倫理的要請を方法論に昇格させた。すなわち、すべての言明を「T 帯の設備に関して、サーベイ集合 S のもとで」という条件節を伴う確率文として書き、絶対的な「空いている」を主張しない(\S{}7.1)。\par\smallskip
 
 \subsection*{1.3 貢献}
 \noindent (i) 332,571 星の星単位・帯別の \(\varepsilon\)・\(\Lambda\) 台帳(来歴付き)。(ii) 同一モダリティ内の不在証拠を周辺化で併合する規則と、素朴積が空き側に倒れることの定理(\S{}3.4)。(iii) 二段の事前登録(因子構造 \(\rightarrow\) 閾値・合格基準)と逸脱の公開記録。(iv) 判定不能会計を主結果として読む規律。(v) 到達可能性・定住資源性との交差表示(合成なし)。\par\smallskip
 
 \subsection*{1.4 構成}
-\noindent \S{}2 位置づけ、\S{}3 方法、\S{}4 検証(逸脱節を含む)、\S{}5 結果、\S{}6 三軸アトラス、\S{}7 解釈規律、\S{}8 限界と展望。付録 A–D。\par\smallskip
+\noindent \S{}2 位置づけ、\S{}3 方法、\S{}4 検証(逸脱節を含む)、\S{}5 結果、\S{}6 三軸アトラス、\S{}7 Discussion(7.1 解釈の範囲と限界、7.2 限界と展望)。付録 A–D。\par\smallskip
 
 \section*{2. Position}
 
 \noindent \textbf{Grimaldi 系(確率論的母集団モデル)に対して}: Grimaldi (2017) 等は送信機の空間分布・寿命の確率モデルから検出率の期待値を導く。本作は星 i ごとの尤度比 \(\Lambda\)\_i(T) を台帳化し、母集団の仮定を置かない(\(\pi\) は掃引する)。\par\smallskip
 \noindent \textbf{Wright+18 ヘイスタックに対して}: Wright, Kanodia \& Lubar (2018) は探索パラメータ空間の体積被覆率を論じる。本作はその射影を個別星に落とし、被覆の穴を「判定不能」として星単位で計数する。判定不能 99.52\%(\S{}5.2)はヘイスタック不完備性の星単位版である。\par\smallskip
 \noindent \textbf{Breakthrough Listen・\^{G}/Hephaistos に対して}: Price+20・Wlodarczyk-Sroka+20(以下 WS20)は新規電波観測と母集団上限、Wright+14/Griffith+15 と Suazo+22/24 は中赤外廃熱の探索である。本作は新規観測を行わず、これらの\textbf{既存不在証拠を星単位で異種合算}する。Phase 0 の実査で、\^{G} には近傍恒星の個別上限が存在せず(銀河対象)、Hephaistos は方法が公刊文献で閉じるが星単位表は非公開であることを確認した\footnote{\texttt{docs/phase0/01-machine-readability-survey.md}。}。\par\smallskip
-\noindent \textbf{上限算式の多様性}: Price+20 \S{}5.3 の百分率上限(算式非明記)、WS20 の 1/N、本作の二項厳密上限と星単位ベイズ上界は、いずれも\textbf{別量}である(\S{}4.3、\S{}7)。\par\smallskip
+\noindent \textbf{上限算式の多様性}: Price+20 \S{}5.3 の百分率上限(算式非明記)、WS20 の 1/N、本作の二項厳密上限と星単位ベイズ上界は、いずれも\textbf{別量}である(\S{}4.3、\S{}7.1)。\par\smallskip
 
 
 \section*{3. Method}
@@ -136,34 +136,34 @@
 
 \section*{4. Verification}
 
-\subsection*{4.1 G1 — 単調性と MC 安定性}
+\subsection*{4.1 G1: 単調性と MC 安定性}
 \noindent 観測行を 1 つずつ加えた \(\Lambda\) の列が非増加であることを全星(1,587)\(\times\) 3 帯で検査した: \textbf{6,777 検査、違反 0}(許容 +10\(^{-12}\))\footnote{\texttt{data/phase2/g1\_report.json}。}。MC(N = 1,000、seed = 20260823、共有単位は事前登録 \S{}4 どおり)では、電波帯の log\(_{10}\)\(\Lambda\) の 90\% 区間幅の中央値は 0.094 dex(f\_pipe の摂動が支配、観測行数に比例)、低信頼セル(幅 > 0.5 dex)は電波 3 帯で 0。情報レイヤ W1 では低信頼 25,822(\(\gamma\) = 0.1)だが、その 97\% は \(\Lambda\) = 0(クリップ)と小さな正値の間の離散的な跳びに由来し、事後 @\(\pi\) = 10\(^{-2}\) で見れば「占有確率 \(\lesssim\) 10\(^{-3}\)」の結論は不変である。\par\smallskip
 
 
-\subsection*{4.2 G2 — 独立二経路}
+\subsection*{4.2 G2: 独立二経路}
 \noindent \(\Lambda\) 列を含まないエクスポート(星 \(\times\) 帯 \(\times\) 区間の \(\varepsilon\) 行・区間重み)を合算前に参謀(チャット Claude)に渡し、参謀が対数和で \(\Lambda\) を独立再計算した。突合結果は max|\(\Delta\)log\(_{10}\)\(\Lambda\)| = 4.9 \(\times\) 10\(^{-10}\)(電波)、5.2 \(\times\) 10\(^{-7}\)(廃熱)、許容 10\(^{-6}\)、違反 0\footnote{裁定ログ「G2 合格」。}。\par\smallskip
 
 
-\subsection*{4.3 G3(i) — WS20 / Price 系アンカー}
+\subsection*{4.3 G3(i): WS20 / Price 系アンカー}
 \noindent (a) \textbf{報告(合否なし)}: Price+20 \S{}5.3 の公刊値 0.45\% / 0.37\% / 2.0\%(GBT L / GBT S / Parkes、N = 882 / 1005 / 189)に対し、当方の二項厳密 95\% 上限 f = [1 \(-\) 0.05\(^{1/N}\)] / 0.5 は 0.678\% / 0.595\% / 3.15\%(比 1.51 / 1.61 / 1.57)。原典の算式は本文に明記されておらず、公刊三値から逆算した f\(\cdot\)N = 3.97 / 3.72 / 3.78 はばらつき、単一の標準式では同時再現できない\footnote{\texttt{data/phase3/g3\_report.json}。}。\par\smallskip
 \noindent (b) \textbf{ハードゲート}: WS20 表の \texttt{rest} 距離(DR2 基盤)のみで再計数した(EDR3 距離は不使用)。公刊の「EIRP \(\gtrsim\) 6.5 \(\times\) 10\(^{13}\) / 2.5 \(\times\) 10\(^{14}\) W」は殻内 EIRP\_min の最大値(再計数 6.49 \(\times\) 10\(^{13}\) / 2.49 \(\times\) 10\(^{14}\) W)であり、絞り込み条件ではない。\(\leq\)50 pc: \textbf{N = 1513(完全一致)}、1/N = 0.0661\%(公刊 \(\lesssim\)0.0660\%); \(\leq\)100 pc: N = 1671、0.0598\%(公刊 0.061 +0.001/\(-\)0.003 \%); \(\leq\)200 pc: N = 2576、0.0388\%(公刊 0.039 +0.004/\(-\)0.008 \%)。\(\leq\)100/200 pc は公刊の明示誤差区間の内側にある(合格基準は \S{}4.6 の逸脱による)。\par\smallskip
 \noindent (c) \textbf{別量}: 同じ殻の本作の星単位事後の平均は、\(\pi\) = 10\(^{-3}\) / 10\(^{-2}\) で 7.7 \(\times\) 10\(^{-4}\) / 7.7 \(\times\) 10\(^{-3}\)(mean \(\Lambda\) \(\approx\) 0.767、\(\leq\)50 pc、ok 1,436 星)。1/N は「N 回の不検出試行」の頻度論上限で被覆率・感度因子を含まず、本作の事後平均は \(\pi\) の関数である。\(\pi\) = 10\(^{-3}\) で同桁になるのは \(\Lambda\) \(\approx\) 0.77 が 1 に近いことの帰結であり、一致ではない。\par\smallskip
 
 
-\subsection*{4.4 G3(ii) — Hephaistos I 計数再現(不合格)}
+\subsection*{4.4 G3(ii): Hephaistos I 計数再現(不合格)}
 \noindent Suazo+22 Table 1(100 pc、N = 265,724、T\_DS = 300 K)の「DS 適合(排除できない)率」6.6 \(\times\) 10\(^{-3}\) / 1.9 \(\times\) 10\(^{-4}\) / 1.8 \(\times\) 10\(^{-5}\)(\(\gamma\) = 0.1 / 0.5 / 0.9)を、本作の母集団(GCNS \(\leq\)100 pc 300,567 \(\rightarrow\) 主系列 276,814 \(\rightarrow\) WISE 測光あり 187,274)と超過判定で計数した。適合 = 「300 K 区間で \(\theta\)\(_{3}\) = \(\theta\)\(_{4}\) = 0」または「既超過の検出候補」(定義 A)とすると、適合率は 2.07 \(\times\) 10\(^{-2}\) / 1.77 \(\times\) 10\(^{-2}\) / 1.77 \(\times\) 10\(^{-2}\)、比は \textbf{3.13 / 93 / 982} で凍結基準(比 0.3–3)を外れ、\textbf{不合格}である\footnote{\texttt{data/phase3/g3\_report.json}。}。\par\smallskip
 \noindent \textbf{方向分析(計算誤りではない)}: 比が \(\gamma\) とともに爆発する構造は、本作の「検出候補」(\(\geq\)3\(\sigma\) 超過、3,304 星)が第5条3項により\textbf{全 \(\gamma\) で「排除できない」側に置かれる}ことに由来する。Hephaistos の「DS 領域内」は (\(\gamma\), T) ごとのモデル領域への所属で、0.2 等級の軽い超過は \(\gamma\) = 0.9(数等級)と整合しない。本作は Hephaistos より除外を少なく主張する保守設計の帰結であり、計算誤りではない(G1・G2 は W1 でも合格している)。\par\smallskip
 \noindent \textbf{定義 B の診断}(採用せず): 観測残差が (\(\gamma\), 300 K) モデル残差と k\(\sigma\)\_tot 以内で整合する星を適合とすると、比は \(\gamma\) = 0.1 で 0.82、\(\gamma\) = 0.5 で 0.17(6 星 vs 期待 \textasciitilde{}36 星、ポアソンで説明不能・未解明)、\(\gamma\) = 0.9 で 0.30(\textasciitilde{}1 vs \textasciitilde{}3.4 星、小数統計で判定不能)。数字を見た後の適合定義の選択にあたるため採用せず、合格を示唆する語は用いない。\par\smallskip
 \noindent \textbf{帰結}: 憲法第6条(本作導出の帯は対応する G3 アンカー合格を公開の前提条件とする)により、T-W1 を拡張区画(情報レイヤ、claim=false)へ降格した。\par\smallskip
 \noindent \textbf{昇格経路}: Hephaistos 系の星単位表が公開された場合、または DR4 合流(v1.1)で独立アンカーが組めた場合に再判定する(こちらから提供依頼は行わない)。\par\smallskip
 
-\subsection*{4.5 G3(iii) — 太陽系自己検定(合格)}
-\noindent 太陽系を d = 1.3–10.8 pc の 24 点(GBT L + GBT S + Parkes 10-cm、軸上、各 1 観測行、EIRP\_peak = 10\(^{11}\) W)の仮想行として T-R3 に通した。全 d で \(\Lambda\)(周辺化) \(\geq\) 0.999085、\(\Lambda\)(f\_ill 上端 10\(^{-2}\)) \(\geq\) 0.99479 — \textbf{事後 \(\approx\) 事前}であり合格\footnote{\texttt{data/phase3/g3\_report.json}。}。赤信号の動作確認: f\_ill = f\_pipe = 1 の極では \(\Lambda\) = 1 \(-\) 2.15/2.35 = 0.0851 < 0.5(d \(\leq\) 4.8 pc で 3 帯とも感度内)となり地球は「検出される」。\(\varepsilon\)(検出器)は生きており、T-R3 で事後 \(\approx\) 事前になるのは照射因子(間欠・指向)が小さいためである。Parkes 10-cm は d > 5.24 pc で感度外、GBT は 10.9 pc まで。\par\smallskip
+\subsection*{4.5 G3(iii): 太陽系自己検定(合格)}
+\noindent 太陽系を d = 1.3–10.8 pc の 24 点(GBT L + GBT S + Parkes 10-cm、軸上、各 1 観測行、EIRP\_peak = 10\(^{11}\) W)の仮想行として T-R3 に通した。全 d で \(\Lambda\)(周辺化) \(\geq\) 0.999085、\(\Lambda\)(f\_ill 上端 10\(^{-2}\)) \(\geq\) 0.99479、すなわち\textbf{事後 \(\approx\) 事前}であり合格\footnote{\texttt{data/phase3/g3\_report.json}。}。赤信号の動作確認: f\_ill = f\_pipe = 1 の極では \(\Lambda\) = 1 \(-\) 2.15/2.35 = 0.0851 < 0.5(d \(\leq\) 4.8 pc で 3 帯とも感度内)となり地球は「検出される」。\(\varepsilon\)(検出器)は生きており、T-R3 で事後 \(\approx\) 事前になるのは照射因子(間欠・指向)が小さいためである。Parkes 10-cm は d > 5.24 pc で感度外、GBT は 10.9 pc まで。\par\smallskip
 
-\subsection*{4.6 逸脱節(第9条3項)— 制度が機能した二つの実例}
-\noindent \textbf{裁定 \#3(逸脱: 基準の改訂)}。凍結文書 \S{}5 は G3(i)(b) の \(\leq\)100/200 pc 殻の合格基準を「公刊中心値 \(\pm\)1\%」としていた。再計数 0.0598\% は公刊 0.061\% に対し \(-\)1.89\% で\textbf{不合格}となり、作業を停止した。参謀の原典照会により、WS20 \S{}3 が 50 pc 殻の増分を +42/\(-\)7、EIRP \(\geq\) 10\(^{13}\) W 条件の計数を 1513(+9/\(-\)7)と併記していること、当方の \texttt{b\_rest} 再計数(+42)が原典の +42 と完全一致することが判明した — 再計数機構は原典と同一に動作しており、中心値の計数手続きは本文から一意復元不能で、不合格の実体は\textbf{凍結時に公刊誤差幅を確認せずに基準を設計した不備}であった。基準を「公刊の明示誤差区間の内側」に改訂(\(\leq\)50 pc の完全一致要件と再計数手続きは不変)し、新基準で合格とした。旧基準での不合格の事実は記録として残す。誤り台帳 E-1(参謀の凍結前検分の不備)・E-2(経緯)。\par\smallskip
+\subsection*{4.6 逸脱節(第9条3項): 制度が機能した二つの実例}
+\noindent \textbf{裁定 \#3(逸脱: 基準の改訂)}。凍結文書 \S{}5 は G3(i)(b) の \(\leq\)100/200 pc 殻の合格基準を「公刊中心値 \(\pm\)1\%」としていた。再計数 0.0598\% は公刊 0.061\% に対し \(-\)1.89\% で\textbf{不合格}となり、作業を停止した。参謀の原典照会により、WS20 \S{}3 が 50 pc 殻の増分を +42/\(-\)7、EIRP \(\geq\) 10\(^{13}\) W 条件の計数を 1513(+9/\(-\)7)と併記していること、当方の \texttt{b\_rest} 再計数(+42)が原典の +42 と完全一致することが判明した。すなわち、再計数機構は原典と同一に動作しており、中心値の計数手続きは本文から一意復元不能で、不合格の実体は\textbf{凍結時に公刊誤差幅を確認せずに基準を設計した不備}であった。基準を「公刊の明示誤差区間の内側」に改訂(\(\leq\)50 pc の完全一致要件と再計数手続きは不変)し、新基準で合格とした。旧基準での不合格の事実は記録として残す。誤り台帳 E-1(参謀の凍結前検分の不備)・E-2(経緯)。\par\smallskip
 \noindent \textbf{裁定 \#4(逸脱ではない: 基準どおりの不合格受理)}。G3(ii) は凍結基準で不合格であり、数字を見た後の適合定義の選択(定義 B)に基づく判定の差し替えは採択せず、T-W1 を降格した。基準の変更を伴わない不合格の受理は、基準改訂(裁定 \#3)と対をなす実例である。\par\smallskip
-\noindent 自己申告: 改訂 2 再提出時の追補文の反映漏れ(1 件)、BL 取得対象の集計スクリプトの引き算ミス(取得漏れなし)、裁定ログのパス表記のシェル展開取りこぼし — いずれも数値への影響なし(付録 B)。\par\smallskip
+\noindent 自己申告: 改訂 2 再提出時の追補文の反映漏れ(1 件)、BL 取得対象の集計スクリプトの引き算ミス(取得漏れなし)、裁定ログのパス表記のシェル展開取りこぼし、T-R3 の \(\Lambda\) 下限を 4 桁丸め値の不等号で引用した転記(E-7。厳密値 0.998458 を併記して訂正)、交差計数の補集合ラベルの区分混同(E-8。上界なし 13,984 = 判定不能 13,982 + 感度外 2)。いずれも数値の結論への影響なし(付録 B)。\par\smallskip
 
 \section*{5. Results}
 
@@ -171,7 +171,7 @@
 \noindent 空き度上界(\(\varepsilon\) 確定)を持つ星は T-R1 \textbf{1,554}、T-R2 \textbf{1,587}、T-R3 \textbf{159}(d \(\leq\) 10.8 pc)\footnote{\texttt{data/phase2/lambda\_ledger.json}(summary.status\_counts、lambda\_*)。}。観測されたが当該帯で感度外(\(\varepsilon\) = 0、\(\Lambda\) = 1 = 情報なし)の星は T-R1 33、T-R3 1,428。T-R1 の \(\Lambda\) は 0.4266(最小: GBT L + GBT S + GBT S + Parkes 10-cm の 4 観測行、S 帯 2 ポインティング、1 星)/ 0.8000(中央値: GBT S のみ)/ 0.8596(最大: GBT L のみ)で、事後 @\(\pi\) = 10\(^{-2}\) の中央値は 0.0080。T-R3 は \(\Lambda\) = 0.9985–0.9998(4 桁丸め; 最小の厳密値 0.998458)、事後 @\(\pi\) = 10\(^{-2}\) で 0.0100。\(\Lambda\) の値は観測行の被覆構造(受信帯の窓内被覆率 \(\times\) f\_pipe)で決まり、距離にはほとんど依らない(感度閾値をまたぐ星が T-R1 で 33 星のみ)。\par\smallskip
 
 
-\subsection*{5.2 判定不能 99.52\% — 主結果として}
+\subsection*{5.2 判定不能 99.52\%: 主結果として}
 \noindent 母集団 332,571 星のうち、WS20 のいずれのポインティングの視野にも入っていない星は \textbf{330,984(99.52\%)}\footnote{\texttt{data/phase2/lambda\_ledger.json}(summary.status\_counts、lambda\_*)。}。このうち \textbf{1,530 星}は BL 公開アーカイブに観測ファイルがあるが上限が公刊されていない(C/X 帯、または L/S/10-cm で Price+20 非掲載)ため「観測あり・未公刊」として判定不能 (d) に分類した\footnote{\texttt{docs/phase1/00-status.md} \S{}1.3。}。判定不能は空き側にも占有側にも倒さない。この数字は、既存の電波 SETI の不在証拠が太陽近傍 100 pc の星のうち\textbf{どれだけ少ない星にしか及んでいないか}を星単位で示すものであり、Wright+18 のヘイスタック不完備性の星単位版である。\par\smallskip
 
 
@@ -185,7 +185,7 @@
 \noindent 「空き度」は曲線であり、単一数値ではない。\par\smallskip
 
 \subsection*{5.4 太陽自己校正}
-\noindent 地球級帯 T-R3 では事後 \(\approx\) 事前 — 本アトラスが空き度を語れる技術帯の下限は地球自身で校正される(\S{}4.5)。\par\smallskip
+\noindent 地球級帯 T-R3 では事後 \(\approx\) 事前であり、本アトラスが空き度を語れる技術帯の下限は地球自身で校正される(\S{}4.5)。\par\smallskip
 
 \subsection*{5.5 W1 情報レイヤ(claim=false)}
 \noindent GCNS 内蔵の WISE 測光から導いた T-W1 の \(\Lambda\) は、主系列かつ W3/W4 測光を持つ 192,363 星(既超過の検出候補 3,615 星・模型外 54,498 星・測光なし 82,094 星は判定不能)のうち、\(\gamma\) = 0.1 で \(\Lambda\) < 1(\(\varepsilon\) > 0)の星が 191,237(その大半は \(\Lambda\) = 0 = 全 T\_DS 区間で検出されたはず)、感度外 \(\Lambda\) = 1 が 1,126 である\footnote{\texttt{data/phase2/lambda\_ledger.json}(lambda\_W1\_g0.1)。\(\Lambda\) < 1 の計数には \(\Lambda\) = 0 の星を含む。}。これは物理的に正しい: 太陽を 10 pc に置いた 12 \(\mu\)m の光球流束 1.9 Jy に対し、\(\gamma\) = 0.1・300 K の部分ダイソン球は 90 Jy を放つ。しかしこの導出は G3(ii) のアンカー不合格により主張の地位を持たず、v1 では情報レイヤ(既定オフ、「アンカー未確立」バッジ)として提供する。\par\smallskip
@@ -194,7 +194,7 @@
 \section*{6. Three-axis atlas}
 
 \subsection*{6.1 結合率}
-\noindent 到達可能性は EMBARK reachability atlas v1(37,498 星)を DR3 source\_id で結合した: GCNS 内在 \textbf{14,799}(4.45\%)、残り 22,699 星は 100 pc 超で母集団外(注記のみ)、GCNS 側の 317,772 星(95.55\%)は到達可能性\textbf{判定不能}\footnote{\texttt{data/phase4/atlas\_v1\_summary.json}。}。定住資源性は GCNS 内蔵量(M\_G、BP\(-\)RP、WDprob)、Mamajek 表の色\(\rightarrow\)型区分、NASA Exoplanet Archive(1,037 ホスト・1,545 惑星)、HWC(居住可能候補 70 行中 45 行・35 ホスト)を輸入した。三軸とも再計算は行っていない。\par\smallskip
+\noindent 到達可能性は EMBARK reachability atlas v1(37,498 星)を DR3 source\_id で結合した: GCNS 内在 \textbf{14,799}(4.45\%)、残り 22,699 星は 100 pc 超で母集団外(注記のみ)、GCNS 側の 317,772 星(95.55\%)は到達可能性\textbf{判定不能}\footnote{\texttt{data/phase4/atlas\_v1\_summary.json}。}。定住資源性は GCNS 内蔵量(M\_G、BP\(-\)RP、WDprob)、Mamajek 表の色\(\rightarrow\)型区分、NASA Exoplanet Archive(1,037 ホスト・1,545 惑星)、HWC(居住可能候補 70 行中 45 行・35 ホスト)を結合した。三軸とも既存カタログの値をそのまま用い、再計算は行っていない。\par\smallskip
 
 
 \subsection*{6.2 交差計数(合成なし)}
@@ -214,12 +214,14 @@ T-R1 上界あり \(\wedge\) 既知惑星ホスト & 136 \\
 \noindent S1 狭義(FGK 主系列、Mamajek 区分 F0–K5)43,119 星 / S2 主系列全型 283,526 星 / S3 資源的広義(全恒星)332,571 星。スライダーは表示時の星集合の関数であり判定基準ではなく、空き度・到達可能性の値に影響しない。狭義ハビタビリティ(液体の水・温度)は判定基準にしない。\par\smallskip
 
 \subsection*{6.4 HWC 照合表(合成ではない)}
-\noindent HWC 居住可能候補ホストのうち T-R1 上界を持つものは 16(例: Proxima Cen b のホスト \(\Lambda\) = 0.819、EMBARK 到達; Ross 128 b のホスト \(\Lambda\) = 0.860、EMBARK 外)。TRAPPIST-1、LHS 1140、TOI-700 等 19 ホストは電波視野外で空き度判定不能。居住可能候補であることと空き度上界は独立の輸入量であり、本表は照合のみで合成しない。\par\smallskip
+\noindent HWC 居住可能候補ホストのうち T-R1 上界を持つものは 16(例: Proxima Cen b のホスト \(\Lambda\) = 0.819、EMBARK 到達; Ross 128 b のホスト \(\Lambda\) = 0.860、EMBARK 外)。TRAPPIST-1、LHS 1140、TOI-700 等 19 ホストは電波視野外で空き度判定不能。居住可能候補であることと空き度上界は独立に取得された量であり、本表は照合のみで合成しない。\par\smallskip
 
-\section*{7. Interpretation discipline}
-\noindent 本稿の全言明は次の四文に従う。(1) \textbf{測量であって証明ではない} — 不在の証拠は限定的であり、占有の不在を証明しない。(2) \textbf{空き度は入植許可証ではない} — 本成果物から占有の不在・入植の正当性を推論してはならない。(3) \textbf{HWC 照合表は合成ではない} — 居住可能候補と空き度上界を掛け合わせた量は存在しない。(4) \textbf{1/N と星単位事後は別量} — 数値の近さ(\S{}4.3(c))は偶然である。加えて、条件節(技術帯・サーベイ集合・\(\pi\))の省略、単一数値・順位としての提示、三軸の積・加重和、判定不能を空き側に倒すこと、本成果物を入植・接触・送信の正当化に用いることを禁じる。W1 情報レイヤはアンカー未確立であり、空き度の主張に用いない。\par\smallskip
+\section*{7. Discussion}
 
-\section*{8. Limitations \& future}
+\subsection*{7.1 解釈の範囲と限界(Interpretation and scope)}
+\noindent 本稿の結果は次の四点の範囲でのみ意味を持つ。第一に、本台帳は測量であって証明ではない。不在の証拠は限定的であり、占有の不在を証明しない。第二に、空き度上界は入植許可証ではない。本成果物から占有の不在や入植の正当性を推論することはできない。第三に、HWC 照合表は合成ではない。居住可能候補と空き度上界を掛け合わせた量は本稿のどこにも存在しない。第四に、1/N と星単位事後は別量であり、数値の近さ(\S{}4.3(c))は偶然である。同じ理由から、本稿の値は条件節(技術帯・サーベイ集合・\(\pi\))を離れては意味を持たない。単一数値や順位への圧縮、三軸の積・加重和、判定不能星を空き側に数えること、本成果物を入植・接触・送信の正当化に用いることは、いずれも本手法の範囲外の使用である。W1 情報レイヤはアンカー未確立であり、空き度の主張には用いない。\par\smallskip
+
+\subsection*{7.2 限界と展望(Limitations and outlook)}
 \begin{itemize}\setlength{\itemsep}{1pt}
 \item \textbf{未公刊観測}: BL 公開アーカイブには GCNS 星 1,530 の未公刊観測(C/X 帯等)があり、上限の公刊により判定不能 (d) から可判定へ移りうる。UWL・光学レーザー・遷移現象は拡張区画。
 \item \textbf{独立性仮定}: f\_pipe の観測間独立は Price+20 と同一前提だが、感度枠(U[0.3, 0.8])の外に相関の効果が残りうる。
@@ -228,28 +230,28 @@ T-R1 上界あり \(\wedge\) 既知惑星ホスト & 136 \\
 \item \textbf{母集団の地平線}: GCNS \(\leq\)100 pc であり、WS20 の 288,315 星の大半(100 pc 超)は本アトラスの母集団外である。
 \end{itemize}
 
-\section*{付録 A — \(\varepsilon\) 因子表・受信帯被覆・共通 \(\nu\) グリッド}
+\section*{付録 A: \(\varepsilon\) 因子表・受信帯被覆・共通 \(\nu\) グリッド}
 \noindent 事前登録 (b)(\url{doi:10.5281/zenodo.22067884})\S{}2 の転記: EIRP50、ビーム応答、受信帯被覆(L [1.10,1.20]\(\cup\)[1.34,1.90]、S [1.80,2.30]\(\cup\)[2.36,2.80]、P [2.60,3.45] GHz)、共通 \(\nu\) グリッド境界 \{1.10, 1.20, 1.34, 1.80, 1.90, 2.30, 2.36, 2.60, 2.80, 3.45\}、f\_pipe 0.5、f\_ill 格子 13 点、T\_DS 20 区間、k = 3、S/N \(\geq\) 3.5、主系列選択式、Mamajek 表 sha256 1de2edee\ldots{}、WISE 零点。\par\smallskip
 
-\section*{付録 B — Method record and AI disclosure}
-\noindent 三役: 人間(前田幸枝)= 方向設定・ゲート裁定・全分岐の最終決定 / チャット Claude = 参謀・独立検算(G2 第二経路)・文献照合 / Claude Code(Fable 5)= 実行。運用記録: 裁定 6 件(\#1 技術帯集合 A–F、\#2 事前登録 (b) 修正、\#3 逸脱・基準改訂、\#4 不合格受理・降格、\#5 付議 7 件、\#6 目次承認)、停止 2 回(G3(i)(b)、G3(ii) — いずれも正しく停止し裁定で再開)、逸脱 1、不合格 1、自己申告 3。誤り台帳 r1(E-1、E-2)。本内部検証は人間による査読の代替ではない。\par\smallskip
+\section*{付録 B: Method record and AI disclosure}
+\noindent 三役: 人間(前田幸枝)= 方向設定・ゲート裁定・全分岐の最終決定 / チャット Claude = 参謀・独立検算(G2 第二経路)・文献照合 / Claude Code(Fable 5)= 実行。運用記録: 裁定 8 件(\#1 技術帯集合 A–F、\#2 事前登録 (b) 修正、\#3 逸脱・基準改訂、\#4 不合格受理・降格、\#5 付議 7 件、\#6 目次承認、\#7 報告 (2) 条件付き承認、\#8 公開前の体裁・文体)、停止 2 回(G3(i)(b)、G3(ii)。いずれも正しく停止し裁定で再開)、逸脱 1、不合格 1、自己申告 5(追補反映漏れ・BL 集計・ログ表記・E-7・E-8)。誤り台帳 r1(E-1〜E-8)。本内部検証は人間による査読の代替ではない。\par\smallskip
 
-\section*{付録 C — 判定不能会計(三軸)}
+\section*{付録 C: 判定不能会計(三軸)}
 {\footnotesize\setlength{\tabcolsep}{3.5pt}\begin{center}\begin{tabular}{lll}
 軸 & 判定不能 & 率 \\
 \hline
 空き度(電波 3 帯、視野外) & 330,984 & 99.52\% \\
-空き度(W1) & 拡張区画(情報レイヤ) & — \\
+空き度(W1) & 拡張区画(情報レイヤ) & 該当なし \\
 到達可能性(EMBARK 外) & 317,772 & 95.55\% \\
 定住資源性(測光なし) & 8,261 & 2.48\% \\
 \end{tabular}\end{center}}
 
-\section*{付録 D — Reproducibility and data release}
+\section*{付録 D: Reproducibility and data release}
 \noindent 再生成: \texttt{python3 src/vacancy/build\_ledger.py}(3 s)/ 図 1: \texttt{python3 scripts/build\_paper\_figs.py}\(\rightarrow\) \texttt{scripts/export\_g2.py} \(\rightarrow\) \texttt{python3 src/vacancy/aggregate.py}(\(\approx\)10 分)\(\rightarrow\) \texttt{scripts/g3\_i\_ws20\_price.py} / \texttt{g3\_ii\_hephaistos.py} / \texttt{g3\_iii\_solar\_selftest.py} \(\rightarrow\) \texttt{python3 src/vacancy/build\_atlas.py}。単体テスト \texttt{python3 -m unittest tests.test\_epsilon}(14 件)。公開物: \(\varepsilon\) 台帳(\texttt{ledger\_v0.json}、式版 eps-v0.2)、\(\Lambda\) 台帳(\texttt{lambda\_ledger.json})、三軸アトラス(\texttt{atlas\_v1.json})、電波観測行来歴(\texttt{radio\_obs\_v0.json})、G1/G2/G3 レポート、NEA/HWC 凍結コピー、全スクリプト、誤り台帳 r1、sha256 マニフェスト(\texttt{MANIFEST.json})。事前登録 (a) コミット 10a01e710854b69344651ed6ba016ab303c9d124、(b) \url{doi:10.5281/zenodo.22067884}。\par\smallskip
 
 \section*{謝辞}
 \noindent This work has made use of data from the European Space Agency (ESA) mission Gaia (\url{https://www.cosmos.esa.int/gaia}), processed by the Gaia Data Processing and Analysis Consortium (DPAC, \url{https://www.cosmos.esa.int/web/gaia/dpac/consortium}). Funding for the DPAC has been provided by national institutions, in particular the institutions participating in the Gaia Multilateral Agreement. This research has made use of the NASA Exoplanet Archive, which is operated by the California Institute of Technology, under contract with the National Aeronautics and Space Administration under the Exoplanet Exploration Program. This research has made use of the VizieR catalogue access tool, CDS, Strasbourg, France (DOI: 10.26093/cds/vizier). The Habitable Worlds Catalog is maintained by the Planetary Habitability Laboratory @ UPR Arecibo. Breakthrough Listen 公開データアーカイブ(seti.berkeley.edu/opendata)の観測メタデータを使用した。\par\smallskip
 
-\section*{参考文献(参謀照合中 — 付録の確認リスト 23 項目)}
+\section*{参考文献}
 \noindent [1] Price D. C. et al. 2020, AJ 159, 86. [2] Wlodarczyk-Sroka B. S., Garrett M. A., Siemion A. P. V. 2020, MNRAS 498, 5720. [3] Enriquez J. E. et al. 2017, ApJ 849, 104. [4] Isaacson H. et al. 2017, PASP 129, 054501. [5] Lebofsky M. et al. 2019, PASP 131, 124505. [6] Suazo M. et al. 2022, MNRAS 512, 2988. [7] Suazo M. et al. 2024, MNRAS 531, 695. [8] Wright J. T. et al. 2014, ApJ 792, 26; 792, 27. [9] Griffith R. L. et al. 2015, ApJS 217, 25. [10] Wright J. T., Kanodia S., Lubar E. 2018, AJ 156, 260. [11] Grimaldi C. 2017, Sci. Rep. 7, 46273. [12] Gaia Collaboration, Smart R. L. et al. 2021, A\&A 649, A6. [13] Gaia Collaboration 2016, A\&A 595, A1; 2021, A\&A 649, A1; 2023, A\&A 674, A1. [14] Brandt T. D. 2021, ApJS 254, 42. [15] Bailer-Jones C. A. L. et al. 2018, AJ 156, 58. [16] Pecaut M. J., Mamajek E. E. 2013, ApJS 208, 9. [17] Wright E. L. et al. 2010, AJ 140, 1868; Cutri R. M. et al. 2014, VizieR II/328; Marocco F. et al. 2021, ApJS 253, 8. [18] Jarrett T. H. et al. 2011, ApJ 735, 112. [19] Sullivan W. T., Brown S., Wetherill C. 1978, Science 199, 377; Saide R. C. et al. 2023, MNRAS 522, 2393. [20] Sheikh S. Z. et al. 2019, ApJ 884, 14. [21] NASA Exoplanet Archive, Planetary Systems Composite Parameters, \url{doi:10.26133/NEA12}(2026-08-23 取得). [22] Habitable Worlds Catalog, PHL @ UPR Arecibo(2026-08-23 取得). [23] Maeda Y. 2026a, Zenodo, \url{doi:10.5281/zenodo.22067884}(事前登録 (b)); Maeda Y. 2026b, WAKE, Zenodo, \url{doi:10.5281/zenodo.21966305}; Maeda Y. 2026c, EMBARK, Zenodo, \url{doi:10.5281/zenodo.22059576.}\par\smallskip
 \end{document}
