@@ -115,6 +115,7 @@ def main():
             files[rel] = {"sha256": hashlib.sha256(b).hexdigest(), "bytes": len(b)}
     bundle = hashlib.sha256("".join(f"{k} {files[k]['sha256']}\n" for k in sorted(files)).encode()).hexdigest()
     man = {"release": f"vacancy-data-v1.0(doi:{doi})", "generated": "2026-08-24",
+           "zenodo_filename_rule": "Zenodo 収載時のファイル名 = 本 MANIFEST のパスの '/' を '__' に置換したもの(バケットの制約)",
            "constitution": "CLAUDE.md v0.3 / 裁定 #1–#11",
            "preregistration_a_commit": "10a01e710854b69344651ed6ba016ab303c9d124",
            "preregistration_b_doi": "10.5281/zenodo.22067884",
@@ -190,14 +191,14 @@ def main():
         p = REL / relname
         data = p.read_bytes()
         md5 = hashlib.md5(data).hexdigest()
-        prev = exist_by_name.get(relname)
+        prev = exist_by_name.get(relname.replace("/", "__"))
         if prev and prev.get("checksum", "").split(":")[-1] == md5:
             results.append((relname, len(data), md5, "既存一致(再送不要)", True))
             continue
         if prev:   # 重複/部分アップロードは削除してから再送(裁定 #11)
             retry(lambda: req("DELETE", prev["links"]["self"], tok), f"DELETE {relname}")
             print(f"    旧 {relname} を削除(不一致/部分)")
-        key = urllib.parse.quote(relname, safe="")
+        key = relname.replace("/", "__")            # バケットはスラッシュ不可 → 命名則: パスの / を __ に(MANIFEST に注記)
         r = retry(lambda: req("PUT", f"{bucket}/{key}", tok, data, ctype="application/octet-stream", raw=True),
                   f"PUT {relname}")
         api_md5 = r.get("checksum", "").split(":")[-1]

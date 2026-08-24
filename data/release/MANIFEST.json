@@ -1,6 +1,7 @@
 {
  "release": "vacancy-data-v1.0(doi:10.5281/zenodo.22081202)",
  "generated": "2026-08-24",
+ "zenodo_filename_rule": "Zenodo 収載時のファイル名 = 本 MANIFEST のパスの '/' を '__' に置換したもの(バケットの制約)",
  "constitution": "CLAUDE.md v0.3 / 裁定 #1–#11",
  "preregistration_a_commit": "10a01e710854b69344651ed6ba016ab303c9d124",
  "preregistration_b_doi": "10.5281/zenodo.22067884",
