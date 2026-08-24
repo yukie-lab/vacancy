@@ -130,7 +130,10 @@ Suazo+22 Table 1(100 pc、N = 265,724、T_DS = 300 K)の「DS 適合(排除で�
 [^ph1]: `docs/phase1/00-status.md` §1.3。
 
 ### 5.3 上界曲線
-P(占有 | D, T, π) = expit(logit π + ln Λ) は π の単調関数で、Λ ∈ [0.43, 0.86] の電波帯では事後 ≈ π × Λ(π ≪ 1)となる。図 1(π 掃引、再現コマンドは付録 D)。「空き度」は曲線であり、単一数値ではない。
+P(占有 | D, T, π) = expit(logit π + ln Λ) は π の単調関数で、Λ ∈ [0.43, 0.86] の電波帯では事後 ≈ π × Λ(π ≪ 1)となる。図 1(π 掃引、再現コマンドは付録 D)。
+
+[FIG] figs/fig1_pi_sweep.png | 図 1: π 掃引の上界曲線 P(占有 | D, T, π) = expit(logit π + ln Λ)。曲線は凍結台帳の Λ(T-R1 の最小/中央/最大、T-R3 の最小/中央/最大)。点線は事前 P = π。再現: python3 scripts/build_paper_figs.py
+「空き度」は曲線であり、単一数値ではない。
 
 ### 5.4 太陽自己校正
 地球級帯 T-R3 では事後 ≈ 事前 — 本アトラスが空き度を語れる技術帯の下限は地球自身で校正される(§4.5)。
@@ -189,7 +192,7 @@ HWC 居住可能候補ホストのうち T-R1 上界を持つものは 16(例: P
 | 定住資源性(測光なし) | 8,261 | 2.48% |
 
 ## 付録 D — Reproducibility and data release
-再生成: `python3 src/vacancy/build_ledger.py`(3 s)→ `scripts/export_g2.py` → `python3 src/vacancy/aggregate.py`(≈10 分)→ `scripts/g3_i_ws20_price.py` / `g3_ii_hephaistos.py` / `g3_iii_solar_selftest.py` → `python3 src/vacancy/build_atlas.py`。単体テスト `python3 -m unittest tests.test_epsilon`(14 件)。公開物: ε 台帳(`ledger_v0.json`、式版 eps-v0.2)、Λ 台帳(`lambda_ledger.json`)、三軸アトラス(`atlas_v1.json`)、電波観測行来歴(`radio_obs_v0.json`)、G1/G2/G3 レポート、NEA/HWC 凍結コピー、全スクリプト、誤り台帳 r1、sha256 マニフェスト(`MANIFEST.json`)。事前登録 (a) コミット 10a01e710854b69344651ed6ba016ab303c9d124、(b) doi:10.5281/zenodo.22067884。
+再生成: `python3 src/vacancy/build_ledger.py`(3 s)/ 図 1: `python3 scripts/build_paper_figs.py`→ `scripts/export_g2.py` → `python3 src/vacancy/aggregate.py`(≈10 分)→ `scripts/g3_i_ws20_price.py` / `g3_ii_hephaistos.py` / `g3_iii_solar_selftest.py` → `python3 src/vacancy/build_atlas.py`。単体テスト `python3 -m unittest tests.test_epsilon`(14 件)。公開物: ε 台帳(`ledger_v0.json`、式版 eps-v0.2)、Λ 台帳(`lambda_ledger.json`)、三軸アトラス(`atlas_v1.json`)、電波観測行来歴(`radio_obs_v0.json`)、G1/G2/G3 レポート、NEA/HWC 凍結コピー、全スクリプト、誤り台帳 r1、sha256 マニフェスト(`MANIFEST.json`)。事前登録 (a) コミット 10a01e710854b69344651ed6ba016ab303c9d124、(b) doi:10.5281/zenodo.22067884。
 
 ## 謝辞
 This work has made use of data from the European Space Agency (ESA) mission Gaia (https://www.cosmos.esa.int/gaia), processed by the Gaia Data Processing and Analysis Consortium (DPAC, https://www.cosmos.esa.int/web/gaia/dpac/consortium). Funding for the DPAC has been provided by national institutions, in particular the institutions participating in the Gaia Multilateral Agreement. This research has made use of the NASA Exoplanet Archive, which is operated by the California Institute of Technology, under contract with the National Aeronautics and Space Administration under the Exoplanet Exploration Program. This research has made use of the VizieR catalogue access tool, CDS, Strasbourg, France (DOI: 10.26093/cds/vizier). The Habitable Worlds Catalog is maintained by the Planetary Habitability Laboratory @ UPR Arecibo. Breakthrough Listen 公開データアーカイブ(seti.berkeley.edu/opendata)の観測メタデータを使用した。

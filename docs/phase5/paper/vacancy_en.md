@@ -130,7 +130,10 @@ Of the 332,571 stars, **330,984 (99.52%)** lie outside the field of every WS20 p
 [^ph1]: `docs/phase1/00-status.md` §1.3.
 
 ### 5.3 Upper-bound curves
-P(occupied | D, T, π) = expit(logit π + ln Λ) is monotonic in π; for the radio bands with Λ ∈ [0.43, 0.86] the posterior is ≈ π × Λ for π ≪ 1. Figure 1 (π sweep; reproduction command in Appendix D). The "vacancy" is a curve, not a single number.
+P(occupied | D, T, π) = expit(logit π + ln Λ) is monotonic in π; for the radio bands with Λ ∈ [0.43, 0.86] the posterior is ≈ π × Λ for π ≪ 1. Figure 1 (π sweep; reproduction command in Appendix D).
+
+[FIG] figs/fig1_pi_sweep.png | Figure 1: upper-bound curves P(occupied | D, T, π) = expit(logit π + ln Λ). Curves use the frozen-ledger Λ (min/median/max of T-R1 and T-R3); the dotted line is the prior P = π. Reproduce: python3 scripts/build_paper_figs.py
+ The "vacancy" is a curve, not a single number.
 
 ### 5.4 Solar self-calibration
 In the Earth-level band T-R3 the posterior ≈ the prior: the lowest technology band about which this atlas can speak is calibrated by Earth itself (§4.5).
@@ -189,7 +192,7 @@ Three roles: the human (Yukie Maeda) — direction, gate rulings, all final deci
 | Settlement resources (no photometry) | 8,261 | 2.48% |
 
 ## Appendix D — Reproducibility and data release
-Regeneration: `python3 src/vacancy/build_ledger.py` (3 s) → `scripts/export_g2.py` → `python3 src/vacancy/aggregate.py` (≈10 min) → `scripts/g3_i_ws20_price.py` / `g3_ii_hephaistos.py` / `g3_iii_solar_selftest.py` → `python3 src/vacancy/build_atlas.py`. Unit tests: `python3 -m unittest tests.test_epsilon` (14 tests). Released files: the ε ledger (`ledger_v0.json`, formula version eps-v0.2), the Λ ledger (`lambda_ledger.json`), the three-axis atlas (`atlas_v1.json`), radio-row provenance (`radio_obs_v0.json`), the G1/G2/G3 reports, frozen copies of the NEA and HWC inputs, all scripts, error ledger r1, and the SHA-256 manifest (`MANIFEST.json`). Pre-registration (a) commit 10a01e710854b69344651ed6ba016ab303c9d124; (b) doi:10.5281/zenodo.22067884.
+Regeneration: `python3 src/vacancy/build_ledger.py` (3 s) / Figure 1: `python3 scripts/build_paper_figs.py` → `scripts/export_g2.py` → `python3 src/vacancy/aggregate.py` (≈10 min) → `scripts/g3_i_ws20_price.py` / `g3_ii_hephaistos.py` / `g3_iii_solar_selftest.py` → `python3 src/vacancy/build_atlas.py`. Unit tests: `python3 -m unittest tests.test_epsilon` (14 tests). Released files: the ε ledger (`ledger_v0.json`, formula version eps-v0.2), the Λ ledger (`lambda_ledger.json`), the three-axis atlas (`atlas_v1.json`), radio-row provenance (`radio_obs_v0.json`), the G1/G2/G3 reports, frozen copies of the NEA and HWC inputs, all scripts, error ledger r1, and the SHA-256 manifest (`MANIFEST.json`). Pre-registration (a) commit 10a01e710854b69344651ed6ba016ab303c9d124; (b) doi:10.5281/zenodo.22067884.
 
 ## Acknowledgements
 This work has made use of data from the European Space Agency (ESA) mission Gaia (https://www.cosmos.esa.int/gaia), processed by the Gaia Data Processing and Analysis Consortium (DPAC, https://www.cosmos.esa.int/web/gaia/dpac/consortium). Funding for the DPAC has been provided by national institutions, in particular the institutions participating in the Gaia Multilateral Agreement. This research has made use of the NASA Exoplanet Archive, which is operated by the California Institute of Technology, under contract with the National Aeronautics and Space Administration under the Exoplanet Exploration Program. This research has made use of the VizieR catalogue access tool, CDS, Strasbourg, France (DOI: 10.26093/cds/vizier). The Habitable Worlds Catalog is maintained by the Planetary Habitability Laboratory @ UPR Arecibo. Observation metadata from the Breakthrough Listen open data archive (seti.berkeley.edu/opendata) were used.
