@@ -89,6 +89,27 @@ if os.path.exists(aa_tex_path):
     for v in ["10.5281/zenodo.22067884", "10a01e71", "88eb7809", "10.5281/zenodo.22081202"]:
         if v not in tex: fails.append(f"A&A 凍結値 {v} が無い")
     print("AA tokens", len(s_aa))
+# ---- 裁定 #13-(4): arXiv 版(docs/phase5/submission_arxiv/vacancy_arxiv.tex) ----
+XT = os.path.join(ROOT, "docs", "phase5", "submission_arxiv", "vacancy_arxiv.tex")
+if os.path.exists(XT):
+    xtex = open(XT).read()
+    def detex2(t):
+        t = re.sub(r"^\\(?:documentclass|usepackage|ifdefined).*$", " ", t, flags=re.M)
+        t = re.sub(r"\\hspace\{[^{}]*\}", " ", t)
+        t = re.sub(r"(?:ex)?hyphenpenalty=\d+", " ", t)
+        return detex(t)
+    en_x = re.sub(r"^\[\d+\]\s+", "", en, flags=re.M)                       # 参考文献ラベルは arXiv 版で不掲載
+    s_mdx, s_x = nums(en_x), nums(detex2(xtex))
+    dx1, dx2 = sorted(s_mdx - s_x), sorted(s_x - s_mdx)
+    if dx1 or dx2:
+        fails.append(f"arXiv 数値トークン不一致: mdのみ {dx1[:20]} / arXivのみ {dx2[:20]}")
+    for bad in ["partial anchor", "partially pass"]:
+        if bad in xtex.lower(): fails.append(f"arXiv 禁止語: {bad}")
+    for r in req_en:
+        if r not in xtex: fails.append(f"arXiv 必須文: {r}")
+    for v in ["10.5281/zenodo.22067884", "10a01e71", "88eb7809", "10.5281/zenodo.22081202"]:
+        if v not in xtex: fails.append(f"arXiv 凍結値 {v} が無い")
+    print("arXiv tokens", len(s_x))
 print("JA tokens", len(sj), "EN tokens", len(se))
 print("PASS" if not fails else "FAIL"); [print(" -", f) for f in fails]
 sys.exit(1 if fails else 0)
