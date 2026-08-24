@@ -6,8 +6,8 @@
  "preregistration_a_commit": "10a01e710854b69344651ed6ba016ab303c9d124",
  "preregistration_b_doi": "10.5281/zenodo.22067884",
  "n_files": 54,
- "total_bytes": 430245541,
- "bundle_sha256_of_file_list": "80bc7941f24e1fb1afb4f49c9db12801942347e31ee21913c5e92d74f352eda7",
+ "total_bytes": 430245607,
+ "bundle_sha256_of_file_list": "41bcbc8d39f1b7122ac464f3ca1d7e2f5783aac9d20ea69c6eb939a44990fdf7",
  "files": {
   "README.md": {
    "sha256": "53065f0fb6a6ddd9a20562bb60a1210dc71b8902103bf48d610a88772cd6911a",
@@ -78,8 +78,8 @@
    "bytes": 1665
   },
   "code/src/vacancy/__init__.py": {
-   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-   "bytes": 0
+   "sha256": "4ffcf0174a0456926be3ada7fd4c47b10c12bb0e3f7859c609455cf21f6854f1",
+   "bytes": 66
   },
   "code/src/vacancy/aggregate.py": {
    "sha256": "cb4b62e2c0d5c5c233cd8aa4b3a8b86c4febbd43e86d39f163f28feda2fc1e12",

@@ -1,0 +1,61 @@
+Updated tag 'v1.0' (was 6920c55)
+[1] 既存ドラフト 22081202 再開
+    予約 DOI: 10.5281/zenodo.22081202
+[2] DOI 置換: スキップ(済み)
+    gate_check PASS
+    MANIFEST 再生成: 54 ファイル, bundle 80bc7941f24e1fb1…
+  $ git add -A
+  $ git -c user.name=Claude Code -c user.email=noreply@anthropic.com commit -q -m release: v1.0 確定(doi:10.5281/zenodo.22081202 埋め込み・MANIFEST 最終)
+
+Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>
+    v1.0 確定コミット+タグ
+    retry 1/1 PUT metadata: HTTPError BAD REQUEST
+    relation isRelatedTo は拒否 → references にフォールバック
+[3] メタデータ PUT(WAKE/EMBARK relation = references)
+    code/scripts/bl_log_stats.py: 0.0 MB ✓
+    code/scripts/build_mnras_version.py: 0.0 MB ✓
+    code/scripts/build_paper_figs.py: 0.0 MB ✓
+    code/scripts/build_paper_numbers.py: 0.0 MB ✓
+    code/scripts/build_paper_pdf.py: 0.0 MB ✓
+    code/scripts/export_g2.py: 0.0 MB ✓
+    code/scripts/fetch_bl_opendata.py: 0.0 MB ✓
+    code/scripts/finalize_bl_fetch.sh: 0.0 MB ✓
+    code/scripts/g3_i_ws20_price.py: 0.0 MB ✓
+    code/scripts/g3_ii_hephaistos.py: 0.0 MB ✓
+    code/scripts/g3_iii_solar_selftest.py: 0.0 MB ✓
+    code/scripts/gate_check_paper.py: 0.0 MB ✓
+    code/scripts/xmatch_hip_dr3.py: 0.0 MB ✓
+    retry 1/3 PUT code/src/vacancy/__init__.py: HTTPError BAD REQUEST
+    retry 2/3 PUT code/src/vacancy/__init__.py: HTTPError BAD REQUEST
+    retry 3/3 PUT code/src/vacancy/__init__.py: HTTPError BAD REQUEST
+Traceback (most recent call last):
+  File "/Users/yukie/Desktop/test/vacancy/scripts/zenodo_deposit_vacancy.py", line 221, in <module>
+    main()
+    ~~~~^^
+  File "/Users/yukie/Desktop/test/vacancy/scripts/zenodo_deposit_vacancy.py", line 202, in main
+    r = retry(lambda: req("PUT", f"{bucket}/{key}", tok, data, ctype="application/octet-stream", raw=True),
+              f"PUT {relname}")
+  File "/Users/yukie/Desktop/test/vacancy/scripts/zenodo_deposit_vacancy.py", line 54, in retry
+    return fn()
+  File "/Users/yukie/Desktop/test/vacancy/scripts/zenodo_deposit_vacancy.py", line 202, in <lambda>
+    r = retry(lambda: req("PUT", f"{bucket}/{key}", tok, data, ctype="application/octet-stream", raw=True),
+                      ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yukie/Desktop/test/vacancy/scripts/zenodo_deposit_vacancy.py", line 46, in req
+    with urllib.request.urlopen(r, timeout=timeout) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yukie/miniforge3/lib/python3.13/urllib/request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yukie/miniforge3/lib/python3.13/urllib/request.py", line 495, in open
+    response = meth(req, response)
+  File "/Users/yukie/miniforge3/lib/python3.13/urllib/request.py", line 604, in http_response
+    response = self.parent.error(
+        'http', request, response, code, msg, hdrs)
+  File "/Users/yukie/miniforge3/lib/python3.13/urllib/request.py", line 533, in error
+    return self._call_chain(*args)
+           ~~~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/yukie/miniforge3/lib/python3.13/urllib/request.py", line 466, in _call_chain
+    result = func(*args)
+  File "/Users/yukie/miniforge3/lib/python3.13/urllib/request.py", line 613, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 400: BAD REQUEST
