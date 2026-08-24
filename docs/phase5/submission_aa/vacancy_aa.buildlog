@@ -1,0 +1,118 @@
+note: Running TeX ...
+note: Running BibTeX on vacancy_aa.aux ...
+note: Rerunning TeX because bibtex was run ...
+note: Rerunning TeX because "vacancy_aa.aux" changed ...
+note: Running xdvipdfmx ...
+note: Writing `vacancy_aa.pdf` (2.2536544799804688 MiB)
+note: Skipped writing 2 intermediate files (use --keep-intermediates to keep them)
+warning: vacancy_aa.tex:29: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: vacancy_aa.tex:42: Underfull \hbox (badness 10000) in paragraph at lines 42--42
+warning: vacancy_aa.tex:42: Underfull \hbox (badness 10000) in paragraph at lines 42--42
+warning: vacancy_aa.tex:42: Underfull \hbox (badness 10000) in paragraph at lines 42--42
+warning: vacancy_aa.tex:51: Underfull \hbox (badness 1769) in paragraph at lines 50--51
+warning: vacancy_aa.tex:52: Underfull \hbox (badness 2111) in paragraph at lines 51--52
+warning: vacancy_aa.tex:68: Underfull \hbox (badness 6047) in paragraph at lines 68--68
+warning: vacancy_aa.tex:78: 
+Missing character: There is no ��� ("2026) in font ec-lmtt10!
+warning: could not represent character "…" (0x2026) in font "ec-lmtt10"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: vacancy_aa.tex:84: Underfull \hbox (badness 10000) in paragraph at lines 84--84
+warning: vacancy_aa.tex:84: Underfull \hbox (badness 10000) in paragraph at lines 84--84
+warning: vacancy_aa.tex:127: Underfull \hbox (badness 10000) in paragraph at lines 127--127
+warning: vacancy_aa.tex:137: Underfull \hbox (badness 10000) in paragraph at lines 137--137
+warning: vacancy_aa.tex:186: Underfull \vbox (badness 1275) has occurred while \output is active
+warning: vacancy_aa.tex:204: Underfull \hbox (badness 1448) in paragraph at lines 203--204
+warning: vacancy_aa.tex:204: Underfull \hbox (badness 4673) in paragraph at lines 203--204
+warning: vacancy_aa.tex:204: Underfull \hbox (badness 1762) in paragraph at lines 203--204
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 1460) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 3323) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 4328) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 2302) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 4886) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:29: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: vacancy_aa.tex:42: Underfull \hbox (badness 10000) in paragraph at lines 42--42
+warning: vacancy_aa.tex:42: Underfull \hbox (badness 10000) in paragraph at lines 42--42
+warning: vacancy_aa.tex:42: Underfull \hbox (badness 10000) in paragraph at lines 42--42
+warning: vacancy_aa.tex:51: Underfull \hbox (badness 1769) in paragraph at lines 50--51
+warning: vacancy_aa.tex:52: Underfull \hbox (badness 2111) in paragraph at lines 51--52
+warning: vacancy_aa.tex:68: Underfull \hbox (badness 6047) in paragraph at lines 68--68
+warning: vacancy_aa.tex:78: 
+Missing character: There is no ��� ("2026) in font ec-lmtt10!
+warning: could not represent character "…" (0x2026) in font "ec-lmtt10"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: vacancy_aa.tex:84: Underfull \hbox (badness 10000) in paragraph at lines 84--84
+warning: vacancy_aa.tex:84: Underfull \hbox (badness 10000) in paragraph at lines 84--84
+warning: vacancy_aa.tex:127: Underfull \hbox (badness 10000) in paragraph at lines 127--127
+warning: vacancy_aa.tex:137: Underfull \hbox (badness 10000) in paragraph at lines 137--137
+warning: vacancy_aa.tex:186: Underfull \vbox (badness 1275) has occurred while \output is active
+warning: vacancy_aa.tex:204: Underfull \hbox (badness 1448) in paragraph at lines 203--204
+warning: vacancy_aa.tex:204: Underfull \hbox (badness 4673) in paragraph at lines 203--204
+warning: vacancy_aa.tex:204: Underfull \hbox (badness 1762) in paragraph at lines 203--204
+warning: vacancy_aa.bbl:54: Underfull \hbox (badness 5548) in paragraph at lines 52--54
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 1460) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 3323) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 4328) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 2302) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 4886) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:29: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: vacancy_aa.tex:42: Underfull \hbox (badness 10000) in paragraph at lines 42--42
+warning: vacancy_aa.tex:42: Underfull \hbox (badness 10000) in paragraph at lines 42--42
+warning: vacancy_aa.tex:42: Underfull \hbox (badness 10000) in paragraph at lines 42--42
+warning: vacancy_aa.tex:51: Underfull \hbox (badness 1769) in paragraph at lines 50--51
+warning: vacancy_aa.tex:52: Underfull \hbox (badness 2111) in paragraph at lines 51--52
+warning: vacancy_aa.tex:68: Underfull \hbox (badness 6047) in paragraph at lines 68--68
+warning: vacancy_aa.tex:78: 
+Missing character: There is no ��� ("2026) in font ec-lmtt10!
+warning: could not represent character "…" (0x2026) in font "ec-lmtt10"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: vacancy_aa.tex:84: Underfull \hbox (badness 10000) in paragraph at lines 84--84
+warning: vacancy_aa.tex:84: Underfull \hbox (badness 10000) in paragraph at lines 84--84
+warning: vacancy_aa.tex:127: Underfull \hbox (badness 10000) in paragraph at lines 127--127
+warning: vacancy_aa.tex:137: Underfull \hbox (badness 10000) in paragraph at lines 137--137
+warning: vacancy_aa.tex:186: Underfull \vbox (badness 1275) has occurred while \output is active
+warning: vacancy_aa.tex:204: Underfull \hbox (badness 1448) in paragraph at lines 203--204
+warning: vacancy_aa.tex:204: Underfull \hbox (badness 4673) in paragraph at lines 203--204
+warning: vacancy_aa.tex:204: Underfull \hbox (badness 1762) in paragraph at lines 203--204
+warning: vacancy_aa.bbl:54: Underfull \hbox (badness 5548) in paragraph at lines 52--54
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 1460) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 3323) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 4328) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 2302) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 4886) in paragraph at lines 229--229
+warning: vacancy_aa.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 229--229
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

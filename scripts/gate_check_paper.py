@@ -47,6 +47,48 @@ for bad in ["部分アンカー", "partial anchor", "partially pass", "部分合
 for v in ["10.5281/zenodo.22067884", "10a01e71", "88eb7809"]:
     for name, txt in (("JA", ja), ("EN", en)):
         if v not in txt: fails.append(f"凍結値 {v} が {name} に無い")
+# ---- 裁定 #12 手順 F'-4: A&A 版(docs/phase5/submission_aa/vacancy_aa.tex + vacancy_refs.bib) ----
+AA = os.path.join(ROOT, "docs", "phase5", "submission_aa")
+aa_tex_path = os.path.join(AA, "vacancy_aa.tex")
+if os.path.exists(aa_tex_path):
+    tex = open(aa_tex_path).read(); bib = open(os.path.join(AA, "vacancy_refs.bib")).read()
+    def detex(t):
+        t = re.sub(r"^\s*%.*$", " ", t, flags=re.M)                          # コメント行
+        t = re.sub(r"\\begin\{tabular\}.*", " ", t)                           # 列指定行(幅数値)を行末まで除去
+        t = re.sub(r"\\setlength\{[^{}]*\}\{[^{}]*\}", " ", t)
+        t = re.sub(r"\\includegraphics\[[^\]]*\]\{[^{}]*\}", " ", t)
+        t = re.sub(r"\\\(\^\{(-\d+)\}\\\)", r"^\1", t)                      # \(^{-10}\) → ^-10(md の ⁻ 対応)
+        t = re.sub(r"\\\(\^\{(\d+)\}\\\)", r"\1", t)                       # \(^{13}\) → 13(md の上付き数字対応)
+        t = re.sub(r"\\\(\^\{([^{}]*)\}\\\)", r" \1 ", t)                   # 逐語 ^{1/N} 等 → 中身を分離(md 側と同トークン)
+        t = re.sub(r"\\\(_\{[^{}]*\}\\\)", " ", t)                          # 下付きは md 側トークン非生成に合わせ除去
+        t = t.replace(r"\(\times\)", "x").replace(r"\(-\)", "-").replace(r"\(\pm\)", "+/-")
+        t = re.sub(r"\\(?:S|ldots)\{\}", " ", t)
+        t = re.sub(r"\\[A-Za-z@]+\*?", " ", t)                               # 残る全マクロ名
+        return t.replace("{", " ").replace("}", " ").replace("\\", " ")
+    # md 側コーパス: 参考文献の [n] ラベルを除去(A&A 版は自動書式でラベル無し)
+    en_md = re.sub(r"^\[\d+\]\s+", "", en, flags=re.M)
+    en_md = re.sub(r"^(##+) \d+(?:\.\d+)?\.?\s+", r"\1 ", en_md, flags=re.M)   # 見出しの明示番号(A&A は自動番号)
+    yfix = lambda t: re.sub(r"\b((?:19|20)\d\d)[abc]\b", r"\1", t)            # 2014a 等のサフィックス(bib は素の年)
+    s_md, s_aa = nums(yfix(en_md)), nums(yfix(detex(tex) + " " + detex(bib)))
+    d1, d2 = sorted(s_md - s_aa), sorted(s_aa - s_md)
+    if d1 or d2:
+        fails.append(f"A&A 数値トークン不一致: mdのみ {d1[:20]} / A&Aのみ {d2[:20]}")
+    # 構造化要旨: md 要旨と \abstract 4 引数の数値一致
+    abs_md = en.split("## Abstract", 1)[1].split("## 1.", 1)[0]
+    m = re.search(r"\\abstract(\{.*\}\{\})", tex)
+    if not m:
+        fails.append("A&A: \\abstract が見つからない")
+    else:
+        if nums(re.sub(r"^\[\^pop\]:.*$", "", abs_md, flags=re.M)) != nums(detex(m.group(1))):
+            a_, b_ = nums(re.sub(r"^\[\^pop\]:.*$", "", abs_md, flags=re.M)), nums(detex(m.group(1)))
+            fails.append(f"A&A 構造化要旨の数値不一致: mdのみ {sorted(a_-b_)[:10]} / aaのみ {sorted(b_-a_)[:10]}")
+    for bad in ["partial anchor", "partially pass"]:
+        if bad in tex.lower(): fails.append(f"A&A 禁止語: {bad}")
+    for r in req_en:
+        if r not in tex: fails.append(f"A&A 必須文: {r}")
+    for v in ["10.5281/zenodo.22067884", "10a01e71", "88eb7809", "10.5281/zenodo.22081202"]:
+        if v not in tex: fails.append(f"A&A 凍結値 {v} が無い")
+    print("AA tokens", len(s_aa))
 print("JA tokens", len(sj), "EN tokens", len(se))
 print("PASS" if not fails else "FAIL"); [print(" -", f) for f in fails]
 sys.exit(1 if fails else 0)
