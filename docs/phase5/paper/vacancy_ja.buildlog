@@ -1,8 +1,7 @@
 note: Running TeX ...
-note: downloading float.sty
 note: Rerunning TeX because "vacancy_ja.aux" changed ...
 note: Running xdvipdfmx ...
-note: Writing `vacancy_ja.pdf` (3.2905521392822266 MiB)
+note: Writing `vacancy_ja.pdf` (3.2904624938964844 MiB)
 note: Skipped writing 1 intermediate files (use --keep-intermediates to keep them)
 warning: accessing absolute path `/System/Library/Fonts/ヒラギノ明朝 ProN.ttc`; build may not be reproducible in other environments
 warning: vacancy_ja.tex:269: Overfull \hbox (58.60959pt too wide) in paragraph at lines 269--269

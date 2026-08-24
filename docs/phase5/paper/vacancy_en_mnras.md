@@ -4,7 +4,7 @@
 **Yukie Maeda**
 Independent Researcher, Tokyo
 ORCID: 0009-0005-3401-9230
-(Preprint, English version; a Japanese version accompanies this record; doi:10.5281/zenodo.XXXXXXX)
+(Preprint, English version; a Japanese version accompanies this record; doi:10.5281/zenodo.22081202)
 Footnote: The roles of AI systems and the complete verification protocol are disclosed in Appendix B; this internal verification is not a substitute for human peer review.
 
 
