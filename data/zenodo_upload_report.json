@@ -1,0 +1,387 @@
+[
+ {
+  "file": "README.md",
+  "bytes": 610,
+  "md5": "6bf14e44d65fb43537f15d4d79c477b4",
+  "action": "既存一致(再送不要)",
+  "ok": true
+ },
+ {
+  "file": "VACANCY-preregistration-b-frozen.md",
+  "bytes": 8303,
+  "md5": "1d91bbacf97e9ea343818ecf0022c110",
+  "action": "既存一致(再送不要)",
+  "ok": true
+ },
+ {
+  "file": "atlas_v1.json",
+  "bytes": 142450517,
+  "md5": "471ba8d4dad9e97e8f7c025f0e40d251",
+  "action": "既存一致(再送不要)",
+  "ok": true
+ },
+ {
+  "file": "atlas_v1_summary.json",
+  "bytes": 3803,
+  "md5": "7a7e8f5ed84438e0306da1d051b56a2e",
+  "action": "既存一致(再送不要)",
+  "ok": true
+ },
+ {
+  "file": "code/scripts/bl_log_stats.py",
+  "bytes": 5171,
+  "md5": "c9cae53674fb7ab98fc8e5e9f94c9787",
+  "action": "既存一致(再送不要)",
+  "ok": true
+ },
+ {
+  "file": "code/scripts/build_mnras_version.py",
+  "bytes": 1430,
+  "md5": "cedcb14ee4f1c8436e1fbae617427318",
+  "action": "既存一致(再送不要)",
+  "ok": true
+ },
+ {
+  "file": "code/scripts/build_paper_figs.py",
+  "bytes": 8965,
+  "md5": "96fbf6a11b63fa1c67c763a2855f3d37",
+  "action": "既存一致(再送不要)",
+  "ok": true
+ },
+ {
+  "file": "code/scripts/build_paper_numbers.py",
+  "bytes": 9713,
+  "md5": "baf66e854b4d8fd4a7229ae1aaf5fa3f",
+  "action": "既存一致(再送不要)",
+  "ok": true
+ },
+ {
+  "file": "code/scripts/build_paper_pdf.py",
+  "bytes": 10910,
+  "md5": "64f63076a2e3a3e64e34f724a44e9185",
+  "action": "既存一致(再送不要)",
+  "ok": true
+ },
+ {
+  "file": "code/scripts/export_g2.py",
+  "bytes": 3399,
+  "md5": "b2973b140678e2d2b7e0737a73adc5fb",
+  "action": "既存一致(再送不要)",
+  "ok": true
+ },
+ {
+  "file": "code/scripts/fetch_bl_opendata.py",
+  "bytes": 2301,
+  "md5": "474c37a14949ef2a534a2eabf66f70cf",
+  "action": "既存一致(再送不要)",
+  "ok": true
+ },
+ {
+  "file": "code/scripts/finalize_bl_fetch.sh",
+  "bytes": 355,
+  "md5": "9993dca6cbda198b0b97690f8a75fdcd",
+  "action": "既存一致(再送不要)",
+  "ok": true
+ },
+ {
+  "file": "code/scripts/g3_i_ws20_price.py",
+  "bytes": 6388,
+  "md5": "6ba9211cb809e8736b688a80b2516857",
+  "action": "既存一致(再送不要)",
+  "ok": true
+ },
+ {
+  "file": "code/scripts/g3_ii_hephaistos.py",
+  "bytes": 5356,
+  "md5": "12f9b84d08074f08e14adc51aff31505",
+  "action": "既存一致(再送不要)",
+  "ok": true
+ },
+ {
+  "file": "code/scripts/g3_iii_solar_selftest.py",
+  "bytes": 3946,
+  "md5": "ef399ef02e791b5852303fc7651eef5e",
+  "action": "既存一致(再送不要)",
+  "ok": true
+ },
+ {
+  "file": "code/scripts/gate_check_paper.py",
+  "bytes": 3412,
+  "md5": "8c801acdc201c4248c5ff8a401a801eb",
+  "action": "既存一致(再送不要)",
+  "ok": true
+ },
+ {
+  "file": "code/scripts/xmatch_hip_dr3.py",
+  "bytes": 1665,
+  "md5": "cf40caab37c35b84496ab06272ab21e1",
+  "action": "既存一致(再送不要)",
+  "ok": true
+ },
+ {
+  "file": "code/src/vacancy/__init__.py",
+  "bytes": 66,
+  "md5": "f5d28b34d775bda35de26111a867114c",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "code/src/vacancy/aggregate.py",
+  "bytes": 14755,
+  "md5": "eb8b91ec1b5a3f8f5d211072166db9a5",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "code/src/vacancy/build_atlas.py",
+  "bytes": 15488,
+  "md5": "3d60884b3259a5f646713782459c250f",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "code/src/vacancy/build_ledger.py",
+  "bytes": 13898,
+  "md5": "0872724da1a6583b82e9716eb9ad2965",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "code/src/vacancy/epsilon.py",
+  "bytes": 13313,
+  "md5": "846132329096f95d13fee1c20d6b8fe1",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "code/src/vacancy/ingest_gcns.py",
+  "bytes": 6054,
+  "md5": "03417cfb8260b0b9b17427820b9d01b5",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "code/src/vacancy/ingest_ws20.py",
+  "bytes": 3601,
+  "md5": "9553fd56d418d5c9cb4724040327cb5e",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "code/tests/test_epsilon.py",
+  "bytes": 7679,
+  "md5": "69f6101b588be539c939c4dc25cdc3ee",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "environment.yml",
+  "bytes": 578,
+  "md5": "876867a47160a33ebda7892b872bf4f9",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "error-ledger-public-r1.md",
+  "bytes": 2947,
+  "md5": "ab1dbd1ad0b0e6b4bf1440f1b6621e55",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "g1_report.json",
+  "bytes": 2067,
+  "md5": "a70719056d6848f7c21868a71a2a9b05",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "g2_export_v0.json",
+  "bytes": 26257639,
+  "md5": "2ddbadfdb0e9db7c93d568e80442e339",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "g3_report.json",
+  "bytes": 24214,
+  "md5": "5050fb831c71857e4e95853bb070e3d0",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "inputs/EEM_dwarf_colors_Teff.txt",
+  "bytes": 55680,
+  "md5": "afa3e0c8b249e8b9511b917c03aceb84",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "inputs/hwc_2026-08-23.csv",
+  "bytes": 6702897,
+  "md5": "e971b8dcc305a2fb142d2840aaa8ca37",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "inputs/nea_pscomppars_lt120pc_2026-08-23.csv",
+  "bytes": 331453,
+  "md5": "c30f44f61e1721d37eacbec0a15de971",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "lambda_ledger.json",
+  "bytes": 150675113,
+  "md5": "de6bcf7f3e24b9db38343bda7fec2f36",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "ledger_v0.json",
+  "bytes": 61944306,
+  "md5": "f9cfb2a79843ee02dd1e811cc4172afe",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "ledger_v0_detail.npz",
+  "bytes": 1490275,
+  "md5": "519205d5527d6fa6f1e9c29c4d8a9d3d",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "ledger_v0_summary.json",
+  "bytes": 1785,
+  "md5": "54a98e9760bdb512a972259c6354b789",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "mc_quantiles.npz",
+  "bytes": 26414858,
+  "md5": "af3bfb37f93f08a44297dead7b04234a",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "ms_locus_v0.json",
+  "bytes": 6641,
+  "md5": "d33cf801d359047097d1a76a784d295e",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "paper/figs/fig1_g3iii_dlambda.pdf",
+  "bytes": 23195,
+  "md5": "cb0663a24fe3ccad10041b131b488792",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "paper/figs/fig1_g3iii_dlambda.png",
+  "bytes": 132085,
+  "md5": "d8fa9711ca09a93de73de47256ce7b75",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "paper/figs/fig2_coverage_lambda.pdf",
+  "bytes": 22999,
+  "md5": "ba7f40eeea0acda04711e49b53b3111d",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "paper/figs/fig2_coverage_lambda.png",
+  "bytes": 133414,
+  "md5": "b778b8a96fdc70aeb1edbb5a6e513199",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "paper/figs/fig3_atlas_overview.pdf",
+  "bytes": 2175493,
+  "md5": "61321fecf3199195eff53d170ef34b49",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "paper/figs/fig3_atlas_overview.png",
+  "bytes": 2628986,
+  "md5": "c68652bf0fc182594448b1e20d367f90",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "paper/figs/fig4_pi_sweep.pdf",
+  "bytes": 25502,
+  "md5": "23ccba049ee6c230f7a905122191809b",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "paper/figs/fig4_pi_sweep.png",
+  "bytes": 241916,
+  "md5": "1a0f2c09884a8fcc4b895035b7f1620b",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "paper/numbers.json",
+  "bytes": 11141,
+  "md5": "787cd5d5a7d062f226095a64d57ec433",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "paper/vacancy_en.md",
+  "bytes": 35565,
+  "md5": "e2160f9d7b27a59bdba4ae39c5d34460",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "paper/vacancy_en.pdf",
+  "bytes": 3157483,
+  "md5": "dce40536f6373b80e4365a1765e81d63",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "paper/vacancy_en_mnras.md",
+  "bytes": 35612,
+  "md5": "74f3030b08dccabb76c91c1f8a3c6adf",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "paper/vacancy_ja.md",
+  "bytes": 33913,
+  "md5": "ed6d0b7ae4992eb5baa763afe34e114c",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "paper/vacancy_ja.pdf",
+  "bytes": 3450300,
+  "md5": "18bb2f38cac1e43205d39ad2364045bd",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "radio_obs_v0.json",
+  "bytes": 1626452,
+  "md5": "73b21acd74ff5392983ca90596697e3d",
+  "action": "アップロード",
+  "ok": true
+ },
+ {
+  "file": "MANIFEST.json",
+  "bytes": 8048,
+  "md5": "6a4611ea098189ac4eefc97b88814727",
+  "action": "アップロード",
+  "ok": true
+ }
+]
