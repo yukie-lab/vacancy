@@ -113,9 +113,10 @@ def cross(layer, band_v, status_key, lam_key, post_key):
     out = []
     for c, lab in enumerate(labels):
         reach_k = np.where(joined)[0][bits[join[joined], c]]
-        n_reach = len(reach_k); okk = reach_k[st[reach_k] == "ok"]
+        n_reach = len(reach_k); okk = reach_k[st[reach_k] == "ok"]; n_ins = int((st[reach_k] == "observed_insensitive").sum())
         rec = {"cell": lab, "n_reachable_in_gcns": int(n_reach), "n_with_vacancy_bound": int(len(okk)),
-               "n_reachable_vacancy_undecidable": int(n_reach - len(okk))}
+               "n_reachable_without_bound": int(n_reach - len(okk)), "n_reachable_insensitive": n_ins,
+               "n_reachable_vacancy_undecidable": int(n_reach - len(okk) - n_ins)}
         if len(okk):
             rec["lambda_min_med_max"] = [float(lam[okk].min()), float(np.median(lam[okk])), float(lam[okk].max())]
             rec["posterior_pi0.01_med"] = float(np.median(post[okk]))
@@ -174,8 +175,11 @@ summary = {
 stR1 = np.array(S["status_R1"]) == "ok"
 for layer in ("flyby_single_any_tdep", "rendezvous_single_any_tdep", "rendezvous_multi_any_tdep"):
     a = any_flag[layer]
+    ins1 = np.array(S["status_R1"]) == "observed_insensitive"
     summary["cross_examples"][layer] = {"reachable_any_cell": int(a.sum()), "reachable_and_R1_bound": int((a & stR1).sum()),
-                                        "reachable_and_R1_undecidable": int((a & ~stR1).sum()),
+                                        "reachable_without_R1_bound": int((a & ~stR1).sum()),
+                                        "reachable_and_R1_insensitive": int((a & ins1).sum()),
+                                        "reachable_and_R1_undecidable": int((a & ~stR1 & ~ins1).sum()),
                                         "reachable_and_R3_bound": int((a & (np.array(S["status_R3"]) == "ok")).sum())}
 summary["cross_examples"]["R1_bound_and_not_in_embark"] = int((stR1 & ~joined).sum())
 summary["cross_examples"]["R1_bound_and_in_embark_but_unreachable_all_cells"] = int((stR1 & joined & ~any_flag["flyby_single_any_tdep"]).sum())

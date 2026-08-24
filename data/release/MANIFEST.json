@@ -46,12 +46,12 @@
    "bytes": 24214
   },
   "atlas_v1.json": {
-   "sha256": "af8b5929edba092a180e9bbaf7ba66cbba11f10a9741cf255e9b95be9ef6412b",
-   "bytes": 142443845
+   "sha256": "c02d17b4bd9b69bf9d0759a79dcdc5d53f72208a4a8d22c88ddc1fc302e04980",
+   "bytes": 142450517
   },
   "atlas_v1_summary.json": {
-   "sha256": "d6a9f41329d031de6564e47c57b2e4b2ecc036632cd3a8d29c04bf995fee9d7e",
-   "bytes": 3571
+   "sha256": "462c3182a775513ac35ed3ce2092378a6f3d6b5cddabbadcd3020520228a3e8b",
+   "bytes": 3803
   },
   "inputs/nea_pscomppars_lt120pc_2026-08-23.csv": {
    "sha256": "6606326fe1d0c0e5881b247a573986f8ad57ca1015d8e727039b47c6483e9b8c",
@@ -70,8 +70,8 @@
    "bytes": 8303
   },
   "error-ledger-public-r1.md": {
-   "sha256": "f773de6535b889555d7394a9c721c52734dfeec18837f14a5c9f459364df6514",
-   "bytes": 2352
+   "sha256": "3f4de593a581be3aa9bc421ab5f807e271cbfb8005468a633249c6d44f82c067",
+   "bytes": 2947
   },
   "paper/vacancy_ja.md": {
    "sha256": "a4d8e36fc7b97bf5d0ba41b1f19021bd1679faec29a7956100e05bba84fd5cb6",
@@ -130,8 +130,8 @@
    "bytes": 14755
   },
   "code/src/vacancy/build_atlas.py": {
-   "sha256": "9b5106efb86837c5ce9bbdd7ff7fbfd2be3434838597c6904a739827126dfe9d",
-   "bytes": 15058
+   "sha256": "71128724b035925e81d0c342a4fb2af1ae4edb47848a279e03d2e9f062286641",
+   "bytes": 15488
   },
   "code/src/vacancy/build_ledger.py": {
    "sha256": "a38138b4e6c419dd16a6c64f569cf22e5e1e4599823267c5be4bcbc8126b661b",

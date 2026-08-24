@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-23T21:58:26",
+ "generated": "2026-08-24T19:43:06",
  "constitution": "CLAUDE.md v0.3 / 裁定 #1–#4 / 事前登録 (b) 10.5281/zenodo.22067884",
  "population": {
   "total": 332571,
@@ -65,18 +65,24 @@
   "flyby_single_any_tdep": {
    "reachable_any_cell": 14799,
    "reachable_and_R1_bound": 815,
-   "reachable_and_R1_undecidable": 13984,
+   "reachable_without_R1_bound": 13984,
+   "reachable_and_R1_insensitive": 2,
+   "reachable_and_R1_undecidable": 13982,
    "reachable_and_R3_bound": 108
   },
   "rendezvous_single_any_tdep": {
    "reachable_any_cell": 2339,
    "reachable_and_R1_bound": 311,
+   "reachable_without_R1_bound": 2028,
+   "reachable_and_R1_insensitive": 0,
    "reachable_and_R1_undecidable": 2028,
    "reachable_and_R3_bound": 38
   },
   "rendezvous_multi_any_tdep": {
    "reachable_any_cell": 2339,
    "reachable_and_R1_bound": 311,
+   "reachable_without_R1_bound": 2028,
+   "reachable_and_R1_insensitive": 0,
    "reachable_and_R1_undecidable": 2028,
    "reachable_and_R3_bound": 38
   },
