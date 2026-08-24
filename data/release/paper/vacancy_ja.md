@@ -110,7 +110,10 @@ Suazo+22 Table 1(100 pc、N = 265,724、T_DS = 300 K)の「DS 適合(排除で�
 **昇格経路**: Hephaistos 系の星単位表が公開された場合、または DR4 合流(v1.1)で独立アンカーが組めた場合に再判定する(こちらから提供依頼は行わない)。
 
 ### 4.5 G3(iii): 太陽系自己検定(合格)
-太陽系を d = 1.3–10.8 pc の 24 点(GBT L + GBT S + Parkes 10-cm、軸上、各 1 観測行、EIRP_peak = 10¹¹ W)の仮想行として T-R3 に通した。全 d で Λ(周辺化) ≥ 0.999085、Λ(f_ill 上端 10⁻²) ≥ 0.99479、すなわち**事後 ≈ 事前**であり合格[^g3]。赤信号の動作確認: f_ill = f_pipe = 1 の極では Λ = 1 − 2.15/2.35 = 0.0851 < 0.5(d ≤ 4.8 pc で 3 帯とも感度内)となり地球は「検出される」。ε(検出器)は生きており、T-R3 で事後 ≈ 事前になるのは照射因子(間欠・指向)が小さいためである。Parkes 10-cm は d > 5.24 pc で感度外、GBT は 10.9 pc まで。
+太陽系を d = 1.3–10.8 pc の 24 点(GBT L + GBT S + Parkes 10-cm、軸上、各 1 観測行、EIRP_peak = 10¹¹ W)の仮想行として T-R3 に通した。全 d で Λ(周辺化) ≥ 0.999085、Λ(f_ill 上端 10⁻²) ≥ 0.99479、すなわち**事後 ≈ 事前**であり合格[^g3]。赤信号の動作確認: f_ill = f_pipe = 1 の極では Λ = 1 − 2.15/2.35 = 0.0851 < 0.5(d ≤ 4.8 pc で 3 帯とも感度内)となり地球は「検出される」。ε(検出器)は生きており、T-R3 で事後 ≈ 事前になるのは照射因子(間欠・指向)が小さいためである。Parkes 10-cm は d > 5.24 pc で感度外、GBT は 10.9 pc まで(図 1)。
+
+[FIG] figs/fig1_g3iii_dlambda.png | 図 1: G3(iii) 太陽系自己検定の d–Λ。周辺化値・f_ill = 10⁻²(上端)・極限(f_ill = f_pipe = 1)の 3 曲線と感度境界(Parkes 5.24 pc、GBT 10.9 pc)。数値は g3_iii.json の凍結値。再現: python3 scripts/build_paper_figs.py
+
 
 ### 4.6 逸脱節(第9条3項): 制度が機能した二つの実例
 **裁定 #3(逸脱: 基準の改訂)**。凍結文書 §5 は G3(i)(b) の ≤100/200 pc 殻の合格基準を「公刊中心値 ±1%」としていた。再計数 0.0598% は公刊 0.061% に対し −1.89% で**不合格**となり、作業を停止した。参謀の原典照会により、WS20 §3 が 50 pc 殻の増分を +42/−7、EIRP ≥ 10¹³ W 条件の計数を 1513(+9/−7)と併記していること、当方の `b_rest` 再計数(+42)が原典の +42 と完全一致することが判明した。すなわち、再計数機構は原典と同一に動作しており、中心値の計数手続きは本文から一意復元不能で、不合格の実体は**凍結時に公刊誤差幅を確認せずに基準を設計した不備**であった。基準を「公刊の明示誤差区間の内側」に改訂(≤50 pc の完全一致要件と再計数手続きは不変)し、新基準で合格とした。旧基準での不合格の事実は記録として残す。誤り台帳 E-1(参謀の凍結前検分の不備)・E-2(経緯)。
@@ -120,19 +123,25 @@ Suazo+22 Table 1(100 pc、N = 265,724、T_DS = 300 K)の「DS 適合(排除で�
 ## 5. Results
 
 ### 5.1 台帳の概観
-空き度上界(ε 確定)を持つ星は T-R1 **1,554**、T-R2 **1,587**、T-R3 **159**(d ≤ 10.8 pc)[^s1]。観測されたが当該帯で感度外(ε = 0、Λ = 1 = 情報なし)の星は T-R1 33、T-R3 1,428。T-R1 の Λ は 0.4266(最小: GBT L + GBT S + GBT S + Parkes 10-cm の 4 観測行、S 帯 2 ポインティング、1 星)/ 0.8000(中央値: GBT S のみ)/ 0.8596(最大: GBT L のみ)で、事後 @π = 10⁻² の中央値は 0.0080。T-R3 は Λ = 0.9985–0.9998(4 桁丸め; 最小の厳密値 0.998458)、事後 @π = 10⁻² で 0.0100。Λ の値は観測行の被覆構造(受信帯の窓内被覆率 × f_pipe)で決まり、距離にはほとんど依らない(感度閾値をまたぐ星が T-R1 で 33 星のみ)。
+空き度上界(ε 確定)を持つ星は T-R1 **1,554**、T-R2 **1,587**、T-R3 **159**(d ≤ 10.8 pc)[^s1]。観測されたが当該帯で感度外(ε = 0、Λ = 1 = 情報なし)の星は T-R1 33、T-R3 1,428。T-R1 の Λ は 0.4266(最小: GBT L + GBT S + GBT S + Parkes 10-cm の 4 観測行、S 帯 2 ポインティング、1 星)/ 0.8000(中央値: GBT S のみ)/ 0.8596(最大: GBT L のみ)で、事後 @π = 10⁻² の中央値は 0.0080。T-R3 は Λ = 0.9985–0.9998(4 桁丸め; 最小の厳密値 0.998458)、事後 @π = 10⁻² で 0.0100。Λ の値は観測行の被覆構造(受信帯の窓内被覆率 × f_pipe)で決まり、距離にはほとんど依らない(感度閾値をまたぐ星が T-R1 で 33 星のみ。図 2)。
+
+[FIG] figs/fig2_coverage_lambda.png | 図 2: 宣言窓 [1.10, 3.45] GHz の受信帯被覆(上: 9 共通区間とノッチ)と、台帳に実在する観測行組合せごとの併合 Λ(下: T-R1、棒の色は π = 10⁻² の事後彩色)。数値は radio_obs_v0.json と lambda_ledger.json の凍結値。再現: python3 scripts/build_paper_figs.py
+
 
 [^s1]: `data/phase2/lambda_ledger.json`(summary.status_counts、lambda_*)。
 
 ### 5.2 判定不能 99.52%: 主結果として
-母集団 332,571 星のうち、WS20 のいずれのポインティングの視野にも入っていない星は **330,984(99.52%)**[^s1]。このうち **1,530 星**は BL 公開アーカイブに観測ファイルがあるが上限が公刊されていない(C/X 帯、または L/S/10-cm で Price+20 非掲載)ため「観測あり・未公刊」として判定不能 (d) に分類した[^ph1]。判定不能は空き側にも占有側にも倒さない。この数字は、既存の電波 SETI の不在証拠が太陽近傍 100 pc の星のうち**どれだけ少ない星にしか及んでいないか**を星単位で示すものであり、Wright+18 のヘイスタック不完備性の星単位版である。
+母集団 332,571 星のうち、WS20 のいずれのポインティングの視野にも入っていない星は **330,984(99.52%)**[^s1]。このうち **1,530 星**は BL 公開アーカイブに観測ファイルがあるが上限が公刊されていない(C/X 帯、または L/S/10-cm で Price+20 非掲載)ため「観測あり・未公刊」として判定不能 (d) に分類した[^ph1]。判定不能は空き側にも占有側にも倒さない。この数字は、既存の電波 SETI の不在証拠が太陽近傍 100 pc の星のうち**どれだけ少ない星にしか及んでいないか**を星単位で示すものであり、Wright+18 のヘイスタック不完備性の星単位版である(図 3)。
+
+[FIG] figs/fig3_atlas_overview.png | 図 3: アトラス概観(銀河面への投影、sim_display_v1 から機械生成)。判定不能星は灰(1/8 間引き)、T-R1 上界あり星は π = 10⁻² の事後による中立連続彩色、EMBARK 到達星は輪郭、太陽は星印。シミュレータと同一の配色規律。再現: python3 scripts/build_paper_figs.py
+
 
 [^ph1]: `docs/phase1/00-status.md` §1.3。
 
 ### 5.3 上界曲線
-P(占有 | D, T, π) = expit(logit π + ln Λ) は π の単調関数で、Λ ∈ [0.43, 0.86] の電波帯では事後 ≈ π × Λ(π ≪ 1)となる。図 1(π 掃引、再現コマンドは付録 D)。
+P(占有 | D, T, π) = expit(logit π + ln Λ) は π の単調関数で、Λ ∈ [0.43, 0.86] の電波帯では事後 ≈ π × Λ(π ≪ 1)となる。図 4(π 掃引)。
 
-[FIG] figs/fig1_pi_sweep.png | 図 1: π 掃引の上界曲線 P(占有 | D, T, π) = expit(logit π + ln Λ)。曲線は凍結台帳の Λ(T-R1 の最小/中央/最大、T-R3 の最小/中央/最大)。点線は事前 P = π。再現: python3 scripts/build_paper_figs.py
+[FIG] figs/fig4_pi_sweep.png | 図 4: π 掃引の上界曲線 P(占有 | D, T, π) = expit(logit π + ln Λ)。曲線は凍結台帳の Λ(T-R1 の最小/中央/最大、T-R3 の最小/中央/最大)。点線は事前 P = π。再現: python3 scripts/build_paper_figs.py
 「空き度」は曲線であり、単一数値ではない。
 
 ### 5.4 太陽自己校正
@@ -194,10 +203,41 @@ HWC 居住可能候補ホストのうち T-R1 上界を持つものは 16(例: P
 | 定住資源性(測光なし) | 8,261 | 2.48% |
 
 ## 付録 D: Reproducibility and data release
-再生成: `python3 src/vacancy/build_ledger.py`(3 s)/ 図 1: `python3 scripts/build_paper_figs.py`→ `scripts/export_g2.py` → `python3 src/vacancy/aggregate.py`(≈10 分)→ `scripts/g3_i_ws20_price.py` / `g3_ii_hephaistos.py` / `g3_iii_solar_selftest.py` → `python3 src/vacancy/build_atlas.py`。単体テスト `python3 -m unittest tests.test_epsilon`(14 件)。公開物: ε 台帳(`ledger_v0.json`、式版 eps-v0.2)、Λ 台帳(`lambda_ledger.json`)、三軸アトラス(`atlas_v1.json`)、電波観測行来歴(`radio_obs_v0.json`)、G1/G2/G3 レポート、NEA/HWC 凍結コピー、全スクリプト、誤り台帳 r1、sha256 マニフェスト(`MANIFEST.json`)。事前登録 (a) コミット 10a01e710854b69344651ed6ba016ab303c9d124、(b) doi:10.5281/zenodo.22067884。
+再生成: `python3 src/vacancy/build_ledger.py`(3 s)/ 図 1–4: `python3 scripts/build_paper_figs.py`→ `scripts/export_g2.py` → `python3 src/vacancy/aggregate.py`(≈10 分)→ `scripts/g3_i_ws20_price.py` / `g3_ii_hephaistos.py` / `g3_iii_solar_selftest.py` → `python3 src/vacancy/build_atlas.py`。単体テスト `python3 -m unittest tests.test_epsilon`(14 件)。公開物: ε 台帳(`ledger_v0.json`、式版 eps-v0.2)、Λ 台帳(`lambda_ledger.json`)、三軸アトラス(`atlas_v1.json`)、電波観測行来歴(`radio_obs_v0.json`)、G1/G2/G3 レポート、NEA/HWC 凍結コピー、全スクリプト、誤り台帳 r1、sha256 マニフェスト(`MANIFEST.json`)。事前登録 (a) コミット 10a01e710854b69344651ed6ba016ab303c9d124、(b) doi:10.5281/zenodo.22067884。
 
 ## 謝辞
 This work has made use of data from the European Space Agency (ESA) mission Gaia (https://www.cosmos.esa.int/gaia), processed by the Gaia Data Processing and Analysis Consortium (DPAC, https://www.cosmos.esa.int/web/gaia/dpac/consortium). Funding for the DPAC has been provided by national institutions, in particular the institutions participating in the Gaia Multilateral Agreement. This research has made use of the NASA Exoplanet Archive, which is operated by the California Institute of Technology, under contract with the National Aeronautics and Space Administration under the Exoplanet Exploration Program. This research has made use of the VizieR catalogue access tool, CDS, Strasbourg, France (DOI: 10.26093/cds/vizier). The Habitable Worlds Catalog is maintained by the Planetary Habitability Laboratory @ UPR Arecibo. Breakthrough Listen 公開データアーカイブ(seti.berkeley.edu/opendata)の観測メタデータを使用した。
 
 ## 参考文献
-[1] Price D. C. et al. 2020, AJ 159, 86. [2] Wlodarczyk-Sroka B. S., Garrett M. A., Siemion A. P. V. 2020, MNRAS 498, 5720. [3] Enriquez J. E. et al. 2017, ApJ 849, 104. [4] Isaacson H. et al. 2017, PASP 129, 054501. [5] Lebofsky M. et al. 2019, PASP 131, 124505. [6] Suazo M. et al. 2022, MNRAS 512, 2988. [7] Suazo M. et al. 2024, MNRAS 531, 695. [8] Wright J. T. et al. 2014, ApJ 792, 26; 792, 27. [9] Griffith R. L. et al. 2015, ApJS 217, 25. [10] Wright J. T., Kanodia S., Lubar E. 2018, AJ 156, 260. [11] Grimaldi C. 2017, Sci. Rep. 7, 46273. [12] Gaia Collaboration, Smart R. L. et al. 2021, A&A 649, A6. [13] Gaia Collaboration 2016, A&A 595, A1; 2021, A&A 649, A1; 2023, A&A 674, A1. [14] Brandt T. D. 2021, ApJS 254, 42. [15] Bailer-Jones C. A. L. et al. 2018, AJ 156, 58. [16] Pecaut M. J., Mamajek E. E. 2013, ApJS 208, 9. [17] Wright E. L. et al. 2010, AJ 140, 1868; Cutri R. M. et al. 2014, VizieR II/328; Marocco F. et al. 2021, ApJS 253, 8. [18] Jarrett T. H. et al. 2011, ApJ 735, 112. [19] Sullivan W. T., Brown S., Wetherill C. 1978, Science 199, 377; Saide R. C. et al. 2023, MNRAS 522, 2393. [20] Sheikh S. Z. et al. 2019, ApJ 884, 14. [21] NASA Exoplanet Archive, Planetary Systems Composite Parameters, doi:10.26133/NEA12(2026-08-23 取得). [22] Habitable Worlds Catalog, PHL @ UPR Arecibo(2026-08-23 取得). [23] Maeda Y. 2026a, Zenodo, doi:10.5281/zenodo.22067884(事前登録 (b)); Maeda Y. 2026b, WAKE, Zenodo, doi:10.5281/zenodo.21966305; Maeda Y. 2026c, EMBARK, Zenodo, doi:10.5281/zenodo.22059576.
+
+[1] Price D. C. et al. 2020, AJ 159, 86.
+[2] Wlodarczyk-Sroka B. S., Garrett M. A., Siemion A. P. V. 2020, MNRAS 498, 5720.
+[3] Enriquez J. E. et al. 2017, ApJ 849, 104.
+[4] Isaacson H. et al. 2017, PASP 129, 054501.
+[5] Lebofsky M. et al. 2019, PASP 131, 124505.
+[6] Suazo M. et al. 2022, MNRAS 512, 2988.
+[7] Suazo M. et al. 2024, MNRAS 531, 695.
+[8] Wright J. T. et al. 2014a, ApJ 792, 26.
+[9] Wright J. T. et al. 2014b, ApJ 792, 27.
+[10] Griffith R. L. et al. 2015, ApJS 217, 25.
+[11] Wright J. T., Kanodia S., Lubar E. 2018, AJ 156, 260.
+[12] Grimaldi C. 2017, Sci. Rep. 7, 46273.
+[13] Gaia Collaboration, Smart R. L. et al. 2021, A&A 649, A6.
+[14] Gaia Collaboration 2016, A&A 595, A1.
+[15] Gaia Collaboration 2021, A&A 649, A1.
+[16] Gaia Collaboration 2023, A&A 674, A1.
+[17] Brandt T. D. 2021, ApJS 254, 42.
+[18] Bailer-Jones C. A. L. et al. 2018, AJ 156, 58.
+[19] Pecaut M. J., Mamajek E. E. 2013, ApJS 208, 9.
+[20] Wright E. L. et al. 2010, AJ 140, 1868.
+[21] Cutri R. M. et al. 2014, VizieR On-line Data Catalog II/328.
+[22] Marocco F. et al. 2021, ApJS 253, 8.
+[23] Jarrett T. H. et al. 2011, ApJ 735, 112.
+[24] Sullivan W. T., Brown S., Wetherill C. 1978, Science 199, 377.
+[25] Saide R. C. et al. 2023, MNRAS 522, 2393.
+[26] Sheikh S. Z. et al. 2019, ApJ 884, 14.
+[27] NASA Exoplanet Archive, Planetary Systems Composite Parameters, doi:10.26133/NEA12(2026-08-23 取得).
+[28] Habitable Worlds Catalog, PHL @ UPR Arecibo(2026-08-23 取得).
+[29] Maeda Y. 2026a, Zenodo, doi:10.5281/zenodo.22067884(事前登録 (b)).
+[30] Maeda Y. 2026b, WAKE, Zenodo, doi:10.5281/zenodo.21966305.
+[31] Maeda Y. 2026c, EMBARK, Zenodo, doi:10.5281/zenodo.22059576.

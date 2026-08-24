@@ -1,17 +1,19 @@
 note: Running TeX ...
 note: Rerunning TeX because "vacancy_ja.aux" changed ...
 note: Running xdvipdfmx ...
-note: Writing `vacancy_ja.pdf` (618.947265625 KiB)
+note: Writing `vacancy_ja.pdf` (3.2613039016723633 MiB)
 note: Skipped writing 1 intermediate files (use --keep-intermediates to keep them)
 warning: accessing absolute path `/System/Library/Fonts/ヒラギノ明朝 ProN.ttc`; build may not be reproducible in other environments
-warning: vacancy_ja.tex:250: Overfull \hbox (47.65958pt too wide) in paragraph at lines 250--250
-warning: vacancy_ja.tex:250: Overfull \hbox (58.31136pt too wide) in paragraph at lines 250--250
-warning: vacancy_ja.tex:250: Overfull \hbox (19.52907pt too wide) in paragraph at lines 250--250
-warning: vacancy_ja.tex:250: Overfull \hbox (12.14671pt too wide) in paragraph at lines 250--250
-warning: vacancy_ja.tex:250: Overfull \hbox (75.98718pt too wide) in paragraph at lines 250--250
-warning: vacancy_ja.tex:250: Overfull \hbox (47.65958pt too wide) in paragraph at lines 250--250
-warning: vacancy_ja.tex:250: Overfull \hbox (58.31136pt too wide) in paragraph at lines 250--250
-warning: vacancy_ja.tex:250: Overfull \hbox (19.52907pt too wide) in paragraph at lines 250--250
-warning: vacancy_ja.tex:250: Overfull \hbox (12.14671pt too wide) in paragraph at lines 250--250
-warning: vacancy_ja.tex:250: Overfull \hbox (75.98718pt too wide) in paragraph at lines 250--250
+warning: vacancy_ja.tex:268: Overfull \hbox (58.60959pt too wide) in paragraph at lines 268--268
+warning: vacancy_ja.tex:268: Overfull \hbox (58.31136pt too wide) in paragraph at lines 268--268
+warning: vacancy_ja.tex:268: Overfull \hbox (19.52907pt too wide) in paragraph at lines 268--268
+warning: vacancy_ja.tex:268: Overfull \hbox (12.14671pt too wide) in paragraph at lines 268--268
+warning: vacancy_ja.tex:268: Overfull \hbox (75.98718pt too wide) in paragraph at lines 268--268
+warning: vacancy_ja.tex:301: Overfull \hbox (21.90837pt too wide) in paragraph at lines 301--301
+warning: vacancy_ja.tex:268: Overfull \hbox (58.60959pt too wide) in paragraph at lines 268--268
+warning: vacancy_ja.tex:268: Overfull \hbox (58.31136pt too wide) in paragraph at lines 268--268
+warning: vacancy_ja.tex:268: Overfull \hbox (19.52907pt too wide) in paragraph at lines 268--268
+warning: vacancy_ja.tex:268: Overfull \hbox (12.14671pt too wide) in paragraph at lines 268--268
+warning: vacancy_ja.tex:268: Overfull \hbox (75.98718pt too wide) in paragraph at lines 268--268
+warning: vacancy_ja.tex:301: Overfull \hbox (21.90837pt too wide) in paragraph at lines 301--301
 warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

@@ -10,13 +10,8 @@ s = open(os.path.join(P, "vacancy_en.md")).read()
 # --- 参考文献 author-year
 a = s.index("## References")
 refs_block = s[a:]
-items = re.findall(r"\[\d+\]\s+(.*?)(?=\s\[\d+\]|\Z)", refs_block.split("\n", 1)[1].strip(), flags=re.S)
-entries = []
-for it in items:
-    for part in re.split(r";\s(?=[A-Z][A-Za-z'\-]+ [A-Z]\.|NASA|Habitable|Cutri|Marocco|Saide|Maeda)", it.strip()):
-        part = part.strip().rstrip(".")
-        if part: entries.append(part)
-entries = sorted(set(entries), key=lambda x: x.lower())
+entries = [re.sub(r"^\[\d+\]\s+", "", l).strip().rstrip(".") for l in refs_block.splitlines()[1:] if re.match(r"^\[\d+\]\s", l)]
+entries = sorted(set(e for e in entries if e), key=lambda x: x.lower())
 refs = "## References\n\n" + "\n".join(f"- {e}." for e in entries) + "\n"
 s = s[:a] + refs
 s = s.replace("# A Vacancy Atlas of the Solar Neighbourhood", "# A Vacancy Atlas of the Solar Neighbourhood", 1)

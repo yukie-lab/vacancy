@@ -111,7 +111,10 @@ We counted the "fraction compatible with (unable to exclude) a Dyson sphere" of 
 **Promotion path**: re-adjudication if a per-star Hephaistos-type table is published, or if an independent anchor can be built at the DR4 merge (v1.1). We do not request such data.
 
 ### 4.5 G3(iii) — Solar-System self-test (pass)
-The Solar System was passed through T-R3 as virtual rows at 24 distances d = 1.3–10.8 pc (GBT L + GBT S + Parkes 10-cm, on axis, one row each, EIRP_peak = 10¹¹ W). At every d, Λ(marginalised) ≥ 0.999085 and Λ(f_ill at its upper end 10⁻²) ≥ 0.99479 — **posterior ≈ prior**, pass[^g3]. Red-flag check: in the extreme f_ill = f_pipe = 1, Λ = 1 − 2.15/2.35 = 0.0851 < 0.5 (for d ≤ 4.8 pc all three bands are sensitive), i.e. Earth "would be detected". The detector ε is alive; posterior ≈ prior in T-R3 results from the smallness of the illumination factor (intermittency and beaming). Parkes 10-cm loses sensitivity beyond d = 5.24 pc; GBT keeps it to 10.9 pc.
+The Solar System was passed through T-R3 as virtual rows at 24 distances d = 1.3–10.8 pc (GBT L + GBT S + Parkes 10-cm, on axis, one row each, EIRP_peak = 10¹¹ W). At every d, Λ(marginalised) ≥ 0.999085 and Λ(f_ill at its upper end 10⁻²) ≥ 0.99479 — **posterior ≈ prior**, pass[^g3]. Red-flag check: in the extreme f_ill = f_pipe = 1, Λ = 1 − 2.15/2.35 = 0.0851 < 0.5 (for d ≤ 4.8 pc all three bands are sensitive), i.e. Earth "would be detected". The detector ε is alive; posterior ≈ prior in T-R3 results from the smallness of the illumination factor (intermittency and beaming). Parkes 10-cm loses sensitivity beyond d = 5.24 pc; GBT keeps it to 10.9 pc (Figure 1).
+
+[FIG] figs/fig1_g3iii_dlambda.png | Figure 1: the G3(iii) Solar-System self-test as d–Λ. Three curves (marginalised; f_ill = 10⁻², the upper end; the extreme f_ill = f_pipe = 1) with the sensitivity boundaries (Parkes 5.24 pc, GBT 10.9 pc). Values are the frozen g3_iii.json. Reproduce: python3 scripts/build_paper_figs.py
+
 
 ### 4.6 Deviation section (Art. 9.3) — two cases in which the institution worked
 **Ruling #3 (deviation: revision of a criterion)**. The frozen document §5 set the G3(i)(b) pass criterion for the ≤100/200 pc shells at "published central value ±1%". The recount 0.0598% was −1.89% from the published 0.061% — **fail** — and work stopped. The staff officer's consultation of the source showed that WS20 §3 quotes the 50 pc shell increment as +42/−7 alongside the count under the EIRP ≥ 10¹³ W condition as 1513 (+9/−7), and that our `b_rest` recount (+42) matches the source's +42 exactly: the recount machinery behaves identically to the source, the central-value counting procedure is not uniquely recoverable from the text, and the substance of the failure was **a criterion designed without checking the published error bars at freezing time**. The criterion was revised to "inside the published explicit error interval" (the exact-match requirement at ≤50 pc and the recount procedure unchanged), and the new criterion passes. The fact of failure under the old criterion is kept on record. Error ledger E-1 (inadequate pre-freeze inspection by the staff officer) and E-2 (the sequence of events).
@@ -121,19 +124,25 @@ Self-reported items: one omission of an approved addendum sentence at the re-sub
 ## 5. Results
 
 ### 5.1 Overview of the ledger
-Stars carrying a vacancy bound (ε determined) number **1,554** in T-R1, **1,587** in T-R2, and **159** in T-R3 (d ≤ 10.8 pc)[^s1]. Stars observed but insensitive in the band (ε = 0, Λ = 1 = no information) number 33 in T-R1 and 1,428 in T-R3. In T-R1, Λ ranges from 0.4266 (minimum: four rows, GBT L + GBT S + GBT S + Parkes 10-cm, i.e. two S-band pointings, one star) through 0.8000 (median: GBT S only) to 0.8596 (maximum: GBT L only), with a median posterior of 0.0080 at π = 10⁻². In T-R3, Λ = 0.9985–0.9998 (rounded to four digits; exact minimum 0.998458) and the posterior at π = 10⁻² is 0.0100. Λ is set by the coverage structure of the observation rows (in-window coverage of the receiver × f_pipe) and hardly by distance (only 33 stars straddle the sensitivity threshold in T-R1).
+Stars carrying a vacancy bound (ε determined) number **1,554** in T-R1, **1,587** in T-R2, and **159** in T-R3 (d ≤ 10.8 pc)[^s1]. Stars observed but insensitive in the band (ε = 0, Λ = 1 = no information) number 33 in T-R1 and 1,428 in T-R3. In T-R1, Λ ranges from 0.4266 (minimum: four rows, GBT L + GBT S + GBT S + Parkes 10-cm, i.e. two S-band pointings, one star) through 0.8000 (median: GBT S only) to 0.8596 (maximum: GBT L only), with a median posterior of 0.0080 at π = 10⁻². In T-R3, Λ = 0.9985–0.9998 (rounded to four digits; exact minimum 0.998458) and the posterior at π = 10⁻² is 0.0100. Λ is set by the coverage structure of the observation rows (in-window coverage of the receiver × f_pipe) and hardly by distance (only 33 stars straddle the sensitivity threshold in T-R1; Figure 2).
+
+[FIG] figs/fig2_coverage_lambda.png | Figure 2: receiver coverage of the declared window [1.10, 3.45] GHz (top: the 9 common intervals and notches) and the merged Λ for each observation-row combination present in the ledger (bottom: T-R1; bar colours follow the posterior colour rule at π = 10⁻²). Values are the frozen radio_obs_v0.json and lambda_ledger.json. Reproduce: python3 scripts/build_paper_figs.py
+
 
 [^s1]: `data/phase2/lambda_ledger.json` (summary.status_counts, lambda_*).
 
 ### 5.2 99.52% undecidable — as a main result
-Of the 332,571 stars, **330,984 (99.52%)** lie outside the field of every WS20 pointing[^s1]. Among them, **1,530 stars** have observation files in the BL open archive but no published limit (C/X band, or L/S/10-cm not in Price et al. 2020) and are classified as "observed, unpublished", undecidable (d)[^ph1]. Undecidable stars are tilted neither toward vacancy nor toward occupation. This number shows, star by star, **how few of the stars within 100 pc existing radio SETI non-detections actually reach**; it is the star-level version of the haystack incompleteness of Wright et al. (2018).
+Of the 332,571 stars, **330,984 (99.52%)** lie outside the field of every WS20 pointing[^s1]. Among them, **1,530 stars** have observation files in the BL open archive but no published limit (C/X band, or L/S/10-cm not in Price et al. 2020) and are classified as "observed, unpublished", undecidable (d)[^ph1]. Undecidable stars are tilted neither toward vacancy nor toward occupation. This number shows, star by star, **how few of the stars within 100 pc existing radio SETI non-detections actually reach**; it is the star-level version of the haystack incompleteness of Wright et al. (2018) (Figure 3).
+
+[FIG] figs/fig3_atlas_overview.png | Figure 3: atlas overview (projection onto the Galactic plane, machine-generated from sim_display_v1). Undecidable stars in grey (thinned 1/8); stars with a T-R1 bound in the value-neutral continuous colour of the posterior at π = 10⁻²; EMBARK-reachable stars as outlines; the Sun as a star marker. Same colour discipline as the simulator. Reproduce: python3 scripts/build_paper_figs.py
+
 
 [^ph1]: `docs/phase1/00-status.md` §1.3.
 
 ### 5.3 Upper-bound curves
-P(occupied | D, T, π) = expit(logit π + ln Λ) is monotonic in π; for the radio bands with Λ ∈ [0.43, 0.86] the posterior is ≈ π × Λ for π ≪ 1. Figure 1 (π sweep; reproduction command in Appendix D).
+P(occupied | D, T, π) = expit(logit π + ln Λ) is monotonic in π; for the radio bands with Λ ∈ [0.43, 0.86] the posterior is ≈ π × Λ for π ≪ 1. Figure 4 (π sweep).
 
-[FIG] figs/fig1_pi_sweep.png | Figure 1: upper-bound curves P(occupied | D, T, π) = expit(logit π + ln Λ). Curves use the frozen-ledger Λ (min/median/max of T-R1 and T-R3); the dotted line is the prior P = π. Reproduce: python3 scripts/build_paper_figs.py
+[FIG] figs/fig4_pi_sweep.png | Figure 4: upper-bound curves P(occupied | D, T, π) = expit(logit π + ln Λ). Curves use the frozen-ledger Λ (min/median/max of T-R1 and T-R3); the dotted line is the prior P = π. Reproduce: python3 scripts/build_paper_figs.py
  The "vacancy" is a curve, not a single number.
 
 ### 5.4 Solar self-calibration
@@ -195,7 +204,7 @@ Three roles: the human (Yukie Maeda) — direction, gate rulings, all final deci
 | Settlement resources (no photometry) | 8,261 | 2.48% |
 
 ## Appendix D — Reproducibility and data release
-Regeneration: `python3 src/vacancy/build_ledger.py` (3 s) / Figure 1: `python3 scripts/build_paper_figs.py` → `scripts/export_g2.py` → `python3 src/vacancy/aggregate.py` (≈10 min) → `scripts/g3_i_ws20_price.py` / `g3_ii_hephaistos.py` / `g3_iii_solar_selftest.py` → `python3 src/vacancy/build_atlas.py`. Unit tests: `python3 -m unittest tests.test_epsilon` (14 tests). Released files: the ε ledger (`ledger_v0.json`, formula version eps-v0.2), the Λ ledger (`lambda_ledger.json`), the three-axis atlas (`atlas_v1.json`), radio-row provenance (`radio_obs_v0.json`), the G1/G2/G3 reports, frozen copies of the NEA and HWC inputs, all scripts, error ledger r1, and the SHA-256 manifest (`MANIFEST.json`). Pre-registration (a) commit 10a01e710854b69344651ed6ba016ab303c9d124; (b) doi:10.5281/zenodo.22067884.
+Regeneration: `python3 src/vacancy/build_ledger.py` (3 s) / Figures 1–4: `python3 scripts/build_paper_figs.py` → `scripts/export_g2.py` → `python3 src/vacancy/aggregate.py` (≈10 min) → `scripts/g3_i_ws20_price.py` / `g3_ii_hephaistos.py` / `g3_iii_solar_selftest.py` → `python3 src/vacancy/build_atlas.py`. Unit tests: `python3 -m unittest tests.test_epsilon` (14 tests). Released files: the ε ledger (`ledger_v0.json`, formula version eps-v0.2), the Λ ledger (`lambda_ledger.json`), the three-axis atlas (`atlas_v1.json`), radio-row provenance (`radio_obs_v0.json`), the G1/G2/G3 reports, frozen copies of the NEA and HWC inputs, all scripts, error ledger r1, and the SHA-256 manifest (`MANIFEST.json`). Pre-registration (a) commit 10a01e710854b69344651ed6ba016ab303c9d124; (b) doi:10.5281/zenodo.22067884.
 
 ## Acknowledgements
 This work has made use of data from the European Space Agency (ESA) mission Gaia (https://www.cosmos.esa.int/gaia), processed by the Gaia Data Processing and Analysis Consortium (DPAC, https://www.cosmos.esa.int/web/gaia/dpac/consortium). Funding for the DPAC has been provided by national institutions, in particular the institutions participating in the Gaia Multilateral Agreement. This research has made use of the NASA Exoplanet Archive, which is operated by the California Institute of Technology, under contract with the National Aeronautics and Space Administration under the Exoplanet Exploration Program. This research has made use of the VizieR catalogue access tool, CDS, Strasbourg, France (DOI: 10.26093/cds/vizier). The Habitable Worlds Catalog is maintained by the Planetary Habitability Laboratory @ UPR Arecibo. Observation metadata from the Breakthrough Listen open data archive (seti.berkeley.edu/opendata) were used.
@@ -204,9 +213,11 @@ This work has made use of data from the European Space Agency (ESA) mission Gaia
 
 - Bailer-Jones C. A. L. et al. 2018, AJ 156, 58.
 - Brandt T. D. 2021, ApJS 254, 42.
-- Cutri R. M. et al. 2014, VizieR II/328.
+- Cutri R. M. et al. 2014, VizieR On-line Data Catalog II/328.
 - Enriquez J. E. et al. 2017, ApJ 849, 104.
-- Gaia Collaboration 2016, A&A 595, A1; 2021, A&A 649, A1; 2023, A&A 674, A1.
+- Gaia Collaboration 2016, A&A 595, A1.
+- Gaia Collaboration 2021, A&A 649, A1.
+- Gaia Collaboration 2023, A&A 674, A1.
 - Gaia Collaboration, Smart R. L. et al. 2021, A&A 649, A6.
 - Griffith R. L. et al. 2015, ApJS 217, 25.
 - Grimaldi C. 2017, Sci. Rep. 7, 46273.
@@ -228,5 +239,6 @@ This work has made use of data from the European Space Agency (ESA) mission Gaia
 - Sullivan W. T., Brown S., Wetherill C. 1978, Science 199, 377.
 - Wlodarczyk-Sroka B. S., Garrett M. A., Siemion A. P. V. 2020, MNRAS 498, 5720.
 - Wright E. L. et al. 2010, AJ 140, 1868.
-- Wright J. T. et al. 2014, ApJ 792, 26; 792, 27.
+- Wright J. T. et al. 2014a, ApJ 792, 26.
+- Wright J. T. et al. 2014b, ApJ 792, 27.
 - Wright J. T., Kanodia S., Lubar E. 2018, AJ 156, 260.
